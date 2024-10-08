@@ -1,13 +1,15 @@
 {
   "name": "portal",
   "version": "4.0.2",
-  "author": "Seolah Jeon<ssllqq59@gmail.com>",
+  "author": "Seolah Jeon<jseolah@naver.com>",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/noransaja/ts_portal.git"
+    "url": "https://jeonseolah.github.io/compas/"
   },
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "predeploy": "npm run build",
+    "deploy": "main -d build"
   },
   "engines": {
     "node": "14.16.1",
