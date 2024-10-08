@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+@mixin blind {
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    border: 0;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+// float 해제
+@mixin clearBoth() {
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+// 말줄임
+@mixin textOverflowLine($line) {
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// 밴더프리픽스
+@mixin prefix($property, $value) {
+    $prefixes: webkit, moz, ms, o;
+    @each $prefix in $prefixes {
+        #{"-" + $prefix + "-" + $property}: $value;
+    }
+    // 기본
+    #{$property}: $value;
+}
+
+// 트랜지션
+@mixin transition($prop: all, $duration: .5s, $timing: ease, $delay: 0) {
+    transition: $prop $duration $timing $delay;
+}
+
+// @mixin@ keyword Arguments
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+// animation
+@mixin rotateAnimate($deg, $time, $delay) {
+    transition: all $time ease $delay;
+    transform: rotate($deg);
+}
+
+// @mixin@  mediaQuery 디바이스별 적용 @mixin@
+@mixin mobile {
+    @media screen and (max-width: 1399px) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media screen and (min-width: 1400px) {
+        @content;
+    }
+}

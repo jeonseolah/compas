@@ -1,0 +1,392 @@
+@charset "utf-8";
+
+.guide-view {
+
+	&.typography {
+
+		& p {
+			@include font(15);
+			@include themeColor(color, color01);
+
+			&+p {
+				margin-top: .4rem;
+			}
+
+			&:nth-child(1) {
+				font-weight: 500;
+				@include themeColor(color, color01);
+			}
+		}
+
+		& .font-32 {
+
+			& p {
+
+				&:nth-child(1) {
+					@include font(32);
+				}
+			}
+		}
+
+		& .font-28 {
+
+			& p {
+
+				&:nth-child(1) {
+					@include font(28);
+				}
+			}
+		}
+
+		& .font-26 {
+
+			& p {
+
+				&:nth-child(1) {
+					@include font(26);
+				}
+			}
+		}
+
+		& .font-24 {
+
+			& p {
+
+				&:nth-child(1) {
+					@include font(24);
+				}
+			}
+		}
+
+		& .font-22 {
+
+			& p {
+
+				&:nth-child(1) {
+					@include font(22);
+				}
+			}
+		}
+
+		& .font-20 {
+
+			& p {
+
+				&:nth-child(1) {
+					@include font(20);
+				}
+			}
+		}
+
+		& .font-18 {
+
+			& p {
+
+				&:nth-child(1) {
+					@include font(18);
+				}
+			}
+		}
+
+		& .font-16 {
+
+			& p {
+
+				&:nth-child(1) {
+					@include font(16);
+				}
+			}
+		}
+
+		& .font-14 {
+
+			& p {
+
+				&:nth-child(1) {
+					@include font(15);
+				}
+			}
+		}
+
+		& .font-13 {
+
+			& p {
+
+				&:nth-child(1) {
+					@include font(13);
+				}
+			}
+		}
+
+		& .font-12 {
+
+			& p {
+
+				&:nth-child(1) {
+					@include font(12);
+				}
+			}
+		}
+
+		& .font-8 {
+
+			& p {
+
+				&:nth-child(1) {
+					@include font(10);
+				}
+			}
+		}
+	}
+
+	&.button {
+
+		.btn-group {
+			flex-direction: column;
+			margin: 0;
+		}
+	}
+
+	&.icon {
+
+		.icon-set {
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			width: 100%;
+			margin: 2rem auto;
+			text-align: center;
+
+			& .item {
+				margin: .5rem;
+				padding: 2rem 0;
+				@include themeColor(background-color, color04);
+			}
+
+			& .mls {
+				display: block;
+				margin-top: 1rem;
+				@include font(12);
+			}
+		}
+	}
+
+	.title-box {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: center;
+		padding: 2.4rem;
+		@include themeColor(background-color, color06);
+
+		dt {
+			display: block;
+			font-weight: 500;
+			@include themeColor(color, color00);
+			@include font(22);
+		}
+
+		dd {
+			margin-top: 1rem;
+			@include themeColor(color, color00);
+		}
+	}
+
+	.bg-color {
+		@include themeColor(background-color, color05);
+	}
+
+	.group {
+		padding: 3rem 2rem;
+		border-bottom: .1rem solid;
+		@include themeColor(border-color, color03);
+
+		&-title {
+			display: block;
+			width: 100%;
+			margin-bottom: 1.6rem;
+			@include font(18);
+		}
+
+		&-inner {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+		}
+	}
+
+	table {
+		width: 100%;
+		margin-top: 3rem;
+		border-top: .1rem solid;
+		@include themeColor(border-color, color03);
+
+		caption {
+			@include blind();
+		}
+
+		th {
+			padding: 1.2rem .8rem;
+			border-bottom: .1rem solid;
+			@include font(15);
+			font-weight: 500;
+			@include themeColor(color, color01);
+			@include themeColor(background-color, color04);
+			@include themeColor(border-color, color03);
+			text-align: center;
+
+			& + th {
+				border-left: .1rem solid;
+				@include themeColor(border-color, color03);
+			}
+		}
+
+		td {
+			padding: 1.2rem .8rem;
+			border-bottom: .1rem solid;
+			@include themeColor(border-color, color03);
+			@include font(15);
+
+			& + td {
+				border-left: .1rem solid;
+				@include themeColor(border-color, color03);
+			}
+
+			& > a {
+				display: block;
+				@include font(15);
+				text-align: center;
+			}
+
+			&:nth-child(12) {
+				text-align: center;
+			}
+		}
+
+		.done {
+			text-align: center;
+
+			&::before {
+				content: "";
+				display: inline-block;
+				width: .6rem;
+				height: .6rem;
+				border-radius: 50%;
+				background-color: #7fff00;
+			}
+
+			&::after {
+				content: "완료";
+				margin-left: .4rem;
+			}
+		}
+
+		.done2 {
+
+			&::before {
+				content: "";
+				display: inline-block;
+				width: .6rem;
+				height: .6rem;
+				border-radius: 50%;
+				background-color: rgb(5, 75, 35);
+			}
+
+			&::after {
+				content: "1차 작업완료";
+				width: .6rem;
+				height: .6rem;
+				margin-left: .3rem;
+			}
+		}
+
+		.working {
+			text-align: center;
+
+			&::before {
+				content: "";
+				display: inline-block;
+				width: .5rem;
+				height: .5rem;
+				border-radius: 50%;
+				background-color: #ff8c00;
+			}
+
+			&::after {
+				content: "진행중";
+				width: .6rem;
+				height: .6rem;
+				margin-left: .3rem;
+			}
+		}
+
+		.stop {
+			text-align: center;
+
+			&::before {
+				content: "";
+				display: inline-block;
+				width: .5rem;
+				height: .5rem;
+				border-radius: 50%;
+				background-color: rgb(0, 153, 255);
+			}
+
+			&::after {
+				content: "일시중지";
+				width: .6rem;
+				height: .6rem;
+				margin-left: .3rem;
+			}
+		}
+
+		.tbd {
+			text-align: center;
+
+			&::before {
+				content: "";
+				display: inline-block;
+				width: .5rem;
+				height: .5rem;
+				border-radius: 50%;
+				background-color: rgb(205, 32, 190);
+			}
+
+			&::after {
+				content: "TBD";
+				width: .6rem;
+				height: .6rem;
+				margin-left: .3rem;
+			}
+		}
+
+		.chk {
+			text-align: center;
+
+			&::after {
+				content: "O";
+				width: .6rem;
+				height: .6rem;
+				margin-left: .3rem;
+			}
+		}
+
+		.chk2 {
+			text-align: center;
+
+			&::after {
+				content: "△";
+				width: .6rem;
+				height: .6rem;
+				margin-left: .3rem;
+			}
+		}
+
+		.del {
+			background-color: rgb(165, 165, 165);
+		}
+
+		.pop {
+			background-color: #ffffb1;
+		}
+	}
+}
