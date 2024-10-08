@@ -176,7 +176,7 @@
 		flex-direction: column;
 		justify-content: center;
 		padding: 2.4rem;
-		@include themeColor(background-color, color06);
+		@include themeColor(background-color, color02);
 
 		dt {
 			display: block;
@@ -189,10 +189,6 @@
 			margin-top: 1rem;
 			@include themeColor(color, color00);
 		}
-	}
-
-	.bg-color {
-		@include themeColor(background-color, color05);
 	}
 
 	.group {

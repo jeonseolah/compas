@@ -5,10 +5,12 @@ html {
 }
 
 body {
+	margin: 0;
 	font-family: "Pretendard", -apple-system, "Malgun Gothic", "AppleGothicNeoSD", "Apple SD 산돌고딕 Neo", "Droid sans", "dotum", "돋움", sans-serif;
 	@include font(16);
 	@include themeColor(color, color01);
 	-webkit-text-size-adjust: none;
+	font-weight: 400;
 
 	&.overflow-hidden {
 		overflow: hidden;
@@ -101,8 +103,8 @@ label {
 
 ::-webkit-scrollbar {
 	-webkit-appearance: none;
-	width: .7rem;
-	height: .7rem;
+	width: 7px;
+	height: 7px;
 	background-color: transparent;
 }
 
@@ -111,7 +113,7 @@ label {
 }
 
 ::-webkit-scrollbar-thumb {
-	border-radius: .4rem;
+	border-radius: 4px;
 	background-color: rgba(0, 0, 0, .5);
 }
 
@@ -120,6 +122,251 @@ label {
 	height: 0;
 }
 
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration{
+    display:none;
+}
+
 .blind {
 	@include blind();
+}
+
+.ly-header {
+	@include themeColor(background-color, color00);
+	box-shadow: 0px 49px 30.6px -28px rgba(0, 0, 0, .06);
+
+	.header-inner {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		width: 1400px;
+		height: 100px;
+		margin: 0 auto;
+	}
+
+	.logo {
+		width: 209px;
+		height: 100px;
+		@include funcImage("../images/logo-compashub.png");
+		background-size: 100%;
+		background-position: center;
+		font-size: 0;
+	}
+
+	.nav {
+		flex: 1;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		@include font(22);
+		font-weight: 700;
+	}
+
+	.nav-item {
+		padding: 0 43px;
+
+		& a {
+			position: relative;
+			display: flex;
+			align-items: center;
+			height: 100px;
+
+			&::after {
+				content: "";
+				position: absolute;
+				width: 100%;
+				transform: scaleX(0);
+				transform-origin: right;
+				transition: transform .3s linear;
+				height: .2rem;
+				bottom: 0;
+				left: 0;
+				background-color: currentColor;
+				will-change: transform;
+			}
+
+			&:hover {
+				@include themeColor(color, color02);
+
+				&::after {
+					transform: scaleX(1);
+					transform-origin: left;
+					@include themeColor(background-color, color02);
+				}
+			}
+		}
+	}
+
+	.util-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		margin-left: auto;
+	}
+
+	.link-logo {
+		width: 147px;
+		height: 26px;
+		@include funcImage("../images/logo-compas.png");
+		background-size: 100%;
+		font-size: 0;
+	}
+
+	.search-input-box {
+		position: relative;
+		width: 200px;
+		height: 40px;
+		margin-left: 52px;
+		@include themeColor(background-color, color04);
+		border-radius: 20px;
+
+		.input-search {
+			width: 100%;
+			height: 100%;
+			padding: 0 16px;
+			background-color: transparent;
+			box-sizing: border-box;
+		}
+
+		.btn-search {
+			position: absolute;
+			top: 50%;
+			right: 16px;
+			width: 24px;
+			height: 24px;
+			@include funcImage("../images/icon-search.png");
+			background-size: 100%;
+			font-size: 0;
+			transform: translateY(-50%);
+		}
+	}
+
+	.login-box {
+		display: flex;
+		align-items: center;
+	}
+
+	.user-info {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		margin-left: 20px;
+	}
+
+	.user-img {
+		display: inline-block;
+		width: 33px;
+		height: 33px;
+	}
+
+	.user-name {
+		margin-left: 10px;
+		font-size: 17px;
+		@include themeColor(color, color05);
+	}
+
+	.btn {
+		margin-left: 20px;
+
+		&.login {
+			font-size: 17px;
+			@include themeColor(color, color05);
+		}
+
+		&.join {
+			font-size: 17px;
+			@include themeColor(color, color05);
+		}
+
+		&.logout {
+			width: 24px;
+			height: 24px;
+			@include funcImage("../images/icon-logout.png");
+			background-size: 100%;
+			font-size: 0;
+		}
+	}
+}
+
+.ly-container {
+	min-height: calc(100vh - 225px);
+}
+
+.ly-footer {
+	border-top: 1px solid;
+	@include themeColor(border-color, color06);
+	background-color: #fbfbfb;
+
+	.footer-inner {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		width: 1400px;
+		height: 124px;
+		margin: 0 auto;
+	}
+
+	.util-menu {
+		display: flex;
+		flex-wrap: wrap;
+
+		a {
+			position: relative;
+			@include font(16);
+			font-weight: 600;
+
+			&+a {
+				margin-left: 10px;
+				padding-left: 10px;
+
+				&::before {
+					content: "";
+					position: absolute;
+					top: 50%;
+					left: 0;
+					width: 1px;
+					height: 14px;
+					@include themeColor(background-color, color07);
+					transform: translateY(-50%);
+				}
+			}
+		}
+	}
+
+	address {
+		margin-top: 10px;
+		font-style: normal;
+
+		p {
+			@include font(14);
+			@include themeColor(color, color07);
+		}
+	}
+
+	.footer-familysite {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-end;
+		margin-left: auto;
+
+		.btn {
+			margin: 0 14px;
+			font-size: 0;
+			background-size: 100%;
+
+			&.lh {
+				width: 118px;
+				height: 43px;
+				@include funcImage("../images/logo-lh.png");
+			}
+
+			&.compas {
+				width: 154px;
+				height: 27px;
+				@include funcImage("../images/logo-compas.png");
+			}
+		}
+	}
 }

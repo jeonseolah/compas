@@ -14,8 +14,8 @@
         font-weight: $weight;
         font-display: swap;
         src:
-            url("../fonts/#{$folder}/#{$file}.woff2") format("woff2");
-            // url("../fonts/#{$folder}/#{$file}.woff") format("woff");
+            url("../fonts/#{$folder}/#{$file}.woff2") format("woff2"),
+            url("../fonts/#{$folder}/#{$file}.woff") format("woff");
     }
 }
 
@@ -1178,40 +1178,4 @@
 
 .icon-zoom-out:before {
     content: "\ea19";
-}
-
-.icon-sum {
-    display: inline-block;
-
-    &:before {
-        content: "";
-        display: inline-block;
-        width: 2.4rem;
-        height: 2.4rem;
-        background-image: url("../images/contents/sum.svg");
-    }
-}
-
-.icon-comment {
-    display: inline-block;
-
-    &:before {
-        content: "";
-        display: inline-block;
-        width: 2.4rem;
-        height: 2.4rem;
-        background-image: url("../images/contents/comment.svg");
-    }
-}
-
-.icon-send {
-    display: inline-block;
-
-    &:before {
-        content: "";
-        display: inline-block;
-        width: 2.4rem;
-        height: 2.4rem;
-        background-image: url("../images/contents/send.svg");
-    }
 }

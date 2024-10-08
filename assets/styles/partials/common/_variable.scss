@@ -5,22 +5,12 @@ $colorsTheme: (
     default: (
         color00: #ffffff,
         color01: #000,
-        color02: #888,
-        color03: #e0e0e0,
-        color04: #f0f0f0,
-        color05: #e3f9f7,
-        color06: #2778d7,
-        color07: #fff2da,
-        color08: #e85300,
-        color09: #bbb,
-        color10: #555,
-        color11: #21a300,
-        color12: #eff6ff,
-        color13: #ff9c41,
-        color14: #feeeee,
-        color15: #eefbfe,
-        error: #f80000,
-        success: #2778d7,
+        color02: #369367,
+        color03: #ccc,
+        color04: #ebebeb,
+        color05: #777,
+        color06: #e8e8e8,
+        color07: #333
     )
 );
 @function funcColor($key, $type: "default") {
@@ -50,43 +40,43 @@ $colorsTheme: (
 }
 @mixin font($size) {
     @if ($size == 32) {
-        font-size: 3.2rem;
-        line-height: 4.8rem;
+        font-size: 32px;
+        line-height: 48px;
     } @else if ($size == 28) {
-        font-size: 2.8rem;
-        line-height: 4.2rem;
+        font-size: 28px;
+        line-height: 42px;
     } @else if($size == 26) {
-        font-size: 2.6rem;
-        line-height: 3.8rem;
+        font-size: 26px;
+        line-height: 38px;
     } @else if($size == 24) {
-        font-size: 2.4rem;
-        line-height: 3.6rem;
+        font-size: 24px;
+        line-height: 36px;
     } @else if($size == 22) {
-        font-size: 2.2rem;
-        line-height: 3.3rem;
+        font-size: 22px;
+        line-height: 33px;
     } @else if($size == 20) {
-        font-size: 2rem;
-        line-height: 3rem;
+        font-size: 20px;
+        line-height: 30px;
     } @else if($size == 18) {
-        font-size: 1.8rem;
-        line-height: 2.7rem;
+        font-size: 18px;
+        line-height: 27px;
     } @else if($size == 16) {
-        font-size: 1.6rem;
-        line-height: 2.4rem;
+        font-size: 16px;
+        line-height: 24px;
     }@else if($size == 15) {
-        font-size: 1.5rem;
-        line-height: 2.1rem;
+        font-size: 15px;
+        line-height: 21px;
     } @else if($size == 14) {
-        font-size: 1.4rem;
-        line-height: 2.1rem;
+        font-size: 14px;
+        line-height: 21px;
     } @else if($size == 13) {
-        font-size: 1.3rem;
-        line-height: 1.9rem;
+        font-size: 13px;
+        line-height: 19px;
     } @else if($size == 12) {
-        font-size: 1.2rem;
-        line-height: 1.8rem;
+        font-size: 12px;
+        line-height: 18px;
     } @else if($size == 10) {
-        font-size: 1rem;
-        line-height: 1.5rem;
+        font-size: 10px;
+        line-height: 15px;
     }
 }

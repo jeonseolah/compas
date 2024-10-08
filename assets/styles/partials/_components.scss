@@ -2,8 +2,6 @@
 
 .table-wrap {
     overflow-x: auto;
-    margin-left: 1.6rem;
-    padding-right: 1.6rem;
 
     @extend %table;
 }
@@ -13,90 +11,29 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    border-radius: .4rem;
     box-sizing: border-box;
 
-    &>span:not(.blind)  {
-
-        &+i {
-            margin-left: .4rem;
-        }
-    }
 
     &.primary {
-        @include themeColor(background-color, color06);
         @include themeColor(color, color00);
     }
 
     &.border {
         @include themeColor(background-color, color00);
-        border: .1rem solid currentColor;
+        border: 1px solid currentColor;
         @include themeColor(color, color01);
-
-        &.primary {
-            @include themeColor(color, color06);
-        }
-
-        &.secondary {
-            @include themeColor(border-color, color03);
-        }
-
-        &.tertiary {
-            @include themeColor(border-color, color13);
-            @include themeColor(color, color13);
-        }
 
         &.disabled {
             @include themeColor(background-color, color00);
-            @include themeColor(color, color09);
             pointer-events: none;
         }
     }
 
-    &.round {
-        border-radius: 2rem;
-    }
-
     &.color-primary {
         @include font(16);
-		@include themeColor(color, color06);
-    }
-
-    &.sm {
-        display: inline-flex;
-        height: 3.2rem;
-        padding: 0 .8rem;
-
-        & > span {
-            @include font(15);
-        }
-    }
-
-    &.md {
-        height: 4rem;
-        padding: 0 1.6rem;
-
-        & > span,
-        &> i {
-            @include font(16);
-            font-weight: 500;
-        }
-    }
-
-    &.lg {
-        height: 4.8rem;
-        padding: 0 1.6rem;
-
-        & > span,
-        &> i {
-            @include font(16);
-            font-weight: 500;
-        }
     }
 
     &.disabled {
-        @include themeColor(background-color, color04);
-        @include themeColor(color, color02);
         pointer-events: none;
     }
 }
@@ -122,21 +59,9 @@
     @extend %textarea;
     @extend %fileUpload;
 
-    &+.form {
-        margin-top: 2.4rem;
-    }
-
-    &>.select {
-
-        &+.select {
-            margin-top: .8rem;
-        }
-    }
-
     .label {
         display: flex;
         align-items: center;
-        margin-bottom: .8rem;
         @include font(15);
 
         .essential {
@@ -148,7 +73,6 @@
                 display: inline-block;
                 @include font(15);
                 color: #ff5c00;
-                margin-left: .4rem;
             }
         }
 
@@ -157,216 +81,6 @@
             .datepicker::after {
                 top: 0;
             }
-        }
-    }
-
-    .flex-field {
-        position: relative;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-
-        &>* {
-            flex: 1;
-        }
-
-        &.half {
-
-            &>* {
-                max-width: unset !important;
-                padding: 0;
-
-                &.input-text {
-                    text-indent: 1.6rem;
-                }
-            }
-        }
-
-        &.flex-none {
-
-            &>* {
-                max-width: 30%;
-
-                &.check-type2,
-                &.radio-type2 {
-                    max-width: calc(25% - .4rem);
-                }
-            }
-        }
-
-        &+.flex-field {
-            margin-top: .8rem;
-        }
-
-        &:only-of-type {
-
-            .btn {
-                max-width: 8rem;
-            }
-        }
-
-        &~.flex-field {
-
-            .btn {
-                min-width: 12.2rem;
-            }
-        }
-
-        &.residence-checkbox-div,
-        &.checkbox-age {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-gap: .8rem;
-
-            .check-type2 {
-                max-width: unset;
-                margin: 0 !important;
-            }
-        }
-
-        .btn {
-            max-width: 12.2rem;
-            margin-left: .4rem;
-
-            &+.btn-add,
-            &+.btn-delete {
-                min-width: unset;
-                max-width: 4rem;
-                margin: 0 .4rem;
-            }
-
-            &:nth-last-child(2) {
-                min-width: unset;
-                max-width: 8rem;
-            }
-        }
-
-        .select {
-
-            &+.select {
-                margin-left: .8rem;
-            }
-
-            &+.input-text {
-                margin-left: .8rem;
-            }
-
-            &:nth-child(1) {
-                max-width: 10.8rem;
-            }
-
-            select {
-                min-width: unset;
-            }
-        }
-
-        input {
-
-            &+input {
-                margin-left: .8rem;
-            }
-
-            &:not(:only-of-type) {
-                max-width: 10.8rem;
-
-                &+input {
-                    max-width: unset;
-                }
-            }
-        }
-
-        input[type="hidden"] {
-
-            &+input {
-                margin-left: 0;
-            }
-        }
-
-        .radio-type1 {
-
-            &+.radio-type1 {
-                margin-left: 2.4rem;
-            }
-        }
-
-        .radio-type2,
-        .check-type2  {
-            min-width: calc(25% - .8rem);
-            margin-left: .8rem;
-
-            &:nth-child(1) {
-                margin-left: 0;
-            }
-        }
-
-        .btn-add,
-        .btn-delete {
-            max-width: 4rem;
-            height: 4rem;
-            margin-left: .8rem;
-            border: .1rem solid;
-            @include themeColor(border-color, color03);
-            border-radius: .4rem;
-            font-size: 2rem;
-
-            &.disabled {
-                @include themeColor(background-color, color04);
-                @include themeColor(color, color02);
-            }
-        }
-
-        .timer {
-            position: absolute;
-            top: 50%;
-            right: 14.2rem;
-            transform: translateY(-50%);
-            @include font(15);
-            @include themeColor(color, color06);
-        }
-
-        .input-wrap {
-            position: relative;
-
-            .btn-delete {
-                border: 0;
-                margin: 0;
-
-                i {
-                    &::before {
-                        content: "\ea11";
-                        display: block;
-                        position: relative;
-                        z-index: 10;
-                        width: 2rem;
-                        height: 2rem;
-                        font-size: 1.2rem;
-                        background-color: #888;
-                        border-radius: 50%;
-                        color: #ffffff;
-                        line-height: 2rem;
-                        margin: 0 auto;
-                    }
-                }
-            }
-        }
-    }
-
-    .text-length {
-        margin-top: .8rem;
-        text-align: right;
-    }
-
-    .textarea {
-
-        &+.sortable-container {
-            margin-top: 1.6rem;
-        }
-    }
-
-    input {
-
-        &+.form {
-            margin-top: 2.4rem;
         }
     }
 }
@@ -392,8 +106,4 @@
 .switch {
     position: relative;
     @extend %SwitchType01;
-}
-
-.layer {
-    @extend %popupLayer;
 }
