@@ -42,6 +42,9 @@ $colorsTheme: (
     @if ($size == 32) {
         font-size: 32px;
         line-height: 48px;
+    } @else if ($size == 30) {
+        font-size: 30px;
+        line-height: 46px;
     } @else if ($size == 28) {
         font-size: 28px;
         line-height: 42px;
