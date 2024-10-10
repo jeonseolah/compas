@@ -1440,6 +1440,12 @@ input::-webkit-search-results-decoration {
   font-weight: 700;
   box-sizing: border-box;
 }
+.data-list .data-title.ty1 {
+  background-image: url("../images/icon-building.png");
+  background-repeat: no-repeat;
+  background-size: 40px;
+  background-position: right 25px center;
+}
 .data-list dl {
   border-top: 1px solid #ccc;
   border-radius: 18px 18px 0 0;
