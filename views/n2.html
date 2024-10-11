@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPAS HUB | 검색</title>
+    <link rel="stylesheet" href="../assets/styles/reset.css">
+    <link rel="stylesheet" href="../assets/styles/common.css">
+</head>
+
+<body>
+    <div class="ly-wrap">
+        <div class="ly-header">
+            <div class="header-inner">
+                <h1 class="logo"><a href="#">COMPAS HUB</a></h1>
+                <div class="nav">
+                    <div class="nav-item">
+                        <a href="#">갤러리</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">대시보드</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">지표</a>
+                    </div>
+                </div>
+                <div class="util-wrap">
+                    <a href="#" class="link-logo" target="_blank">compas</a>
+                    <div class="search-input-box">
+                        <input type="search" class="input-search" autocomplete="off">
+                        <button class="btn-search">검색</button>
+                    </div>
+                    <!-- 로그인 -->
+                    <div class="login-box" style="display: none;">
+                        <span class="user-info">
+                            <span class="user-img">
+                                <img src="../assets/images/icon-user.png" alt="사용자 기본이미지">
+                            </span>
+                            <span class="user-name">홍길동님</span>
+                        </span>
+                        <button class="btn logout">로그아웃</button>
+                    </div>
+                    <!-- 로그아웃 -->
+                    <div class="login-box" >
+                        <a href="#" class="btn login">로그인</a>
+                        <a href="#" class="btn join">회원가입</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ly-container">
+            <div class="integrated-search-wrap">
+                <div class="search">
+                    <div class="search-input-box">
+                        <input type="search" class="input-search" autocomplete="off" placeholder="검색어를 입력해주세요">
+                        <button class="btn-search">검색</button>
+                    </div>
+                    <ul class="keyword-list">
+                        <li>
+                            <button class="btn-keyword">검색어 예시</button>
+                        </li>
+                        <li>
+                            <button class="btn-keyword">분석데이터</button>
+                        </li>
+                        <li>
+                            <button class="btn-keyword">검색</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-container">
+                    <div class="nav-tabs">
+                        <a href="#tab1" class="tab active">전체</a>
+                        <a href="#tab2" class="tab">갤러리</a>
+                        <a href="#tab3" class="tab">대시보드</a>
+                        <a href="#tab4" class="tab">자료</a>
+                    </div>
+                    <div id="tab1" class="tab-panel active">
+                        <!-- 상세검색 -->
+                        <div class="search-box-btn">
+                            <button class="btn-search">
+                                <span>상세검색</span>
+                            </button>
+                        </div>
+                        <div class="search-box-wrap">
+                            <div class="search-box">
+                                <dl class="accordion" data-accordion="accordion-sort1">
+                                    <dt>
+                                        <span>분류</span>
+                                        <button class="btn-accordion" id="accordion-sort1">펼치기</button>
+                                    </dt>
+                                    <dd>
+                                        <div class="sort-list">
+                                            <button class="sort-item">인구</button>
+                                            <button class="sort-item">교통</button>
+                                            <button class="sort-item">안전</button>
+                                            <button class="sort-item">환경</button>
+                                            <button class="sort-item">두줄?두줄?두줄?두줄?두줄?두줄?두줄?두줄?</button>
+                                            <button class="sort-item">두줄?두줄?두줄?두줄?두줄?두줄?두줄?두줄?</button>
+                                            <button class="sort-item">두줄?두줄?두줄?두줄?두줄?두줄?두줄?두줄?</button>
+                                            <button class="sort-item">두줄?두줄?두줄?두줄?두줄?두줄?두줄?두줄?</button>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl class="accordion" data-accordion="accordion-sort2">
+                                    <dt>
+                                        <span>중분류</span>
+                                        <button class="btn-accordion" id="accordion-sort2">펼치기</button>
+                                    </dt>
+                                    <dd>
+                                        <div class="sort-list">
+                                            <button class="sort-item">유입인구</button>
+                                            <button class="sort-item">가구</button>
+                                            <button class="sort-item">생활연구</button>
+                                            <button class="sort-item">거주인구</button>
+                                            <button class="sort-item">대중교통</button>
+                                            <button class="sort-item">CCTV</button>
+                                            <button class="sort-item">어린이공원</button>
+                                            <button class="sort-item">통계</button>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl class="accordion" data-accordion="accordion-sort3">
+                                    <dt>
+                                        <span>공개여부</span>
+                                        <button class="btn-accordion" id="accordion-sort3">펼치기</button>
+                                    </dt>
+                                    <dd>
+                                        <div class="sort-list">
+                                            <button class="sort-item">공개</button>
+                                            <button class="sort-item">비공개</button>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl class="accordion" data-accordion="accordion-sort4">
+                                    <dt>
+                                        <span>종류</span>
+                                        <button class="btn-accordion" id="accordion-sort4">펼치기</button>
+                                    </dt>
+                                    <dd>
+                                        <div class="sort-list">
+                                            <button class="sort-item">일반</button>
+                                            <button class="sort-item">공간</button>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl class="accordion" data-accordion="accordion-sort5">
+                                    <dt>
+                                        <span>등록년도</span>
+                                        <button class="btn-accordion" id="accordion-sort5">펼치기</button>
+                                    </dt>
+                                    <dd>
+                                        <div class="sort-list">
+                                            <button class="sort-item">2024</button>
+                                            <button class="sort-item">2023</button>
+                                            <button class="sort-item">2022</button>
+                                            <button class="sort-item">2021</button>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="tag-wrap">
+                                <button type="button" class="btn-reset">초기화</button>
+                                <ul class="tag-list">
+                                    <li>
+                                        <span>인구</span>
+                                        <button class="btn-delete">삭제</button>
+                                    </li>
+                                    <li>
+                                        <span>교통</span>
+                                        <button class="btn-delete">삭제</button>
+                                    </li>
+                                    <li>
+                                        <span>안전</span>
+                                        <button class="btn-delete">삭제</button>
+                                    </li>
+                                    <li>
+                                        <span>환경</span>
+                                        <button class="btn-delete">삭제</button>
+                                    </li>
+                                    <li>
+                                        <span>유입</span>
+                                        <button class="btn-delete">삭제</button>
+                                    </li>
+                                    <li>
+                                        <span>가구</span>
+                                        <button class="btn-delete">삭제</button>
+                                    </li>
+                                    <li>
+                                        <span>생활</span>
+                                        <button class="btn-delete">삭제</button>
+                                    </li>
+                                    <li>
+                                        <span>거주</span>
+                                        <button class="btn-delete">삭제</button>
+                                    </li>
+                                    <li>
+                                        <span>대중</span>
+                                        <button class="btn-delete">삭제</button>
+                                    </li>
+                                    <li>
+                                        <span>CCTV</span>
+                                        <button class="btn-delete">삭제</button>
+                                    </li>
+                                    <li>
+                                        <span>어린</span>
+                                        <button class="btn-delete">삭제</button>
+                                    </li>
+                                    <li>
+                                        <span>통계</span>
+                                        <button class="btn-delete">삭제</button>
+                                    </li>
+                                    <li>
+                                        <span>공개</span>
+                                        <button class="btn-delete">삭제</button>
+                                    </li>
+                                    <li>
+                                        <span>환경</span>
+                                        <button class="btn-delete">삭제</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 검색결과 -->
+                        <div class="result-wrap">
+                            <ul class="result-sort-list">
+                                <li><button class="btn active">최신순</button></li>
+                                <li><button class="btn">조회수</button></li>
+                                <li><button class="btn">다운로드</button></li>
+                                <li><button class="btn">제목순</button></li>
+                            </ul>
+                        </div>
+                        <!-- 분석 -->
+                        <div class="section analysis-board">
+                            <div class="title-wrap">
+                                <h2 class="section-title">분석<em>(24)</em></h2>
+                                <a href="#" class="btn-more">자세히 보기</a>
+                            </div>
+                            <ul class="dashboard-list">
+                                <li class="dashboard-item">
+                                    <a href="#">
+                                        <span class="img"><img src="../assets/images/@img-sample1.png" alt="화재발생 예측지점 도출 모델 화재발생 예측지점 도출 모델"></span>
+                                    </a>
+                                    <div class="content">
+                                        <a href="#" class="title">화재발생 예측지점 도출 모델 화재발생 예측지점 도출 모델</a>
+                                        <p class="description">도시 내 화재 발생 위험도 예측으로 화재로 인한 인명및 재산 피해 최소화 </p>
+                                        <div class="data-util">
+                                            <span class="view-num">9,9999</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dashboard-item">
+                                    <a href="#">
+                                        <span class="img"><img src="../assets/images/@img-sample1.png" alt="화재발생 예측지점 도출 모델 화재발생 예측지점 도출 모델"></span>
+                                    </a>
+                                    <div class="content">
+                                        <a href="#" class="title">화재발생 예측지점 도출 모델 화재발생 예측지점 도출 모델</a>
+                                        <p class="description">도시 내 화재 발생 위험도 예측으로 화재로 인한 인명및 재산 피해 최소화 </p>
+                                        <div class="data-util">
+                                            <span class="view-num">9,9999</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dashboard-item">
+                                    <a href="#">
+                                        <span class="img"><img src="../assets/images/@img-sample1.png" alt="화재발생 예측지점 도출 모델 화재발생 예측지점 도출 모델"></span>
+                                    </a>
+                                    <div class="content">
+                                        <a href="#" class="title">화재발생 예측지점 도출 모델 화재발생 예측지점 도출 모델</a>
+                                        <p class="description">도시 내 화재 발생 위험도 예측으로 화재로 인한 인명및 재산 피해 최소화 </p>
+                                        <div class="data-util">
+                                            <span class="view-num">9,9999</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dashboard-item">
+                                    <a href="#">
+                                        <span class="img"><img src="../assets/images/@img-sample1.png" alt="화재발생 예측지점 도출 모델 화재발생 예측지점 도출 모델"></span>
+                                    </a>
+                                    <div class="content">
+                                        <a href="#" class="title">화재발생 예측지점 도출 모델 화재발생 예측지점 도출 모델</a>
+                                        <p class="description">도시 내 화재 발생 위험도 예측으로 화재로 인한 인명및 재산 피해 최소화 </p>
+                                        <div class="data-util">
+                                            <span class="view-num">9,9999</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 데이터 -->
+                        <div class="section data">
+                            <div class="title-wrap">
+                                <h2 class="section-title">데이터<em>(24)</em></h2>
+                                <a href="#" class="btn-more">자세히 보기</a>
+                            </div>
+                            <ul class="data-list">
+                                <li class="data-item">
+                                    <strong class="data-title ty1">도시계획</strong>
+                                    <dl>
+                                        <dt><a href="#">세종시_건축물대장_층별개요세종시_건축물대장_층별개요</a></dt>
+                                        <dd>레코드수 : 13,790</dd>
+                                        <dd>등록일자 : 2024-06-19</dd>
+                                    </dl>
+                                    <div class="data-util">
+                                        <span class="view-num">9,9999</span>
+                                        <span class="download-num">9,9999</span>
+                                        <span class="badge public">공개</span>
+                                    </div>
+                                </li>
+                                <li class="data-item">
+                                    <strong class="data-title ty1">도시계획</strong>
+                                    <dl>
+                                        <dt><a href="#">세종시_건축물대장_층별개요세종시_건축물대장_층별개요</a></dt>
+                                        <dd>레코드수 : 13,790</dd>
+                                        <dd>등록일자 : 2024-06-19</dd>
+                                    </dl>
+                                    <div class="data-util">
+                                        <span class="view-num">9,9999</span>
+                                        <span class="download-num">9,9999</span>
+                                        <span class="badge public">공개</span>
+                                    </div>
+                                </li>
+                                <li class="data-item">
+                                    <strong class="data-title ty1">도시계획</strong>
+                                    <dl>
+                                        <dt><a href="#">세종시_건축물대장_층별개요세종시_건축물대장_층별개요</a></dt>
+                                        <dd>레코드수 : 13,790</dd>
+                                        <dd>등록일자 : 2024-06-19</dd>
+                                    </dl>
+                                    <div class="data-util">
+                                        <span class="view-num">9,9999</span>
+                                        <span class="download-num">9,9999</span>
+                                        <span class="badge public">공개</span>
+                                    </div>
+                                </li>
+                                <li class="data-item">
+                                    <strong class="data-title ty1">도시계획</strong>
+                                    <dl>
+                                        <dt><a href="#">세종시_건축물대장_층별개요세종시_건축물대장_층별개요</a></dt>
+                                        <dd>레코드수 : 13,790</dd>
+                                        <dd>등록일자 : 2024-06-19</dd>
+                                    </dl>
+                                    <div class="data-util">
+                                        <span class="view-num">9,9999</span>
+                                        <span class="download-num">9,9999</span>
+                                        <span class="badge public">공개</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 대시보드 -->
+                        <div class="section dashboard">
+                            <div class="title-wrap">
+                                <h2 class="section-title">대시보드<em>(24)</em></h2>
+                                <a href="#" class="btn-more">자세히 보기</a>
+                            </div>
+                            <ul class="dashboard-list">
+                                <li class="dashboard-item">
+                                    <a href="#">
+                                        <span class="img"><img src="../assets/images/@img-sample1.png" alt="화재발생 예측지점 도출 모델 화재발생 예측지점 도출 모델"></span>
+                                    </a>
+                                    <div class="content">
+                                        <span class="label ty1">재난/안전</span>
+                                        <span class="num">9,999</span>
+                                        <a href="#" class="title">화재발생 예측지점 도출 모델 화재발생 예측지점 도출 모델</a>
+                                    </div>
+                                </li>
+                                <li class="dashboard-item">
+                                    <a href="#">
+                                        <span class="img"><img src="../assets/images/@img-sample1.png" alt="화재발생 예측지점 도출 모델 화재발생 예측지점 도출 모델"></span>
+                                    </a>
+                                    <div class="content">
+                                        <span class="label ty1">재난/안전</span>
+                                        <span class="num">9,999</span>
+                                        <a href="#" class="title">화재발생 예측지점 도출 모델 화재발생 예측지점 도출 모델</a>
+                                    </div>
+                                </li>
+                                <li class="dashboard-item">
+                                    <a href="#">
+                                        <span class="img"><img src="../assets/images/@img-sample1.png" alt="화재발생 예측지점 도출 모델 화재발생 예측지점 도출 모델"></span>
+                                    </a>
+                                    <div class="content">
+                                        <span class="label ty1">재난/안전</span>
+                                        <span class="num">9,999</span>
+                                        <a href="#" class="title">화재발생 예측지점 도출 모델 화재발생 예측지점 도출 모델</a>
+                                    </div>
+                                </li>
+                                <li class="dashboard-item">
+                                    <a href="#">
+                                        <span class="img"><img src="../assets/images/@img-sample1.png" alt="화재발생 예측지점 도출 모델 화재발생 예측지점 도출 모델"></span>
+                                    </a>
+                                    <div class="content">
+                                        <span class="label ty1">재난/안전</span>
+                                        <span class="num">9,999</span>
+                                        <a href="#" class="title">화재발생 예측지점 도출 모델 화재발생 예측지점 도출 모델</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 지표 -->
+                        <div class="section indicator">
+                            <div class="title-wrap">
+                                <h2 class="section-title">지표<em>(24)</em></h2>
+                                <a href="#" class="btn-more">자세히 보기</a>
+                            </div>
+                            <ul class="data-list">
+                                <li class="data-item">
+                                    <span class="label ty1">인구</span>
+                                    <dl>
+                                        <dt><a href="#">세종시_건축물대장_층별개요세종시_건축물대장_층별개요</a></dt>
+                                        <dd>레코드수 : 13,790</dd>
+                                        <dd>등록일자 : 2024-06-19</dd>
+                                    </dl>
+                                    <div class="data-util">
+                                        <span class="view-num">9,9999</span>
+                                        <span class="download-num">9,9999</span>
+                                    </div>
+                                </li>
+                                <li class="data-item">
+                                    <span class="label ty1">인구</span>
+                                    <dl>
+                                        <dt><a href="#">세종시_건축물대장_층별개요세종시_건축물대장_층별개요</a></dt>
+                                        <dd>레코드수 : 13,790</dd>
+                                        <dd>등록일자 : 2024-06-19</dd>
+                                    </dl>
+                                    <div class="data-util">
+                                        <span class="view-num">9,9999</span>
+                                        <span class="download-num">9,9999</span>
+                                    </div>
+                                </li>
+                                <li class="data-item">
+                                    <span class="label ty1">인구</span>
+                                    <dl>
+                                        <dt><a href="#">세종시_건축물대장_층별개요세종시_건축물대장_층별개요</a></dt>
+                                        <dd>레코드수 : 13,790</dd>
+                                        <dd>등록일자 : 2024-06-19</dd>
+                                    </dl>
+                                    <div class="data-util">
+                                        <span class="view-num">9,9999</span>
+                                        <span class="download-num">9,9999</span>
+                                    </div>
+                                </li>
+                                <li class="data-item">
+                                    <span class="label ty1">인구</span>
+                                    <dl>
+                                        <dt><a href="#">세종시_건축물대장_층별개요세종시_건축물대장_층별개요</a></dt>
+                                        <dd>레코드수 : 13,790</dd>
+                                        <dd>등록일자 : 2024-06-19</dd>
+                                    </dl>
+                                    <div class="data-util">
+                                        <span class="view-num">9,9999</span>
+                                        <span class="download-num">9,9999</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="tab2" class="tab-panel">
+                        갤러리
+                    </div>
+                    <div id="tab3" class="tab-panel">
+                        대시보드
+                    </div>
+                    <div id="tab4" class="tab-panel">
+                        자료
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ly-footer">
+            <div class="footer-inner">
+                <div class="footer-contents">
+                    <div class="util-menu">
+                        <a href="#">LH소개</a>
+                        <a href="#">이용약관</a>
+                        <a href="#">개인정보보호정책</a>
+                    </div>
+                    <address>
+                        <p>(우) 52852 경상남도 진주시 충의로 19(충무공동) 한국토지주택공사</p>
+                        <p>HelpDesk :070-4855-2071 (운영시간 : 평일 09:00 ~ 18:00) Tel :055-922-3664 Fax :055-922-6479</p>
+                    </address>
+                </div>
+                <div class="footer-familysite">
+                    <a href="#" class="btn lh">LH 한국토지주택공사</a>
+                    <a href="#" class="btn compas">COMPAS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/scripts/lib/jquery.js"></script>
+    <script src="../assets/scripts/common.js"></script>
+</body>
+
+</html>
