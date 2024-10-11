@@ -1225,7 +1225,6 @@ input::-webkit-search-results-decoration {
 
 	.indicator {
 		padding-top: 50px;
-		border-top: 1px solid #ccc;
 	}
 }
 
@@ -1339,10 +1338,48 @@ input::-webkit-search-results-decoration {
 	}
 }
 
+.analysis-wrap {
+	@include funcImage("../images/bg-sub-visual02.png");
+	background-position: center top;
+
+	.analysis-board {
+		max-width: 1400px;
+		width: calc(100% - 40px);
+		margin: 0 auto;
+	}
+
+	.sub-visual {
+		height: 416px;
+	}
+}
+
+.sub-visual {
+	max-width: 1400px;
+	width: calc(100% - 40px);
+	margin: 0 auto;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+	.sub-title {
+		display: block;
+		font-size: 55px;
+		font-weight: 700;
+		line-height: 1;
+	}
+
+	.description {
+		font-size: 19px;
+		font-weight: 500;
+		line-height: 30px;
+		margin-top: 20px;
+	}
+}
+
 .dashboard-list {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	column-gap: 24px;
+	grid-gap: 24px;
 	margin-top: 20px;
 
 	.dashboard-item {
@@ -1410,6 +1447,7 @@ input::-webkit-search-results-decoration {
 	}
 
 	.description {
+		margin-top: 15px;
 		@include font(16);
 		color: #666;
 	}
@@ -1433,7 +1471,7 @@ input::-webkit-search-results-decoration {
 .data-list {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	column-gap: 24px;
+	grid-gap: 24px;
 	margin-top: 20px;
 
 	.data-item {
@@ -1525,6 +1563,40 @@ input::-webkit-search-results-decoration {
 			@include font(15);
 			font-weight: 700;
 		}
+	}
+}
+
+.btn-list-more {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 126px;
+	height: 46px;
+	margin: 45px auto 0;
+	background-color: #4e4e4e;
+	border-radius: 23px;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 23px;
+		left: calc(50% - 195px);
+		z-index: -1;
+		width: 390px;
+		height: 53px;
+		@include funcImage("../images/bg-more.png");
+		background-size: 100%;
+	}
+
+	span {
+		padding-right: 32px;
+		@include themeColor(color, color00);
+		@include font(16);
+		font-weight: 600;
+		@include funcImage("../images/icon-arrow-down-circle.png");
+		background-size: 24px;
+		background-position: right center;
 	}
 }
 
