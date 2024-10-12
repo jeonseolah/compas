@@ -156,10 +156,16 @@
         overflow-y: auto;
         display: block;
         width: 100%;
-        border: 1px solid;
+        height: 110px;
+        border: 1px solid #ddd;
+        background-color: #f6f6f6;
+        padding: 26px 36px;
         box-sizing: border-box;
 
         &::placeholder {
+            @include font(18);
+            font-weight: 700;
+            color: #b3b3b3;
             word-break: break-all;
         }
 

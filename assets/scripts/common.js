@@ -35,7 +35,7 @@
 				if($(this).html() == "펼치기"){
 					$(this).html("접기");
 					
-				}else {
+				}else if($(this).html() == "접기") {
 					$(this).html("펼치기");
 				}
 			})
@@ -46,16 +46,16 @@
 		})
 	};
 
-	$.searchToggle = function () {
+	$.btnToggle = function () {
 		$(".search-box-btn .btn-search span").on("click", function (){
 			$(".search-box-btn").toggleClass("active")
 			$(".search-box-wrap").toggleClass("active");
-		})
+		});
 	}
 
 	$(document).ready(function () {
 		$.tab();
 		$.accordion();
-		$.searchToggle();
+		$.btnToggle();
 	});
 })();
