@@ -25,5 +25,8 @@
     "gulp-watch": "^4.0.1",
     "node-sass": "8.0",
     "sass": "^1.63.4"
+  },
+  "dependencies": {
+    "swiper": "^11.1.14"
   }
 }

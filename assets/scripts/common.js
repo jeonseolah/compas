@@ -11,8 +11,8 @@
 					e.preventDefault();
 					$(this).siblings(tab).removeClass("active");
 					$(this).addClass("active");
-					activeTab = $(this).attr("href");
-					$(this).parent(".nav-tabs").siblings(".tab-panel").removeClass("active");
+					activeTab = $(this).find("a").attr("href");
+					tabWrap.find(".tab-panel").removeClass("active");
 					$(activeTab).addClass("active");
 				});
 				return false;

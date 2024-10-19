@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPAS HUB | 대시보드</title>
+    <link rel="stylesheet" href="../assets/styles/reset.css">
+    <link rel="stylesheet" href="../assets/styles/common.css">
+</head>
+
+<body>
+    <div class="ly-wrap">
+        <div class="ly-header">
+            <div class="header-inner">
+                <h1 class="logo"><a href="#">COMPAS HUB</a></h1>
+                <div class="nav">
+                    <div class="nav-item">
+                        <a href="#">갤러리</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">대시보드</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">지표</a>
+                    </div>
+                </div>
+                <div class="util-wrap">
+                    <a href="#" class="link-logo" target="_blank">compas</a>
+                    <div class="search-input-box">
+                        <input type="search" class="input-search" autocomplete="off">
+                        <button class="btn-search">검색</button>
+                    </div>
+                    <!-- 로그인 -->
+                    <div class="login-box" style="display: none;">
+                        <span class="user-info">
+                            <span class="user-img">
+                                <img src="../assets/images/icon-user.png" alt="사용자 기본이미지">
+                            </span>
+                            <span class="user-name">홍길동님</span>
+                        </span>
+                        <button class="btn logout">로그아웃</button>
+                    </div>
+                    <!-- 로그아웃 -->
+                    <div class="login-box" >
+                        <a href="#" class="btn login">로그인</a>
+                        <a href="#" class="btn join">회원가입</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ly-container">
+            <div class="sub-nav">
+                <a href="#">분석개요</a>
+                <a href="#" class="active">데이터전처리</a>
+                <a href="#">분석내용</a>
+                <a href="#">마무리</a>
+                <a href="#">의견</a>
+            </div>
+            <div class="board-view">
+                <div class="board-view-head">
+                    <strong class="board-title">화재발생 예측지점 도출 모델</strong>
+                    <ul>
+                        <li class="user-info">
+                            <span class="img">
+                                <img src="../assets/images/icon-user02.png" alt="홍길동">
+                            </span>
+                            <span class="name">홍길동</span>
+                        </li>
+                        <li class="date">2024-08-28 09:25</li>
+                        <li>
+                            <span class="view-num">9,9999</span>
+                            <span class="copy-num">9,9999</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="board-view-content">
+                    <div class="board-img">
+                        <img src="../assets/images/img-dashboardDetail.png" alt="">
+                        <div class="btn-group">
+                            <button class="btn detail">
+                                <span>상세보기</span>
+                            </button>
+                            <button class="btn popup">
+                                <span>팝업</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 다운로드 -->
+            <div class="section download">
+                <div class="title-wrap">
+                    <h2 class="section-title">다운로드</h2>
+                </div>
+                <div class="download-slide">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <a href="#" class="swiper-slide">
+                                <span class="img">
+                                    <img src="../assets/images/@img-sample2.png" alt="">
+                                </span>
+                                <span class="title">엑셀데이터</span>
+                            </a>
+                            <a href="#" class="swiper-slide">
+                                <span class="img">
+                                    <img src="../assets/images/@img-sample2.png" alt="">
+                                </span>
+                                <span class="title">보고서 차트</span>
+                            </a>
+                            <a href="#" class="swiper-slide">
+                                <span class="img">
+                                    <img src="../assets/images/@img-sample2.png" alt="">
+                                </span>
+                                <span class="title">데이터 소스</span>
+                            </a>
+                            <a href="#" class="swiper-slide">
+                                <span class="img">
+                                    <img src="../assets/images/@img-sample2.png" alt="">
+                                </span>
+                                <span class="title">444</span>
+                            </a>
+                            <a href="#" class="swiper-slide">
+                                <span class="img">
+                                    <img src="../assets/images/@img-sample2.png" alt="">
+                                </span>
+                                <span class="title">555</span>
+                            </a>
+                        </div>
+                        <button class="swiper-button-prev">이전</button>
+                        <button class="swiper-button-next">다음</button>
+                    </div>
+                </div>
+            </div>
+            <!-- 의견 -->
+            <div class="section opinion">
+                <div class="title-wrap">
+                    <h2 class="section-title">의견<em>(24)</em></h2>
+                </div>
+                <div class="opinion-write">
+                    <div class="form">
+                        <textarea class="textarea" placeholder="질문이나 의견을 자유롭게 남겨주세요"></textarea>
+                    </div>
+                    <div class="opinion-write-util">
+                        <button class="btn-register">등록</button>
+                        <span class="text-length">0/1000</span>
+                    </div>
+                </div>
+                <div class="opinion-list">
+                    <div class="opinion-item">
+                        <div class="opinion-item-head">
+                            <span class="user-id">
+                                <span class="img"><img src="../assets/images/icon-user02.png" alt="아이디"></span>
+                                <em>아이디</em>님
+                            </span>
+                            <span class="date">2024-08-27 09:22</span>
+                            <button class="btn-edit">수정</button>
+                            <button class="btn-delete">삭제</button>
+                        </div>
+                        <div class="opinion-item-content">
+                            <p>다양한 도시문제에 대한 분석모델을 제시합니다. COMPAS-Hub의 분석모델을 확장하여 더 나은 솔루션을 제공할 수 있습니다.  다양한 도시문제에 대한 분석모델을 제시합니다.<br>COMPAS-Hub의 분석모델을 확장하여 더 나은 솔루션을 제공할 수 있습니다.</p>
+                            <div class="accordion" data-accordion="accordion-reply2">
+                                <button class="btn-reply btn-accordion" id="accordion-reply2">답글달기</button>
+                                <div class="opinion-write">
+                                    <div class="form">
+                                        <textarea class="textarea" placeholder="답글작성"></textarea>
+                                    </div>
+                                    <div class="opinion-write-util">
+                                        <span class="text-length">0/1000</span>
+                                        <button class="btn-cancel">
+                                            <span>취소</span>
+                                        </button>
+                                        <button class="btn-register">
+                                            <span>등록</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="opinion-item">
+                        <div class="opinion-item-head">
+                            <span class="user-id">
+                                <span class="img"><img src="../assets/images/icon-user02.png" alt="아이디"></span>
+                                <em>아이디</em>님
+                            </span>
+                            <span class="date">2024-08-27 09:22</span>
+                            <button class="btn-edit">수정</button>
+                            <button class="btn-delete">삭제</button>
+                        </div>
+                        <div class="opinion-item-content">
+                            <p><em class="target-id">아이디님</em>다양한 도시문제에 대한 분석모델을 제시합니다. COMPAS-Hub의 분석모델을 확장하여 더 나은 솔루션을 제공할 수 있습니다.  다양한 도시문제에 대한 분석모델을 제시합니다.<br>COMPAS-Hub의 분석모델을 확장하여 더 나은 솔루션을 제공할 수 있습니다.<br>세줄 말줄임세줄 말줄임세줄 말줄임세줄 말줄임세줄 말줄임세줄 말줄임세줄 말줄임세줄 말줄임세줄 말줄임세줄 말줄임세줄 말줄임세줄 말줄임세줄 말줄임세줄 말줄임세줄 말줄임세줄 말줄임세줄 말줄임세줄 말줄임세줄 말줄임세줄 말줄임세줄 말줄임세줄 말줄임세줄 말줄임세줄 말줄임세줄 말줄임세줄 말줄임세줄 말줄임세줄 말줄임세줄 말줄임세줄 말줄임세줄 말줄임세줄 말줄임세줄 말줄임</p>
+                            <div class="accordion" data-accordion="accordion-reply1">
+                                <button class="btn-reply btn-accordion" id="accordion-reply1">답글달기</button>
+                                <div class="opinion-write">
+                                    <div class="form">
+                                        <textarea class="textarea" placeholder="답글작성"></textarea>
+                                    </div>
+                                    <div class="opinion-write-util">
+                                        <span class="text-length">0/1000</span>
+                                        <button class="btn-cancel">
+                                            <span>취소</span>
+                                        </button>
+                                        <button class="btn-register">
+                                            <span>등록</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ly-footer">
+            <div class="footer-inner">
+                <div class="footer-contents">
+                    <div class="util-menu">
+                        <a href="#">LH소개</a>
+                        <a href="#">이용약관</a>
+                        <a href="#">개인정보보호정책</a>
+                    </div>
+                    <address>
+                        <p>(우) 52852 경상남도 진주시 충의로 19(충무공동) 한국토지주택공사</p>
+                        <p>HelpDesk :070-4855-2071 (운영시간 : 평일 09:00 ~ 18:00) Tel :055-922-3664 Fax :055-922-6479</p>
+                    </address>
+                </div>
+                <div class="footer-familysite">
+                    <a href="#" class="btn lh">LH 한국토지주택공사</a>
+                    <a href="#" class="btn compas">COMPAS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/scripts/lib/jquery.js"></script>
+    <script src="../assets/scripts/lib/swiper.js"></script>
+    <script src="../assets/scripts/common.js"></script>
+
+    <script>
+        var swiper = new Swiper(".download-slide .swiper", {
+            slidesPerView: 4,
+            spaceBetween: 24,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            }
+        });
+    </script>
+</body>
+
+</html>
