@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPAS HUB | 지표</title>
+    <link rel="stylesheet" href="../assets/styles/reset.css">
+    <link rel="stylesheet" href="../assets/styles/common.css">
+</head>
+
+<body>
+    <div class="ly-wrap">
+        <div class="ly-header">
+            <div class="header-inner">
+                <h1 class="logo"><a href="#">COMPAS HUB</a></h1>
+                <div class="nav">
+                    <div class="nav-item">
+                        <a href="#">갤러리</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">대시보드</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">지표</a>
+                    </div>
+                </div>
+                <div class="util-wrap">
+                    <a href="#" class="link-logo" target="_blank">compas</a>
+                    <div class="search-input-box">
+                        <input type="search" class="input-search" autocomplete="off">
+                        <button class="btn-search">검색</button>
+                    </div>
+                    <!-- 로그인 -->
+                    <div class="login-box" style="display: none;">
+                        <span class="user-info">
+                            <span class="user-img">
+                                <img src="../assets/images/icon-user.png" alt="사용자 기본이미지">
+                            </span>
+                            <span class="user-name">홍길동님</span>
+                        </span>
+                        <button class="btn logout">로그아웃</button>
+                    </div>
+                    <!-- 로그아웃 -->
+                    <div class="login-box" >
+                        <a href="#" class="btn login">로그인</a>
+                        <a href="#" class="btn join">회원가입</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ly-container">
+            <div class="board-view">
+                <div class="board-view-head">
+                    <strong class="board-title">활동인구분포 <span class="label ty1">인구</span></strong>
+                    <ul>
+                        
+                        <li class="date">2024-08-28</li>
+                        <li>
+                            <span class="view-num">9,9999</span>
+                            <span class="copy-num">9,9999</span>
+                        </li>
+                    </ul>
+                    <div class="board-util">
+                        <span class="bookmark-indicator">관심지표</span>
+                        <button class="btn-download">다운로드</button>
+                    </div>
+                </div>
+            </div>
+            <!-- 정의 -->
+            <div class="section txt-box">
+                <dl>
+                    <dt>정의</dt>
+                    <dd><p class="txt">활동인구는 도시서비스의 수요를 통신데이터를 기반 실활동인구로 추정하기 위한 지표로, 인구ㆍ시간의 개념을 활용한 시간대별 연평균 통신데이터 집계인구의 24시간 평균</p></dd>
+                </dl>
+            </div>
+            <!-- 그래프 -->
+            <div class="section graph">
+                <div class="title-wrap">
+                    <h2 class="section-title">그래프</h2>
+                    <div class="util">
+                        <div class="form">
+                            <select class="select">
+                                <option>전국</option>
+                            </select>
+                        </div>
+                        <button class="btn inquiry">조회</button>
+                    </div>
+                </div>
+                <!-- 그래프 영역 -->
+                <div class="graph-wrap">
+                    <img src="../assets/images/@img-sample3.png" alt="">
+                </div>
+            </div>
+            <!-- 통계표 -->
+            <div class="section statistics">
+                <div class="title-wrap">
+                    <h2 class="section-title">통계표</h2>
+                    <div class="util">
+                        <div class="form">
+                            <select class="select">
+                                <option>전국</option>
+                            </select>
+                        </div>
+                        <button class="btn inquiry">조회</button>
+                        <button class="btn order">행렬전환</button>
+                    </div>
+                </div>
+                <div class="table-wrap">
+                    <table class="table">
+                        <colgroup>
+                            <col style="width: 250px;">
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">활동인구분포</th>
+                                <th scope="col">00~02</th>
+                                <th scope="col">02~04</th>
+                                <th scope="col">04~06</th>
+                                <th scope="col">06~08</th>
+                                <th scope="col">08~10</th>
+                                <th scope="col">10~12</th>
+                                <th scope="col">12~14</th>
+                                <th scope="col">14~16</th>
+                                <th scope="col">16~18</th>
+                                <th scope="col">18~20</th>
+                                <th scope="col">20~22</th>
+                                <th scope="col">22~24</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>활동인구 밀도 (인/헥타르)</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                            </tr>
+                            <tr>
+                                <td>심야활동인구 밀도  (인/헥타르)</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                            </tr>
+                            <tr>
+                                <td>주간활동인구 밀도  (인/헥타르)</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                            </tr>
+                            <tr>
+                                <td>야간활동인구 밀도  (인/헥타르)</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                            </tr>
+                            <tr>
+                                <td>총 생활인구</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                            </tr>
+                            <tr>
+                                <td>내국인 생활인구</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                            </tr>
+                            <tr>
+                                <td>장기체류 외국인 생활인구</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                            </tr>
+                            <tr>
+                                <td>단기체류 외국인 생활인구</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                            </tr>
+                            <tr>
+                                <td>KT 생활인구 9세이하</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                            </tr>
+                            <tr>
+                                <td>KT 생활인구 10~19세</td> 
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                            </tr>
+                            <tr>
+                                <td>KT 생활인구 20~29세</td> 
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                            </tr>
+                            <tr>
+                                <td>KT 생활인구 30~39세</td> 
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                            </tr>
+                            <tr>
+                                <td>KT 생활인구 40~49세</td> 
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                            </tr>
+                            <tr>
+                                <td>KT 생활인구 50~59세</td> 
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                            </tr>
+                            <tr>
+                                <td>KT 생활인구 60~69세</td> 
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                            </tr>
+                            <tr>
+                                <td>KT 생활인구 70~79세</td> 
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                            </tr>
+                            <tr>
+                                <td>KT 생활인구 80세</td> 
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                                <td>1234</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- 해설 -->
+            <div class="section txt-box">
+                <dl>
+                    <dt>해설</dt>
+                    <dd>
+                        <p class="txt">도시서비스의 수요를 통신데이터를 기반 실활동인구로 추정하기 위한 지표로서 인구ㆍ시간의 개념을 활용한<br>시간대별 연평균 통신데이터 집계인구의 24시간 평균</p>
+                        <ul>
+                            <li>- 심야활동인구 (00시에서 06시까지 6시간 평균)</li>
+                            <li>- 심야활동인구 (07시에서 18시까지 12시간 평균)</li>
+                            <li>- 심야활동인구 (19시에서 24시까지 6시간 평균)</li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+            <!-- 보고서, 지도, 대시보드 -->
+            <div class="section analytics">
+                <div class="tab-container">
+                    <ul class="nav-tabs">
+                        <li class="tab"><a href="#tab1" >보고서</a></li>
+                        <li class="tab active"><a href="#tab2" >지도</a></li>
+                        <li class="tab"><a href="#tab3" >대시보드</a></li>
+                    </ul>
+                    <div id="tab1" class="tab-panel">
+                        보고서
+                    </div>
+                    <div id="tab2" class="tab-panel active">
+                        <img src="../assets/images/@img-sample4.png" alt="">
+                    </div>
+                    <div id="tab3" class="tab-panel">
+                        대시보드
+                    </div>
+                </div>
+            </div>
+            <!-- 관련용어 -->
+            <div class="section txt-box">
+                <dl>
+                    <dt>관련용어</dt>
+                    <dd>
+                        <dl>
+                            <dt>물가</dt>
+                            <dd>시장에서 거래되는 개별 상품의 가격을 경제생활에서 차지하는 중요도 등을 고려하여 평균한 종합적인 가격수준을 말함</dd>
+                            <dt>물가지수</dt>
+                            <dd>물가의 움직임을 알기 쉽게 지수화한 경제지표임.</dd>
+                            <dt>생활물가지수</dt>
+                            <dd>소비자물가지수의 보조지수로 소비자물가 조사대상품목 중에서 일반 소비자들이 자주 구입하는 기본 생필품 144개(2020=100)를 선정하여 이들 품목의 평균적인 가격변동을 나타냄.</dd>
+                            <dt>소비자물가지수</dt>
+                            <dd>대표적인 인플레이션 지표로 소비자가 일상 소비생활에서 구입하는 상품과 서비스의 가격 변동을 조사함으로써 도시가계의 평균적인 생계비나 화폐의 구매력 변동을 측정하는 물가지수를 말함.</dd>
+                            <dt>지출목적별분류지수</dt>
+                            <dd>소비지출의 목적에 따라 분류하여 작성한 지수(12개 대분류)</dd>
+                        </dl>
+                    </dd>
+                </dl>
+            </div>
+            <!-- 출처 -->
+            <div class="section txt-box">
+                <dl>
+                    <dt>출처</dt>
+                    <dd>
+                        <dl>
+                            <dt>출처 : 서울대학교 환경대학원</dt>
+                            <dd>※ "활동인구 지표는 국토교통부의 지원으로 수행된 "빅데이터 기반 인공지능 도시계획 기술 개발사업"의 연구 결과입니다. (과제번호 KAIA001434041G0003186)</dd>
+                        </dl>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div class="ly-footer">
+            <div class="footer-inner">
+                <div class="footer-contents">
+                    <div class="util-menu">
+                        <a href="#">LH소개</a>
+                        <a href="#">이용약관</a>
+                        <a href="#">개인정보보호정책</a>
+                    </div>
+                    <address>
+                        <p>(우) 52852 경상남도 진주시 충의로 19(충무공동) 한국토지주택공사</p>
+                        <p>HelpDesk :070-4855-2071 (운영시간 : 평일 09:00 ~ 18:00) Tel :055-922-3664 Fax :055-922-6479</p>
+                    </address>
+                </div>
+                <div class="footer-familysite">
+                    <a href="#" class="btn lh">LH 한국토지주택공사</a>
+                    <a href="#" class="btn compas">COMPAS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/scripts/lib/jquery.js"></script>
+    <script src="../assets/scripts/common.js"></script>
+</body>
+
+</html>

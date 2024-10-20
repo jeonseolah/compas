@@ -3,6 +3,7 @@
 .form {
     position: relative;
     @extend %textarea;
+    @extend %SelectDefault;
 }
 
 .switch {
