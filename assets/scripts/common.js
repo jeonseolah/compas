@@ -51,6 +51,10 @@
 			$(".search-box-btn").toggleClass("active")
 			$(".search-box-wrap").toggleClass("active");
 		});
+
+		$(".bookmark-indicator").on("click", function() {
+			$(this).toggleClass("active");
+		});
 	}
 
 	$(document).ready(function () {

@@ -2525,6 +2525,9 @@ input::-webkit-search-results-decoration {
   background-size: 18px;
   background-position: right 15px center;
 }
+.board-view .board-view-content .board-img .btn.detail:hover {
+  background-color: #1f764d;
+}
 .board-view .board-view-content .board-img .btn.popup {
   background-color: #45b1bf;
   color: #ffffff;
@@ -2532,6 +2535,9 @@ input::-webkit-search-results-decoration {
   background-repeat: no-repeat;
   background-size: 18px;
   background-position: right 15px center;
+}
+.board-view .board-view-content .board-img .btn.popup:hover {
+  background-color: #219eaf;
 }
 .board-view .board-view-content img {
   display: block;
@@ -2550,12 +2556,16 @@ input::-webkit-search-results-decoration {
 }
 .board-view .bookmark-indicator {
   padding-left: 30px;
-  background-image: url("../images/icon-bookmark.png");
+  background-image: url("../images/icon-bookmark-off.png");
   background-repeat: no-repeat;
   background-position: 0 center;
-  background-size: 19px;
+  background-size: 21px;
   font-weight: 600;
   color: #666;
+}
+.board-view .bookmark-indicator.active {
+  background-image: url("../images/icon-bookmark-on.png");
+  background-repeat: no-repeat;
 }
 .board-view .btn-download {
   padding: 7px 45px 7px 15px;
@@ -2567,6 +2577,10 @@ input::-webkit-search-results-decoration {
   font-weight: 600;
   background-color: #333;
   color: #ffffff;
+}
+.board-view .btn-download:hover {
+  background-color: #000;
+  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.09);
 }
 
 .graph {
@@ -2687,6 +2701,11 @@ input::-webkit-search-results-decoration {
   color: #23456f;
   font-size: 14px;
   line-height: 21px;
+}
+.title-wrap .util .btn:hover {
+  border-color: #000;
+  color: #000;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 .title-wrap .util .btn.inquiry {
   background-color: #e2e6ec;

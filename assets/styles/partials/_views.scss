@@ -2299,6 +2299,10 @@ input::-webkit-search-results-decoration {
 					@include funcImage("../images/icon-search-wht.png");
 					background-size: 18px;
 					background-position: right 15px center;
+
+					&:hover {
+						background-color: #1f764d;
+					}
 				}
 
 				&.popup {
@@ -2307,6 +2311,10 @@ input::-webkit-search-results-decoration {
 					@include funcImage("../images/icon-popup.png");
 					background-size: 18px;
 					background-position: right 15px center;
+
+					&:hover {
+						background-color: #219eaf;
+					}
 				}
 			}
 		}
@@ -2331,11 +2339,15 @@ input::-webkit-search-results-decoration {
 
 	.bookmark-indicator {
 		padding-left: 30px;
-		@include funcImage("../images/icon-bookmark.png");
+		@include funcImage("../images/icon-bookmark-off.png");
 		background-position: 0 center;
-		background-size: 19px;
+		background-size: 21px;
 		font-weight: 600;
 		color: #666;
+
+		&.active {
+			@include funcImage("../images/icon-bookmark-on.png");
+		}
 	}
 
 	.btn-download {
@@ -2347,6 +2359,12 @@ input::-webkit-search-results-decoration {
 		font-weight: 600;
 		background-color: #333;
 		@include themeColor(color, color00);
+
+		&:hover {
+			background-color: #000;
+			box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, .09);
+
+		}
 	}
 }
 
@@ -2481,6 +2499,12 @@ input::-webkit-search-results-decoration {
 			font-weight: 500;
 			color: #23456f;
 			@include font(14);
+
+			&:hover {
+				border-color: #000;
+				color: #000;
+				box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .15);
+			}
 
 			&.inquiry {
 				background-color: #e2e6ec;
