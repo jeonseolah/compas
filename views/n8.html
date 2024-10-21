@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPAS HUB | 데이터</title>
+    <link rel="stylesheet" href="../assets/styles/reset.css">
+    <link rel="stylesheet" href="../assets/styles/common.css">
+</head>
+
+<body>
+    <div class="ly-wrap">
+        <div class="ly-header">
+            <div class="header-inner">
+                <h1 class="logo"><a href="#">COMPAS HUB</a></h1>
+                <div class="nav">
+                    <div class="nav-item">
+                        <a href="#">갤러리</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">대시보드</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">지표</a>
+                    </div>
+                </div>
+                <div class="util-wrap">
+                    <a href="#" class="link-logo" target="_blank">compas</a>
+                    <div class="search-input-box">
+                        <input type="search" class="input-search" autocomplete="off">
+                        <button class="btn-search">검색</button>
+                    </div>
+                    <!-- 로그인 -->
+                    <div class="login-box" style="display: none;">
+                        <span class="user-info">
+                            <span class="user-img">
+                                <img src="../assets/images/icon-user.png" alt="사용자 기본이미지">
+                            </span>
+                            <span class="user-name">홍길동님</span>
+                        </span>
+                        <button class="btn logout">로그아웃</button>
+                    </div>
+                    <!-- 로그아웃 -->
+                    <div class="login-box" >
+                        <a href="#" class="btn login">로그인</a>
+                        <a href="#" class="btn join">회원가입</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ly-container">
+            <div class="data-detail">
+                <div class="map-wrap">
+                    <div class="map-inner">
+                        <div class="btn-group">
+                            <button class="btn map"></button>
+                            <button class="btn mountain active"></button>
+                            <button class="btn drone"></button>
+                        </div>
+                        <div class="zoom-in-out">
+                            <button class="btn zoon-in active"></button>
+                            <button class="btn zoon-out"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="align-left">
+                    <div class="data-slide">
+                        <div class="swiper">
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="data-slide-head">
+                                        <strong class="title ty1">세종시_거주인구</strong>
+                                        <div class="util">
+                                            <span class="label ty1">인구</span>
+                                            <span class="label ty2">주소</span>
+                                        </div>
+                                    </div>
+                                    <dl class="data-slide-content">
+                                        <dt>설명</dt>
+                                        <dd>경기도 고양시000 도로명 주소</dd>
+                                        <dt>키워드</dt>
+                                        <dd><span>#도로<span>#주소</dd>
+                                        <dt>등록일</dt>
+                                        <dd>2024-08-11</dd>
+                                        <dt>출처</dt>
+                                        <dd>도로명 주소</dd>
+                                        <dt>종류</dt>
+                                        <dd>공간</dd>
+                                        <dt>레코드수</dt>
+                                        <dd>100건</dd>
+                                        <dt>다운로드 수</dt>
+                                        <dd>100건</dd>
+                                    </dl>
+                                    <button class="btn-download">다운로드</button>
+                                </div>
+                                <div class="swiper-slide">
+                                    slide2
+                                </div>
+                                <div class="swiper-slide">
+                                    slide3
+                                </div>
+                            </div>
+                        </div>
+                        <button class="swiper-button-prev">이전</button>
+                        <button class="swiper-button-next">다음</button>
+                    </div>
+                </div>
+                <div class="align-right">
+                    <div class="tab-container">
+                        <ul class="nav-tabs">
+                            <li class="tab "><a href="#tab1">데이터목록</a></li>
+                            <li class="tab active"><a href="#tab2">관련대시보드</a></li>
+                        </ul>
+                        <!-- 데이터목록 -->
+                        <div id="tab1" class="tab-panel">
+                        </div>
+                        <!-- 관련대시보드 -->
+                        <div id="tab2" class="tab-panel active">
+                            <div class="dashboard-scrolly">
+                                <ul class="dashboard-list">
+                                    <li class="dashboard-item">
+                                        <a href="#">
+                                            <span class="img"><img src="../assets/images/@img-sample1.png" alt="영등포 CCTV"></span>
+                                        </a>
+                                        <div class="content">
+                                            <a href="#" class="title">영등포 CCTV</a>
+                                            <div class="data-util multi">
+                                                <span class="date">2024-08-28</span>
+                                                <span class="view-num">9,999</span>
+                                                <span class="copy-num">2</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="dashboard-item">
+                                        <a href="#">
+                                            <span class="img"><img src="../assets/images/@img-sample1.png" alt="영등포 CCTV"></span>
+                                        </a>
+                                        <div class="content">
+                                            <a href="#" class="title">영등포 CCTV</a>
+                                            <div class="data-util multi">
+                                                <span class="date">2024-08-28</span>
+                                                <span class="view-num">9,999</span>
+                                                <span class="copy-num">2</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="dashboard-item">
+                                        <a href="#">
+                                            <span class="img"><img src="../assets/images/@img-sample1.png" alt="영등포 CCTV"></span>
+                                        </a>
+                                        <div class="content">
+                                            <a href="#" class="title">영등포 CCTV</a>
+                                            <div class="data-util multi">
+                                                <span class="date">2024-08-28</span>
+                                                <span class="view-num">9,999</span>
+                                                <span class="copy-num">2</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <button class="btn-list-more">
+                                    <span>더보기</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="align-center" style="display: none;">
+                    <button class="btn-layer bottom-sheet">속성보기</button>
+                    <div class="layer-bottom-sheet">
+                        <div class="table-wrap">
+                            <div class="table-wrap">
+                                <table class="table">
+                                    <colgroup>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">번호</th>
+                                            <th scope="col">도로명코드</th>
+                                            <th scope="col">도로명</th>
+                                            <th scope="col">시/도</th>
+                                            <th scope="col">시/군/구</th>
+                                            <th scope="col">읍/면/동</th>
+                                            <th scope="col">비고</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>번호</td>
+                                            <td>도로명코드</td>
+                                            <td>도로명</td>
+                                            <td>시/도</td>
+                                            <td>시/군/구</td>
+                                            <td>읍/면/동</td>
+                                            <td>비고</td>
+                                        </tr>
+                                        <tr>
+                                            <td>번호</td>
+                                            <td>도로명코드</td>
+                                            <td>도로명</td>
+                                            <td>시/도</td>
+                                            <td>시/군/구</td>
+                                            <td>읍/면/동</td>
+                                            <td>비고</td>
+                                        </tr>
+                                        <tr>
+                                            <td>번호</td>
+                                            <td>도로명코드</td>
+                                            <td>도로명</td>
+                                            <td>시/도</td>
+                                            <td>시/군/구</td>
+                                            <td>읍/면/동</td>
+                                            <td>비고</td>
+                                        </tr>
+                                        <tr>
+                                            <td>번호</td>
+                                            <td>도로명코드</td>
+                                            <td>도로명</td>
+                                            <td>시/도</td>
+                                            <td>시/군/구</td>
+                                            <td>읍/면/동</td>
+                                            <td>비고</td>
+                                        </tr>
+                                        <tr>
+                                            <td>번호</td>
+                                            <td>도로명코드</td>
+                                            <td>도로명</td>
+                                            <td>시/도</td>
+                                            <td>시/군/구</td>
+                                            <td>읍/면/동</td>
+                                            <td>비고</td>
+                                        </tr>
+                                        <tr>
+                                            <td>번호</td>
+                                            <td>도로명코드</td>
+                                            <td>도로명</td>
+                                            <td>시/도</td>
+                                            <td>시/군/구</td>
+                                            <td>읍/면/동</td>
+                                            <td>비고</td>
+                                        </tr>
+                                        <tr>
+                                            <td>번호</td>
+                                            <td>도로명코드</td>
+                                            <td>도로명</td>
+                                            <td>시/도</td>
+                                            <td>시/군/구</td>
+                                            <td>읍/면/동</td>
+                                            <td>비고</td>
+                                        </tr>
+                                        <tr>
+                                            <td>번호</td>
+                                            <td>도로명코드</td>
+                                            <td>도로명</td>
+                                            <td>시/도</td>
+                                            <td>시/군/구</td>
+                                            <td>읍/면/동</td>
+                                            <td>비고</td>
+                                        </tr>
+                                        <tr>
+                                            <td>번호</td>
+                                            <td>도로명코드</td>
+                                            <td>도로명</td>
+                                            <td>시/도</td>
+                                            <td>시/군/구</td>
+                                            <td>읍/면/동</td>
+                                            <td>비고</td>
+                                        </tr>
+                                        <tr>
+                                            <td>번호</td>
+                                            <td>도로명코드</td>
+                                            <td>도로명</td>
+                                            <td>시/도</td>
+                                            <td>시/군/구</td>
+                                            <td>읍/면/동</td>
+                                            <td>비고</td>
+                                        </tr>
+                                        <tr>
+                                            <td>번호</td>
+                                            <td>도로명코드</td>
+                                            <td>도로명</td>
+                                            <td>시/도</td>
+                                            <td>시/군/구</td>
+                                            <td>읍/면/동</td>
+                                            <td>비고</td>
+                                        </tr>
+                                        <tr>
+                                            <td>번호</td>
+                                            <td>도로명코드</td>
+                                            <td>도로명</td>
+                                            <td>시/도</td>
+                                            <td>시/군/구</td>
+                                            <td>읍/면/동</td>
+                                            <td>비고</td>
+                                        </tr>
+                                        <tr>
+                                            <td>번호</td>
+                                            <td>도로명코드</td>
+                                            <td>도로명</td>
+                                            <td>시/도</td>
+                                            <td>시/군/구</td>
+                                            <td>읍/면/동</td>
+                                            <td>비고</td>
+                                        </tr>
+                                        <tr>
+                                            <td>번호</td>
+                                            <td>도로명코드</td>
+                                            <td>도로명</td>
+                                            <td>시/도</td>
+                                            <td>시/군/구</td>
+                                            <td>읍/면/동</td>
+                                            <td>비고</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <button class="btn-list-more">
+                            <span>더보기</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ly-footer" style="display: none;">
+            <div class="footer-inner">
+                <div class="footer-contents">
+                    <div class="util-menu">
+                        <a href="#">LH소개</a>
+                        <a href="#">이용약관</a>
+                        <a href="#">개인정보보호정책</a>
+                    </div>
+                    <address>
+                        <p>(우) 52852 경상남도 진주시 충의로 19(충무공동) 한국토지주택공사</p>
+                        <p>HelpDesk :070-4855-2071 (운영시간 : 평일 09:00 ~ 18:00) Tel :055-922-3664 Fax :055-922-6479</p>
+                    </address>
+                </div>
+                <div class="footer-familysite">
+                    <a href="#" class="btn lh">LH 한국토지주택공사</a>
+                    <a href="#" class="btn compas">COMPAS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/scripts/lib/jquery.js"></script>
+    <script src="../assets/scripts/lib/swiper.js"></script>
+    <script src="../assets/scripts/common.js"></script>
+    <script>
+        var swiper = new Swiper(".data-slide .swiper", {
+            slidesPerView: 1,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -17,7 +17,7 @@
 				});
 				return false;
 			});
-		}
+		};
 	};
 
 	// 아코디언 
@@ -55,7 +55,7 @@
 		$(".bookmark-indicator").on("click", function() {
 			$(this).toggleClass("active");
 		});
-	}
+	} 
 
 	$(document).ready(function () {
 		$.tab();
