@@ -2991,6 +2991,7 @@ input::-webkit-search-results-decoration {
   font-weight: 400;
   border-radius: 10px;
   color: #fff;
+  line-height: 21px;
 }
 .data-detail .data-slide-head .util .label.ty1 {
   background-color: #e28d8d;
