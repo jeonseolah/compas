@@ -14,6 +14,10 @@
 					activeTab = $(this).find("a").attr("href");
 					tabWrap.find(".tab-panel").removeClass("active");
 					$(activeTab).addClass("active");
+
+					if($(".data-detail").length) {
+						$(".data-detail").removeClass("open-layer");
+					}
 				});
 				return false;
 			});
