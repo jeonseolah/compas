@@ -20,40 +20,31 @@
 %CheckboxDefault {
     input[type="checkbox"] {
         & + label {
+            overflow: hidden;
+            display: block;
             position: relative;
             cursor: pointer;
-            @include font(16);
-
-            &::before {
-                content: "";
-                position: absolute;
-                top: 50%;
-                left: 0;
-                display: block;
-                border: 1px solid;
-                width: 20px;
-                height: 20px;
-                box-sizing: border-box;
-                transform: translateY(-50%);
-            }
+            border: 1px solid #e7e7e7;
+            border-radius: 2px;
+            width: 20px;
+            height: 20px;
+            box-sizing: border-box;
         }
 
         &:checked {
             & + label {
+                border-color: #457f5f;
+                background-color: #457f5f;
+
                 &::after {
-                    content: "\e92b";
-                    display: block;
+                    content: "";
                     position: absolute;
                     top: 50%;
-                    left: 0;
-                    width: 20px;
-                    height: 20px;
-                    @include themeColor(color, color00);
-                    font-weight: bold;
-                    font-family: "Icomoon";
-                    transform: translateY(-50%);
-                    text-align: center;
-                    line-height: 20px;
+                    left: 50%;
+                    width: 14px;
+                    height: 14px;
+                    @include funcImage("../images/icon-check.png");
+                    transform: translate(-50%, -50%);
                 }
             }
 
@@ -214,10 +205,17 @@
 
         tbody {
 
-            tr:last-child {
+            tr {
 
-                td {
-                    border-bottom: 0;
+                &:first-child:nth-last-child(1) {
+                    border-bottom: 1px solid #d2d9e2;
+                }
+
+                &:last-child {
+
+                    td {
+                        border-bottom: 0;
+                    }
                 }
             }
 
