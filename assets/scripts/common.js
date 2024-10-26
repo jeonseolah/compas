@@ -12,7 +12,7 @@
 					$(this).siblings(tab).removeClass("active");
 					$(this).addClass("active");
 					activeTab = $(this).find("a").attr("href");
-					tabWrap.find(".tab-panel").removeClass("active");
+					$(this).parent().siblings(".tab-panel").removeClass("active");
 					$(activeTab).addClass("active");
 
 					if($(".data-detail").length) {
