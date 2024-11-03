@@ -1,0 +1,442 @@
+.nb-notebook {
+    line-height: 1.5;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+}
+
+.nb-stdout,
+.nb-stderr {
+    white-space: pre-wrap;
+    margin: 1em 0;
+    padding: 0.1em 0.5em;
+}
+
+.nb-stderr {
+    background-color: #FAA;
+}
+
+.nb-cell+.nb-cell {
+    margin-top: 1.0em;
+}
+
+.nb-input {
+    font-size: 14px;
+    color: #000;
+    border: solid 1px #ccc;
+    background-color: #f5f5f5;
+    padding: 10px;
+    line-height: 20px;
+}
+
+.nb-input code {
+    white-space: pre;
+}
+
+
+/* .nb-output table {
+    border: 1px solid #000;
+    border-collapse: collapse;
+} */
+
+.nb-output th {
+    font-weight: bold;
+}
+
+
+/* .nb-output th,
+.nb-output td {
+    border: 1px solid #000;
+    padding: 0.25em;
+    text-align: left;
+    vertical-align: middle;
+    border-collapse: collapse;
+} */
+
+.nb-cell {
+    position: relative;
+}
+
+.nb-raw-cell {
+    white-space: pre-wrap;
+    background-color: #f5f2f0;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    padding: 1em;
+    margin: .5em 0;
+}
+
+.nb-output {
+    margin: 10px 0px;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: monospace;
+    min-height: 1em;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.nb-output img {
+    max-width: 100%;
+}
+
+.nb-output:before,
+.nb-input:before {
+    position: absolute;
+    font-size: 12px;
+    font-family: monospace;
+    color: #999;
+    left: -7.5em;
+    width: 7em;
+    text-align: right;
+}
+
+.nb-input:before {
+    content: "In [" attr(data-prompt-number) "]:";
+}
+
+
+/* .nb-output:before {
+    content: "Out [" attr(data-prompt-number) "]:";
+} */
+
+
+/** Fix pandas dataframe formatting**/
+
+div[style="max-height:1000px;max-width:1500px;overflow:auto;"] {
+    max-height: none !important;
+}
+
+.list-inline>li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+
+/**************/
+
+dl {
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+dt,
+dd {
+    line-height: 1.42857143;
+}
+
+dt {
+    font-weight: 700;
+}
+
+dd {
+    margin-left: 0;
+}
+
+@media (min-width: 541px) {
+    .dl-horizontal dt {
+        float: left;
+        width: 160px;
+        clear: left;
+        text-align: right;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .dl-horizontal dd {
+        margin-left: 180px;
+    }
+}
+
+.nb-output caption {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #777777;
+    text-align: left;
+}
+
+.nb-output table {
+    border: 1px solid #000;
+    border-collapse: collapse;
+    margin-right: auto;
+    border: none;
+    border-collapse: collapse;
+    border-spacing: 0;
+    color: black;
+    font-size: 12px;
+    table-layout: fixed;
+}
+
+.nb-output thead {
+    border-bottom: 1px solid black;
+    vertical-align: bottom;
+}
+
+.nb-output .dataframe thead th {
+    text-align: left;
+}
+
+
+/* .nb-output th {
+    border-bottom: 1px solid #000;
+} */
+
+.nb-output tr,
+.nb-output td {
+    border: none;
+}
+
+.nb-output tr,
+.nb-output th,
+.nb-output td {
+    text-align: left;
+    vertical-align: middle;
+    padding: 0.5em 0.5em;
+    line-height: normal;
+    white-space: normal;
+    max-width: none;
+    word-break: break-all;
+}
+
+.nb-output th {
+    font-weight: bold;
+}
+
+.nb-output tbody tr:nth-child(odd) {
+    background: #f5f5f5;
+}
+
+.nb-output tbody tr:hover {
+    background: rgba(66, 165, 245, 0.2);
+}
+
+.nb-output *+table {
+    margin-top: 1em;
+}
+
+.nb-output p {
+    text-align: left;
+}
+
+.nb-output *+p {
+    margin-top: 1em;
+}
+
+.nb-output img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nb-output *+img {
+    margin-top: 1em;
+}
+
+.nb-output img,
+.nb-output svg {
+    max-width: 100%;
+    height: auto;
+}
+
+.nb-output img.unconfined,
+.nb-output svg.unconfined {
+    max-width: none;
+}
+
+.nb-output .alert {
+    margin-bottom: initial;
+}
+
+.nb-output *+.alert {
+    margin-top: 1em;
+}
+
+[dir="rtl"] .nb-output p {
+    text-align: right;
+}
+
+.nb-output caption {
+    caption-side: top;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #777777;
+    text-align: left;
+    overflow: hidden;
+    width: 100%;
+    height: 30px;
+    font-size: 12px;
+    text-indent: unset;
+}
+
+.nb-output ul:not(.list-inline),
+.nb-output ol:not(.list-inline) {
+    padding-left: 2em;
+}
+
+.nb-output ul {
+    list-style: disc;
+}
+
+.nb-output ul ul {
+    list-style: square;
+    margin-top: 0;
+}
+
+.nb-output ul ul ul {
+    list-style: circle;
+}
+
+.nb-output ol {
+    list-style: decimal;
+}
+
+.nb-output ol li {
+    list-style: decimal;
+}
+
+.nb-output ol ol {
+    list-style: upper-alpha;
+    margin-top: 0;
+}
+
+.nb-output ol ol ol {
+    list-style: lower-alpha;
+}
+
+.nb-output ol ol ol ol {
+    list-style: lower-roman;
+}
+
+.nb-output ol ol ol ol ol {
+    list-style: decimal;
+}
+
+.nb-output *+ul {
+    margin-top: 1em;
+}
+
+.nb-output *+ol {
+    margin-top: 1em;
+}
+
+.nb-markdown-cell {
+    font-family: 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
+}
+
+.nb-markdown-cell h1 {
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 10px 0px;
+}
+
+.nb-markdown-cell h2 {
+    display: block;
+    font-size: 26px;
+    font-weight: 700;
+    margin: 10px 0px;
+}
+
+.nb-markdown-cell h3 {
+    display: block;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 10px 0px;
+}
+
+.nb-markdown-cell h4 {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 10px 0px;
+}
+
+.nb-markdown-cell code {
+    font-size: 14px;
+}
+
+.nb-markdown-cell p {
+    font-size: 14px;
+    padding: 10px 0px;
+    ;
+}
+
+.nb-markdown-cell li {
+    font-size: 14px;
+    list-style: disc;
+}
+
+.nb-markdown-cell table {
+    margin-top: 1em;
+    margin-left: 10px;
+    margin-right: auto;
+    border: none;
+    border-collapse: collapse;
+    border-spacing: 0;
+    color: black;
+    font-size: 12px;
+    table-layout: fixed;
+}
+
+.nb-markdown-cell thead {
+    border-bottom: 1px solid black;
+    vertical-align: bottom;
+}
+
+.nb-markdown-cell th {
+    font-weight: bold;
+}
+
+.nb-markdown-cell tr,
+.nb-markdown-cell th,
+.nb-markdown-cell td {
+    max-width: none;
+    text-align: right;
+    vertical-align: middle;
+    padding: 0.5em 0.5em;
+    line-height: normal;
+    white-space: normal;
+    max-width: none;
+    border: none;
+}
+
+.nb-markdown-cell tbody tr:nth-child(odd) {
+    background: #f5f5f5;
+}
+
+.nb-markdown-cell strong {
+    font-weight: 900;
+}
+
+.nb-markdown-cell em {
+    font-style: italic;
+}
+
+.nb-markdown-cell blockquote {
+    margin: 1em 2em;
+    padding: 1px 18px;
+    font-size: inherit;
+    border-left: 5px solid #eeeeee;
+}
+
+.nb-markdown-cell :link {
+    text-decoration: underline;
+}
+
+.katex-display {
+    display: block;
+    margin: 1em 0;
+    text-align: left;
+}
+
+.katex-display>.katex {
+    display: block;
+    text-align: left;
+    white-space: nowrap;
+}
+
+
+@media screen and (max-width: 400px) {
+	.nb-input:before {
+	    position: inherit;
+	    
+	}
+}

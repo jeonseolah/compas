@@ -1,0 +1,934 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="COMPAS">
+    <meta name="Keywords" content="COMPAS">
+    <meta name="Description" content="COMPAS">
+    <meta property="og:title" content="COMPAS">
+    <meta property="og:description" content="COMPAS">
+    <meta property="og:image" content="/images/common/head_logo.png">
+    <!--개발배포시 하단 주석처리. 운영배포시 주석해제-->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta property="og:url" content="url">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> -->
+    <meta name="viewport" content="width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.10/webfont.js"></script>
+    <title>COMPAS</title>
+
+    <link rel="stylesheet" type="text/css" href="js/vendor/bootstrap-4.4.1/css/bootstrap.css">
+    <!-- <link rel="stylesheet" type="text/css" href="js/vendor/fontawesome-5.12.0/css/all.css"> -->
+
+    <!-- 공통 css -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css?20241026203843">
+    <link rel="stylesheet" type="text/css" href="css/board.css?20241026203843">
+    <!-- <link rel="stylesheet" type="text/css" href="css/common.css?20241026203843"> -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <!-- 서브 css -->
+    <link rel="stylesheet" type="text/css" href="css/sub.css?20241026203843">
+    <link rel="stylesheet" type="text/css" href="css/style.css?20241026203843">
+    <link rel="stylesheet" type="text/css" href="css/vendor.css?20241026203843">
+
+    <!-- notebook css -->
+    <link rel="stylesheet" type="text/css" href="js/vendor/notebook/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="js/vendor/notebook/prism.css" />
+    <link rel="stylesheet" type="text/css" href="js/vendor/notebook/notebook.css?20241026203843">
+    <!-- <link rel="stylesheet" type="text/css" href="js/vendor/notebook/nbpreview.css"> -->
+
+    <!-- daterange picker -->
+    <link rel="stylesheet" href="js/vendor/daterangepicker/daterangepicker.css">
+
+    <!-- 모델확산 슬라이드 배너 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--  
+    <script src="js/script.js"></script>
+    <script src="js/owl-carousel.js"></script>
+-->
+    <!-- 공통 js -->
+    <!--[if lt IE 10]>
+		<script src="js/placeholders.min.js" ></script>
+	<![endif]-->
+    <!--[if lt IE 9]>
+		<script src="js/html5shiv.js" ></script>
+		<script src="js/respond.min.js" ></script>
+	<![endif]-->
+</head>
+
+<body>
+    <!-- wrapper -->
+    <div class="wrapper">
+        <header class="header-area header-sticky">
+            <!-- container -->
+            <div class="container clearfix" style="max-width: 1700px;">
+                <h1 class="head_ment">
+                    <img src="images/common/pic1.png" alt="살고 싶은 집과 도시로 국민의 희망을 가꾸는 기업">
+                </h1>
+                <h1 class="head_logo">
+                    <a href="/"><img src="images/common/head_logo.png" alt="COMPAS"></a>
+                </h1>
+                <ul id="gnb" class="gnb">
+                    <li><a href="/intro">COMPAS</a>
+                        <ul class="sub_gnb">
+                            <li><a href="/intro">COMPAS 소개</a></li>
+                            <li><a href="/apply">참여 방법</a></li>
+                            <li><a href="/subj/sgst/write">과제 신청</a></li>
+                            <li><a href="/sites">관련 사이트</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li><a href="/subj/competition/list">분석과제</a>
+                        <ul class="sub_gnb">
+                            <li><a href="/subj/competition/list?listCase=competition">진행 중 과제</a></li>
+                            <li><a href="/subj/competition/list?listCase=past">종료 된 과제</a></li>
+                            <li><a href="/subj/competition/list?listCase=iac">산학협력 과제</a></li>
+                            <li><a href="/subj/example/info?subjNo=SBJ_2205_001">학습용 과제</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="/datapdsMap">데이터셋</a><!-- data-direct="true" -->
+
+                        <ul class="sub_gnb">
+                            <li><a href="/datapdsMap">데이터 맵</a></li>
+                            <li><a href="/datapdsSearch">데이터 검색</a></li>
+                            <li><a href="/integratedSearch">통합검색</a></li>
+                        </ul>
+
+                    </li>
+
+                    <li><a href="/vs">지자체활용</a>
+                        <ul class="sub_gnb">
+                            <li><a href="/vs">확산과제 소개</a></li>
+                            <!-- <li><a href="/vs/see">분석사례</a></li> -->
+                            <li><a href="/modelsee">시각화</a></li>
+                            <li><a href="/modeldata">데이터 업로드</a></li>
+                            <!-- <li><a href="/event">이벤트</a></li> -->
+                            <!--<li><a href="/idea">과제 아이디어 공모</a></li>
+                    <li><a href="/free">자유게시판</a></li>-->
+
+
+                            <!--   <li><a href="/wisdom">승자의 지혜</a></li> -->
+
+                        </ul>
+                    </li>
+
+                    <!-- <li><a href="/data/listBySubj" data-direct="true">데이터셋</a></li> -->
+
+                    <li><a href="/gis">자료실</a>
+                        <ul class="sub_gnb">
+                            <li><a href="/gis">공간분석 활용</a></li>
+                            <!--<li><a href="/api">공간정보 API</a></li>   과부하로 삭제 파일첨부로 전환 -->
+                            <li><a href="/study?brdTypeCd=21">Python</a></li>
+                            <li><a href="/study?brdTypeCd=22">R</a></li>
+                            <li><a href="/study?brdTypeCd=23">QGIS</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="/notice">커뮤니티</a>
+                        <ul class="sub_gnb">
+                            <li><a href="/notice">공지 사항</a></li>
+                            <li><a href="/qna">Q&A<img id="newMain" style="margin:27px 0px 0px 5px; display:none;" src="images/common/new_img.png" alt="새 글"></a></li>
+                            <li><a href="/faq">자주 묻는 질문</a></li>
+                            <li><a href="/notice?brdTypeCd=08">보도/분석후기</a></li>
+                            <li><a href="/survey">설문참여</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <!-- util_hd_menu_box -->
+                <div class="input-group">
+                    <label for="search-all" class="hide">검색어 입력</label>
+                    <input id="search-all" type="text" class="form-control col-md-12" placeholder="검색어를 입력하세요." title="검색어 입력" style="border:1px solid #f1f1f1;border-radius:15px">
+                    <div class="input-group-append" style="margin-left: -41px;">
+                        <button id="search-all-btn" type="button" class="btn" style="width:42px;z-index: 999;border-radius:15px">
+                            <svg class="svg-inline--fa fa-search fa-w-16" style="color: #000;" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                                <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                            </svg><!-- <i class="fa fa-search" style="color:#fff"></i> -->
+                        </button>
+                    </div>
+                </div>
+                <div class="util_hd_menu_box">
+                    <ul class="Top_sns_icon" style="display:flex;    align-items: center;">
+                        <li class="fw-5">
+                            <a href="https://www.facebook.com/UrbanDataScience" target="_blank">
+                                <img src="images/newmain/facebook_logo.png" alt="페이스북" class="sns_icon">
+                            </a>
+                        </li>
+                        <li class="fw-5">
+                            <a href="https://www.youtube.com/channel/UCThiazgDccc8Z82HCLhbHHQ" target="_blank">
+                                <img src="images/newmain/youtube_logo.png" alt="유튜브" class="sns_icon">
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="util_hd_menu">
+
+                        <li class="fw-5"><a href="/login">로그인</a></li>
+                        <li class="fw-5"><a href="/user/join">회원가입</a></li>
+
+                    </ul>
+                </div>
+                <!-- util_hd_menu_box -->
+
+                <!-- // gnb -->
+
+                <button type="button" class="m_gnb_btn">
+                    <span class="hide">모바일 주 메뉴 열기</span>
+                    <span class="top"></span>
+                    <span class="mid"></span>
+                    <span class="btm"></span>
+                </button>
+            </div>
+            <!-- // container -->
+
+            <!-- m_gnb_wrap -->
+            <div class="m_gnb_wrap">
+                <!-- m_gnb_top -->
+                <div class="m_gnb_top">
+                    <h2 class="tit"><span class="hide">전체메뉴</span></h2>
+                    <ul class="m_gnb_top_util">
+                        <li class="fw-5"><a href="/login">로그인</a></li>
+                        <li class="fw-5"><a href="/user/join">회원가입</a></li>
+                    </ul>
+
+                    <ul class="m_gnb_top_sns">
+                        <li class="fw-5">
+                            <a href="https://www.facebook.com/UrbanDataScience"><img src="images/newmain/facebook_logo.png" alt="페이스북"></a>
+                        </li>
+                        <li class="fw-5">
+                            <a href="https://www.youtube.com/channel/UCThiazgDccc8Z82HCLhbHHQ" target="_blank"><img src="images/common/youtube.png" /></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- // m_gnb_top -->
+                <!-- <div class="subBar"></div> -->
+                <!-- m_gnb 내부 태그는 쿼리로 들어감. -->
+                <ul class="m_gnb">
+
+                </ul>
+                <!-- // m_gnb -->
+
+                <button type="button" class="m_gnb_close"><span class="hide">모바일 주 메뉴 닫기</span></button>
+            </div>
+            <!-- // m_gnb_wrap -->
+            <div class="m_gnb_bg"></div>
+        </header>
+        <!-- // header -->
+
+        <!-- contents -->
+        <!-- 2024.10.28 .new 추가 -->
+        <div id="datapds_list" class="contents new">
+            <section class="section" id="s1" style="background:#93B4EA">
+                <div class="mainimg" style="background:url(images/newmain/vs_main.jpg) no-repeat 50% 50%;">
+                    <div class="mainText">
+                        <div class="container">
+                            <h2 class="sub_top_tit">데이터 검색</h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div>
+                <div class="container">
+                    <div class="main-recommand-product">
+                        <div class="tab_Nav fixed">
+                            <ul>
+                                <li style="width:33%" id="um_id1" value="1">
+                                    <a href="/datapdsMap">
+                                        <span class="cstnd">
+                                            <span class="cCenter">데이터 맵</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li style="width:33%" id="um_id2" value="1">
+                                    <a href="/datapdsSearch">
+                                        <span class="cstnd">
+                                            <span class="cCenter">데이터 검색</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li style="width:33%" id="um_id3" value="1">
+                                    <a href="/integratedSearch">
+                                        <span class="cstnd">
+                                            <span class="cCenter">통합검색</span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="contents">
+                                <div class="category-content">
+                                    <section class="section" id="s2">
+                                        <div>
+                                            <div class="container">
+                                                <div class="input-group">
+                                                    <label for="searchkey-select" class="hide">검색조건 선택</label>
+                                                    <select id="searchkey-select" class="form-control col-md-2" title="검색조건 선택">
+                                                        <option value="file">파일명 + 키워드</option>
+                                                        <option value="desc">데이터설명</option>
+                                                        <option value="col">컬럼정보</option>
+                                                    </select>
+                                                    <label for="search-text" class="hide">검색어 입력</label>
+                                                    <input id="search-text" type="text" class="form-control col-md-12" placeholder="검색어를 입력하세요." title="검색어 입력">
+                                                    <div class="input-group-append">
+                                                        <button id="search-btn" type="button" class="btn" style="background:#023671; width:65px;border-radius:0px">
+                                                            <svg class="svg-inline--fa fa-search fa-w-16" style="color: #fff;" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                                                                <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <h2 id="str" style="display:none;"></h2>
+                                                <div class="box_ty02">
+                                                    <div class="box_ty_cont02 active">
+                                                        <fieldset>
+                                                            <legend>중분류</legend>
+                                                            <dl class="type_box02">
+                                                                <dt>중분류</dt>
+                                                                <dd>
+                                                                    <ul id="C126">
+                                                                        <li><button type="button" name="C126" class="btn" value="1010" data-pcd="100" onclick="clickBtn(this);">유동인구</button></li>
+                                                                        <li><button type="button" name="C126" class="btn" value="1020" data-pcd="100" onclick="clickBtn(this);">거주인구</button></li>
+                                                                        <li><button type="button" name="C126" class="btn" value="1030" data-pcd="100" onclick="clickBtn(this);">생활인구</button></li>
+                                                                        <li><button type="button" name="C126" class="btn" value="1040" data-pcd="100" onclick="clickBtn(this);">가구</button></li>
+                                                                        <li><button type="button" name="C126" class="btn" value="1050" data-pcd="100" onclick="clickBtn(this);">통계</button></li>
+                                                                        <li><button type="button" name="C126" class="btn" value="2010" data-pcd="200" onclick="clickBtn(this);">주제도</button></li>
+                                                                        <li><button type="button" name="C126" class="btn" value="2020" data-pcd="200" onclick="clickBtn(this);">도로</button></li>
+                                                                        <li><button type="button" name="C126" class="btn" value="2030" data-pcd="200" onclick="clickBtn(this);">토지</button></li>
+                                                                        <li><button type="button" name="C126" class="btn" value="2040" data-pcd="200" onclick="clickBtn(this);">건물</button></li>
+                                                                        <li><button type="button" name="C126" class="btn" value="3010" data-pcd="300" onclick="clickBtn(this);">상가/업소</button></li>
+                                                                        <li><button type="button" name="C126" class="btn" value="3020" data-pcd="300" onclick="clickBtn(this);">교통</button></li>
+                                                                        <li><button type="button" name="C126" class="btn" value="3030" data-pcd="300" onclick="clickBtn(this);">교육</button></li>
+                                                                        <li><button type="button" name="C126" class="btn" value="3040" data-pcd="300" onclick="clickBtn(this);">복지</button></li>
+                                                                        <li><button type="button" name="C126" class="btn" value="3050" data-pcd="300" onclick="clickBtn(this);">환경</button></li>
+                                                                        <li><button type="button" name="C126" class="btn" value="3060" data-pcd="300" onclick="clickBtn(this);">안전</button></li>
+                                                                        <li><button type="button" name="C126" class="btn" value="3070" data-pcd="300" onclick="clickBtn(this);">치안</button></li>
+                                                                        <li><button type="button" name="C126" class="btn" value="4010" data-pcd="400" onclick="clickBtn(this);">문화</button></li>
+                                                                        <li><button type="button" name="C126" class="btn" value="4020" data-pcd="400" onclick="clickBtn(this);">코드표</button></li>
+                                                                        <li><button type="button" name="C126" class="btn" value="4030" data-pcd="400" onclick="clickBtn(this);">결과제출양식</button></li>
+                                                                        <li><button type="button" name="C126" class="btn" value="4040" data-pcd="400" onclick="clickBtn(this);">보고서</button></li>
+                                                                        <li><button type="button" name="C126" class="btn" value="3080" data-pcd="300" onclick="clickBtn(this);">통신</button></li>
+                                                                    </ul>
+                                                                </dd>
+                                                            </dl>
+                                                        </fieldset>
+                                                    </div>
+                                                    <div class="box_ty_cont02">
+                                                        <fieldset>
+                                                            <legend>대분류</legend>
+                                                            <dl class="type_box02">
+                                                                <dt>대분류</dt>
+                                                                <dd>
+                                                                    <ul id="C125">
+                                                                        <li><button type="button" name="C125" class="btn active" value="100" onclick="clickBtn(this);">인구</button></li>
+                                                                        <li><button type="button" name="C125" class="btn" value="200" onclick="clickBtn(this);">도시계획</button></li>
+                                                                        <li><button type="button" name="C125" class="btn" value="300" onclick="clickBtn(this);">도시관리</button></li>
+                                                                        <li><button type="button" name="C125" class="btn" value="400" onclick="clickBtn(this);">도시행정/일반</button></li>
+                                                                    </ul>
+                                                                </dd>
+                                                            </dl>
+                                                        </fieldset>
+                                                    </div>
+                                                    <div class="box_ty_cont02">
+                                                        <fieldset>
+                                                            <legend>파일포맷</legend>
+                                                            <dl class="type_box02">
+                                                                <dt>파일포맷</dt>
+                                                                <dd>
+                                                                    <ul id="ext">
+                                                                        <li><button type="button" name="ext" class="btn" value="csv" onclick="clickBtn(this);">CSV</button></li>
+                                                                        <li><button type="button" name="ext" class="btn" value="geojson" onclick="clickBtn(this);">GEOJSON</button></li>
+                                                                        <li><button type="button" name="ext" class="btn" value="xlsx" onclick="clickBtn(this);">XLSX</button></li>
+                                                                        <li><button type="button" name="ext" class="btn" value="zip" onclick="clickBtn(this);">ZIP</button></li>
+                                                                        <li><button type="button" name="ext" class="btn" value="img" onclick="clickBtn(this);">IMG</button></li>
+                                                                        <li><button type="button" name="ext" class="btn" value="pdf" onclick="clickBtn(this);">PDF</button></li>
+                                                                        <li><button type="button" name="ext" class="btn" value="hwp" onclick="clickBtn(this);">HWP</button></li>
+                                                                        <li><button type="button" name="ext" class="btn" value="txt" onclick="clickBtn(this);">TXT</button></li>
+                                                                    </ul>
+                                                                </dd>
+                                                            </dl>
+                                                        </fieldset>
+                                                    </div>
+                                                    <div class="box_ty_cont02">
+                                                        <fieldset>
+                                                            <legend>등록년도</legend>
+                                                            <dl class="type_box02">
+                                                                <dt>등록년도</dt>
+                                                                <dd>
+                                                                    <ul id="year">
+                                                                        <li><button type="button" name="year" class="btn" value="2020" onclick="clickBtn(this);">2020년</button></li>
+                                                                        <li><button type="button" name="year" class="btn" value="2021" onclick="clickBtn(this);">2021년</button></li>
+                                                                        <li><button type="button" name="year" class="btn" value="2022" onclick="clickBtn(this);">2022년</button></li>
+                                                                        <li><button type="button" name="year" class="btn" value="2023" onclick="clickBtn(this);">2023년</button></li>
+                                                                        <li><button type="button" name="year" class="btn" value="2024" onclick="clickBtn(this);">2024년</button></li>
+                                                                    </ul>
+                                                                </dd>
+                                                            </dl>
+                                                        </fieldset>
+                                                    </div>
+                                                    <div class="box_ty_cont02">
+                                                        <fieldset>
+                                                            <legend>키워드</legend>
+                                                            <dl class="type_box02">
+                                                                <dt>키워드</dt>
+                                                                <dd>
+                                                                    <ul id="tag">
+                                                                        <li><button type="button" name="tag" class="btn" value="100X100" grpcd2s="1020 2010 2010 2040 3020 2010 2040 2030 1020 1020 2010" onclick="clickBtn(this);">#100X100</button></li>
+                                                                        <li><button type="button" name="tag" class="btn" value="112" grpcd2s="3070 3070 3070 1020 1020 3070 3070" onclick="clickBtn(this);">#112</button></li>
+                                                                        <li><button type="button" name="tag" class="btn" value="112신고" grpcd2s="" onclick="clickBtn(this);">#112신고</button></li>
+                                                                        <li><button type="button" name="tag" class="btn" value="112신고수" grpcd2s="3070" onclick="clickBtn(this);">#112신고수</button></li>
+                                                                        <li><button type="button" name="tag" class="btn" value="112신고이력" grpcd2s="" onclick="clickBtn(this);">#112신고이력</button></li>
+                                                                        <li><button type="button" name="tag" class="btn" value="119" grpcd2s="" onclick="clickBtn(this);">#119</button></li>
+                                                                        <li><button type="button" name="tag" class="btn" value="119구급출동" grpcd2s="" onclick="clickBtn(this);">#119구급출동</button></li>
+                                                                        <li><button type="button" name="tag" class="btn" value="119안전센터" grpcd2s="" onclick="clickBtn(this);">#119안전센터</button></li>
+                                                                        <li><button type="button" name="tag" class="btn" value="1인가구" grpcd2s="4040 4040" onclick="clickBtn(this);">#1인가구</button></li>
+                                                                        <li><button type="button" name="tag" class="btn" value="2010" grpcd2s="3050" onclick="clickBtn(this);">#2010</button></li>
+                                                                        <li><button type="button" name="tag" class="btn" value="2011" grpcd2s="3050" onclick="clickBtn(this);">#2011</button></li>
+                                                                    </ul>
+                                                                </dd>
+                                                            </dl>
+                                                        </fieldset>
+                                                    </div>
+                                                    <div class="box_ty_cont02">
+                                                        <fieldset>
+                                                            <legend>공개여부</legend>
+                                                            <dl class="type_box02">
+                                                                <dt>공개여부</dt>
+                                                                <dd>
+                                                                    <ul id="open">
+                                                                        <li><button type="button" name="open" class="btn" value="Y" onclick="clickBtn(this);">공개</button></li>
+                                                                        <li><button type="button" name="open" class="btn" value="N" onclick="clickBtn(this);">비공개</button></li>
+                                                                    </ul>
+                                                                </dd>
+                                                            </dl>
+                                                        </fieldset>
+                                                    </div>
+                                                    <div class="box_ty_cont">
+                                                        <form>
+                                                            <legend>선택정보나열,해제</legend>
+                                                            <dl class="type_box">
+                                                                <dt>
+                                                                    <a href="javascript:resetCondi();" title="선택해제">
+                                                                        전체해제
+                                                                        <img src="images/newmain/sub/new_re.png" alt="전체해제">
+                                                                    </a>
+                                                                </dt>
+                                                                <dd>
+                                                                    <ul id="selCon">
+                                                                        <li id="C125_100" onclick="javascript:clickDel(this);"><button type="button">인구</button></li>
+                                                                        <li id="C125_100" onclick="javascript:clickDel(this);"><button type="button">도시계획</button></li>
+                                                                    </ul>
+                                                                </dd>
+                                                            </dl>
+                                                        </form>
+                                                    </div>
+                                                </div>
+
+                                                <!-- 2024.10.28 .result 추가 -->
+                                                <div class="result">
+                                                    <!-- 2024.10.28 .tab-container 추가 -->
+                                                    <div class="tab-container">
+                                                        <div class="nav-tabs">
+                                                            <a href="#" class="tab active">전체 (10)</a>
+                                                            <a href="#" class="tab">과제 (3)</a>
+                                                            <a href="#" class="tab">데이터 (3)</a>
+                                                            <a href="#" class="tab">보고서 (4)</a>
+                                                        </div>
+                                                        <div class="tab-panel">
+                                                            <div class="clearfix">
+                                                                <div class="topBOX">
+                                                                    <!-- <h2 id="total-count">전체 <span class="txt-total-cnt"><b> 875</b> </span> 건 ( 1 / 59 page )</h2> -->
+                                                                    <!-- 정렬순 추가 -->
+                                                                    <ul class="Sort">
+                                                                        <li>
+                                                                            <button name="ord" type="button" class="active" value="latest" onclick="javascript:setOrder(this.value);">최신순</button>
+                                                                        </li>
+                                                                        <li>
+                                                                            <button name="ord" type="button" value="viewcnt" onclick="javascript:setOrder(this.value);">조회순</button>
+                                                                        </li>
+                                                                        <li>
+                                                                            <button name="ord" type="button" value="downcnt" onclick="javascript:setOrder(this.value);">다운로드순</button>
+                                                                        </li>
+                                                                        <li>
+                                                                            <button name="ord" type="button" value="filename" onclick="javascript:setOrder(this.value);">제목순</button>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+
+                                                                <!-- 2024.10.28 .Cardwrap.analysis, .card-title 추가 -->
+                                                                <!-- 과제 -->
+                                                                <div class="Cardwrap analysis">
+                                                                    <div class="card-title">
+                                                                        <strong class="title">과제<em>(24)</em></strong>
+                                                                        <a href="#" class="btn-more">자세히보기</a>
+                                                                    </div>
+                                                                    <!-- 2024.10.28 통합검색에서 완주군 검색 데이터 가져옴 -->
+                                                                    <div class="list-box" id="subjList">
+                                                                        <div class="list" data-row="0">
+                                                                            <div class="img-box"> <a href="#"><img src="uploads/subj/SBJ_2308_003/image/mid.png" alt=""></a></div>
+                                                                            <div class="Content">
+                                                                                <a href="#">
+                                                                                    <em>[완주군]</em>
+                                                                                    <p class="title">버스 이용자 데이터를 활용한 최적 버스 노선 제시</p>
+                                                                                    <p class="date">2023-08-31 ~ 2023-10-13</p>
+                                                                                    <p class="bottom">분석배경 완주군 내 절대인구 감소, 고령화 및 코로나19 장기화에 따른 버스 이용객축소로 인해 버스 운영 수익금이 감소하고 매년 지자체 보조금 증액이 필요하며, 경영악화에 따른 서비스질 저하가 지속되고 있습니다.</p><!-- 삭제 -->
+                                                                                </a>
+                                                                                <!-- 2024.10.28 .user, .util 추가 -->
+                                                                                <span class="user">26</span>
+                                                                                <div class="util">
+                                                                                    <img src="images/newsearch/logo-lh.png" alt="LH 한국토지주택공사" class="logo">
+                                                                                    <span class="label ty1">진행중</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="list" data-row="1">
+                                                                            <div class="img-box"> <a href="#"><img src="uploads/subj/SBJ_2308_003/image/mid.png" alt=""></a></div>
+                                                                            <div class="Content">
+                                                                                <a href="#">
+                                                                                    <em>[완주군]</em>
+                                                                                    <p class="title">버스 이용자 데이터를 활용한 최적 버스 노선 제시</p>
+                                                                                    <p class="date">2023-08-31 ~ 2023-10-13</p>
+                                                                                    <p class="bottom">분석배경 완주군 내 절대인구 감소, 고령화 및 코로나19 장기화에 따른 버스 이용객축소로 인해 버스 운영 수익금이 감소하고 매년 지자체 보조금 증액이 필요하며, 경영악화에 따른 서비스질 저하가 지속되고 있습니다.</p><!-- 삭제 -->
+                                                                                </a>
+                                                                                <!-- 2024.10.28 .user, .util 추가 -->
+                                                                                <span class="user">26</span>
+                                                                                <div class="util">
+                                                                                    <img src="images/newsearch/logo-lh.png" alt="LH 한국토지주택공사" class="logo">
+                                                                                    <span class="label ty1">진행중</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="list" data-row="2">
+                                                                            <div class="img-box"> <a href="#"><img src="uploads/subj/SBJ_2308_003/image/mid.png" alt=""></a></div>
+                                                                            <div class="Content">
+                                                                                <a href="#">
+                                                                                    <em>[완주군]</em>
+                                                                                    <p class="title">버스 이용자 데이터를 활용한 최적 버스 노선 제시</p>
+                                                                                    <p class="date">2023-08-31 ~ 2023-10-13</p>
+                                                                                    <p class="bottom">분석배경 완주군 내 절대인구 감소, 고령화 및 코로나19 장기화에 따른 버스 이용객축소로 인해 버스 운영 수익금이 감소하고 매년 지자체 보조금 증액이 필요하며, 경영악화에 따른 서비스질 저하가 지속되고 있습니다.</p><!-- 삭제 -->
+                                                                                </a>
+                                                                                <!-- 2024.10.28 .util 추가 -->
+                                                                                <div class="util">
+                                                                                    <img src="images/newsearch/logo-lh.png" alt="LH 한국토지주택공사" class="logo">
+                                                                                    <span class="label ty2">종료</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- 2024.10.28 .Cardwrap.data, .card-title 추가 -->
+                                                                <!-- 데이터 -->
+                                                                <div class="Cardwrap data">
+                                                                    <div class="card-title">
+                                                                        <strong class="title">데이터<em>(24)</em></strong>
+                                                                        <a href="#" class="btn-more">자세히보기</a>
+                                                                    </div>
+                                                                    <ul id="list">
+                                                                        <li data-row="0">
+                                                                            <div class="dataCard">
+                                                                                <div class="dataTOP">
+                                                                                    <div class="text">
+                                                                                        <h2>도시행정/일반</h2>
+                                                                                        <p><span class="label ty1">FILE</span>결과제출양식</p>
+                                                                                    </div> <img src="images/datapds/icon_400.png" alt="" style="width:35px;height:35px;">
+                                                                                </div>
+                                                                                <div class="dataBOTTOM">
+                                                                                    <p><span>세종시_건축물대장_층별개요</span></p>
+                                                                                    <p class="arrow_box"><span>세종시_건축물대장_층별개요</span></p>
+                                                                                    <div class="smallTEXT">
+                                                                                        <p>용량 : 7.44 MB</p>
+                                                                                        <p>등록일자 : 2024-09-03</p>
+                                                                                        <div class="DATA" style="display:flex;justify-content: space-between;flex-direction: row-reverse;">
+                                                                                            <p class="Private">비공개</p>
+                                                                                            <div class="ICon" style="display:flex;justify-content: space-between;flex-direction: row-reverse;">
+                                                                                                <p class="View" style="margin-left:10px">16</p>
+                                                                                                <p class="DLOAD">2</p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li data-row="1">
+                                                                            <div class="dataCard">
+                                                                                <div class="dataTOP">
+                                                                                    <div class="text">
+                                                                                        <h2>도시행정/일반</h2>
+                                                                                        <p><span class="label ty2">DB</span>결과제출양식</p>
+                                                                                    </div> <img src="images/datapds/icon_400.png" alt="" style="width:35px;height:35px;">
+                                                                                </div>
+                                                                                <div class="dataBOTTOM">
+                                                                                    <p><span>세종시_건축물대장_층별개요</span></p>
+                                                                                    <p class="arrow_box"><span>세종시_건축물대장_층별개요</span></p>
+                                                                                    <div class="smallTEXT">
+                                                                                        <p>용량 : 6.57 MB</p>
+                                                                                        <p>등록일자 : 2024-09-03</p>
+                                                                                        <div class="DATA" style="display:flex;justify-content: space-between;flex-direction: row-reverse;">
+                                                                                            <p class="public">공개</p>
+                                                                                            <div class="ICon" style="display:flex;justify-content: space-between;flex-direction: row-reverse;">
+                                                                                                <p class="View" style="margin-left:10px">15</p>
+                                                                                                <p class="DLOAD">8</p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li data-row="2">
+                                                                            <div class="dataCard">
+                                                                                <div class="dataTOP">
+                                                                                    <div class="text">
+                                                                                        <h2>도시행정/일반</h2>
+                                                                                        <p><span class="label ty2">DB</span>결과제출양식</p>
+                                                                                    </div> <img src="images/datapds/icon_400.png" alt="" style="width:35px;height:35px;">
+                                                                                </div>
+                                                                                <div class="dataBOTTOM">
+                                                                                    <p><span>세종시_건축물대장_층별개요</span></p>
+                                                                                    <p class="arrow_box"><span>세종시_건축물대장_층별개요</span></p>
+                                                                                    <div class="smallTEXT">
+                                                                                        <p>용량 : 5.66 MB</p>
+                                                                                        <p>등록일자 : 2024-07-19</p>
+                                                                                        <div class="DATA" style="display:flex;justify-content: space-between;flex-direction: row-reverse;">
+                                                                                            <p class="public">공개</p>
+                                                                                            <div class="ICon" style="display:flex;justify-content: space-between;flex-direction: row-reverse;">
+                                                                                                <p class="View" style="margin-left:10px">25</p>
+                                                                                                <p class="DLOAD">8</p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+
+                                                                <!-- 2024.10.28 .Cardwrap.report, .card-title 추가 -->
+                                                                <!-- 보고서 -->
+                                                                <div class="Cardwrap report">
+                                                                    <div class="card-title">
+                                                                        <strong class="title">보고서<em>(24)</em></strong>
+                                                                        <a href="#" class="btn-more">자세히보기</a>
+                                                                    </div>
+                                                                    <ul id="list">
+                                                                        <li data-row="0">
+                                                                            <div class="dataCard">
+                                                                                <div class="dataTOP">
+                                                                                    <div class="text">
+                                                                                        <h2>도시행정/일반</h2>
+                                                                                        <p>보고서</p>
+                                                                                    </div> <img src="images/datapds/icon_400.png" alt="" style="width:35px;height:35px;">
+                                                                                </div>
+                                                                                <div class="dataBOTTOM">
+                                                                                    <p><span>우수 - 2024 COMPAS 국토도시 데이터 분석대전</span></p>
+                                                                                    <p class="arrow_box"><span>우수 - 2024 COMPAS 국토도시 데이터 분석대전</span></p>
+                                                                                    <div class="smallTEXT">
+                                                                                        <p>용량 : 7.44 MB</p>
+                                                                                        <p>등록일자 : 2024-09-03</p>
+                                                                                        <div class="DATA" style="display:flex;justify-content: space-between;flex-direction: row-reverse;">
+                                                                                            <p class="Private">비공개</p>
+                                                                                            <div class="ICon" style="display:flex;justify-content: space-between;flex-direction: row-reverse;">
+                                                                                                <p class="View" style="margin-left:10px">16</p>
+                                                                                                <p class="DLOAD">2</p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li data-row="1">
+                                                                            <div class="dataCard">
+                                                                                <div class="dataTOP">
+                                                                                    <div class="text">
+                                                                                        <h2>도시행정/일반</h2>
+                                                                                        <p>보고서</p>
+                                                                                    </div> <img src="images/datapds/icon_400.png" alt="" style="width:35px;height:35px;">
+                                                                                </div>
+                                                                                <div class="dataBOTTOM">
+                                                                                    <p><span>장려 - 2024 COMPAS 국토도시 데이터 분석대전</span></p>
+                                                                                    <p class="arrow_box"><span>장려 - 2024 COMPAS 국토도시 데이터 분석대전</span></p>
+                                                                                    <div class="smallTEXT">
+                                                                                        <p>용량 : 6.57 MB</p>
+                                                                                        <p>등록일자 : 2024-09-03</p>
+                                                                                        <div class="DATA" style="display:flex;justify-content: space-between;flex-direction: row-reverse;">
+                                                                                            <p class="public">공개</p>
+                                                                                            <div class="ICon" style="display:flex;justify-content: space-between;flex-direction: row-reverse;">
+                                                                                                <p class="View" style="margin-left:10px">15</p>
+                                                                                                <p class="DLOAD">8</p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li data-row="2">
+                                                                            <div class="dataCard">
+                                                                                <div class="dataTOP">
+                                                                                    <div class="text">
+                                                                                        <h2>도시행정/일반</h2>
+                                                                                        <p>보고서</p>
+                                                                                    </div> <img src="images/datapds/icon_400.png" alt="" style="width:35px;height:35px;">
+                                                                                </div>
+                                                                                <div class="dataBOTTOM">
+                                                                                    <p><span>우수 - 불법 주정차로 인한 소방차량 진입 불가 구역 분석 및 소방시설물 추가 설치 위치 분석 </span></p>
+                                                                                    <p class="arrow_box"><span>우수 - 불법 주정차로 인한 소방차량 진입 불가 구역 분석 및 소방시설물 추가 설치 위치 분석 </span></p>
+                                                                                    <div class="smallTEXT">
+                                                                                        <p>용량 : 5.66 MB</p>
+                                                                                        <p>등록일자 : 2024-07-19</p>
+                                                                                        <div class="DATA" style="display:flex;justify-content: space-between;flex-direction: row-reverse;">
+                                                                                            <p class="public">공개</p>
+                                                                                            <div class="ICon" style="display:flex;justify-content: space-between;flex-direction: row-reverse;">
+                                                                                                <p class="View" style="margin-left:10px">25</p>
+                                                                                                <p class="DLOAD">8</p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+
+                                                                <!-- paging -->
+                                                                <div class="box-page clearfix">
+                                                                    <div id="pagination" class="pagination">
+                                                                        <a data-page="first" href="#" class="page_arrow l2">맨앞</a>
+                                                                        <a href="#" data-page="prev" class="page_arrow l1"><span class="hide">이전</span></a>
+                                                                        <a href="#" class=" active">1</a>
+                                                                        <a href="#" class="">2</a>
+                                                                        <a href="#" class="">3</a>
+                                                                        <a href="#" class="">4</a>
+                                                                        <a href="#" class="">5</a>
+                                                                        <a href="#" class="">6</a>
+                                                                        <a href="#" class="">7</a>
+                                                                        <a href="#" class="">8</a>
+                                                                        <a href="#" class="">9</a>
+                                                                        <a href="#" class="">10</a>
+                                                                        <a href="#" class="page_arrow r1"><span class="hide">다음</span></a>
+                                                                        <a href="#" class="page_arrow r2">맨끝</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- 2024.10.28 데이터 맵에 있는 랭킹 가져옴 -->
+                                                    <div class="ranking">
+                                                        <div>
+                                                            <div class="rankHd">
+                                                                <h3>인기 데이터</h3>
+                                                                <p>누적다운로드순</p>
+                                                            </div>
+                                                            <ul id="downList">
+                                                                <li><span class="rank">1</span><a href="javascript:goList('SBJ_2009_001',5,1032);">최우수 - 전기자동차 충전소 최적입지 선정</a><span class="Num">5,525</span></li>
+                                                                <li><span class="rank">2</span><a href="javascript:goList('SBJ_2102_002',7,1432);">최우수 - 스마트 버스정류장 우선 설치위치 선정</a><span class="Num">4,577</span></li>
+                                                                <li><span class="rank">3</span><a href="javascript:goList('SBJ_2012_001',9,1223);">최우수 - 어린이 교통사고 위험지역 도출</a><span class="Num">3,086</span></li>
+                                                                <li><span class="rank">4</span><a href="javascript:goList('SBJ_2102_003',10,1694);">최우수 - 교통사고 위험지역 도출</a><span class="Num">2,874</span></li>
+                                                                <li><span class="rank">5</span><a href="javascript:goList('SBJ_2007_001',2,0);">자전거스테이션</a><span class="Num">2,108</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div>
+                                                            <div class="rankHd">
+                                                                <h3>최신 데이터</h3>
+                                                                <p>제공일자순</p>
+                                                            </div>
+                                                            <ul id="regList">
+                                                                <li><span class="rank">1</span><a href="javascript:goList('SBJ_2409_001',3,3010);">장려 - 2024 COMPAS 국토도시 데이터 분석대전</a>
+                                                                    <p>2024-09-03</p>
+                                                                </li>
+                                                                <li><span class="rank">2</span><a href="javascript:goList('SBJ_2409_001',1,3007);">우수 - 2024 월드 스마트시티 엑스포(WSCE) 「COMPAS 국토도시 데이터 분석대전」</a>
+                                                                    <p>2024-09-03</p>
+                                                                </li>
+                                                                <li><span class="rank">3</span><a href="javascript:goList('SBJ_2409_001',8,3007);">우수 - 2024 COMPAS 국토도시 데이터 분석대전</a>
+                                                                    <p>2024-09-03</p>
+                                                                </li>
+                                                                <li><span class="rank">4</span><a href="javascript:goList('SBJ_2405_002',5,2936);">장려 - 교통량 분석을 통한 ITS 시설물 입지 선정</a>
+                                                                    <p>2024-07-19</p>
+                                                                </li>
+                                                                <li><span class="rank">5</span><a href="javascript:goList('SBJ_2406_001',7,2953);">최우수 - 불법 주정차로 인한 소방차량 진입 불가 구역 분석 및 소방시설물 추가 설치 위치 분석 </a>
+                                                                    <p>2024-07-19</p>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="section" id="s3">
+                                        <a href="#site-header" id="tothetop">
+                                            <img src="images/newmain/top button.png" alt="">
+                                        </a>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // contents -->
+        <!--. js -->
+        <script src="js/vendor/jquery-3.4.1.min.js"></script>
+        <!--test-->
+        <!--<script src="js/vendor/jquery-ui.min.js"></script>-->
+        <script src="js/vendor/popper.min.js"></script>
+        <script src="js/vendor/bootstrap-4.4.1/js/bootstrap.min.js"></script>
+
+        <script src="js/swiper.min.js"></script>
+        <script src="js/vendor/underscore-min.js"></script>
+        <script src="js/vendor/backbone-min.js"></script>
+        <!-- <script src="js/app/cmmn/namespace.js"></script>
+        <script src="js/app/cmmn/message.js?20241026203843"></script>
+        <script src="js/app/cmmn/cmmn.js?20241026203843"></script>
+        <script src="js/app/cmmn/modal.js?20241026203843"></script> -->
+        <script src="js/common_publish.js?20241026203843"></script>
+
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/scrolloverflow.js"></script>
+        <script src="js/jquery.fullPage.js"></script>
+        <script src="js/vendor/fontawesome-5.12.0/js/all.js"></script>
+
+        <script src="js/jquery.mousewheel.min.js"></script>
+        <script src="js/sub.js"></script>
+
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+        <!-- clipboard -->
+        <script src="js/vendor/clipboard/clipboard.min.js"></script>
+
+        <!-- cookie -->
+        <script src="js/vendor/js.cookie.min.js"></script>
+
+        <!-- markdown editor -->
+        <script src="js/vendor/tailwriter/js/tail.writer-full.js"></script>
+        <!-- markdown view -->
+        <script src="js/vendor/showdown/showdown.js"></script>
+
+        <!-- bootbox -->
+        <script src="js/vendor/bootbox/bootbox.js"></script>
+
+        <!-- daterange picker -->
+        <script src="js/vendor/daterangepicker/moment.min.js"></script>
+        <script src="js/vendor/daterangepicker/daterangepicker.js"></script>
+
+        <!-- notebook -->
+        <script src="js/vendor/notebook/es5-shim.min.js"></script>
+        <script src="js/vendor/notebook/marked.min.js"></script>
+        <script src="js/vendor/notebook/ansi_up.min.js"></script>
+        <script src="js/vendor/notebook/prism.min.js"></script>
+        <script src="js/vendor/notebook/katex.min.js"></script>
+        <script src="js/vendor/notebook/katex-auto-render.min.js"></script>
+        <script src="js/vendor/notebook/notebook.js"></script>
+
+        <script src="js/jquery-migrate-1.4.1.min.js"></script>
+        <script src="js/jquery.easing.1.3.js"></script>
+
+        <script src="js/sb-admin-2.min.js"></script>
+
+        <!-- summernote 에디터  -->
+        <script src="js/vendor/summernote-0.8.18-dist/summernote-lite.min.js"></script>
+        <script src="js/vendor/summernote-0.8.18-dist/lang/summernote-ko-KR.js"></script>
+        <link href="js/vendor/summernote-0.8.18-dist/summernote-lite.min.css" rel="stylesheet">
+
+        <!-- rsa보안  -->
+        <script type="text/javascript" src="js/rsa/rsa.js"></script>
+        <script type="text/javascript" src="js/rsa/jsbn.js"></script>
+        <script type="text/javascript" src="js/rsa/prng4.js"></script>
+        <script type="text/javascript" src="js/rsa/rng.js"></script>
+        <!-- QNA 새글알림 -->
+        <!-- <script>selectQnaCount();</script> -->
+
+        <!--test-->
+        <script src="js/vendor/jquery-ui.min.js"></script>
+        <!-- <script src="js/app/datapds/datapds-list.js?20241026203843"></script> -->
+        <!--/. js -->
+        <div id="right_snb">
+            <ul>
+                <a href="/intro">
+                    <li class="highlight">
+                        <img src="images/newmain/sub/righ_snb_icon1.png" alt="">COMPAS
+                    </li>
+                </a>
+                <a href="/vs">
+                    <li class="highlight">
+                        <img src="images/newmain/sub/righ_snb_icon3.png" alt="">확산과제소개
+                    </li>
+                </a>
+                <a href="/subj/sgst/write">
+                    <li class="highlight">
+                        <img src="images/newmain/sub/righ_snb_icon2.png" alt="">과제신청
+                    </li>
+                </a>
+                <a href="/qna">
+                    <li class="highlight">
+                        <img src="images/newmain/sub/righ_snb_icon4.png" alt="">Q&A
+                    </li>
+                </a>
+
+            </ul>
+        </div>
+        <!-- footer -->
+        <div class="footer"></div>
+        <footer>
+            <div class="footer-top">
+                <div class="container">
+                    <ul class="footer-menu">
+                        <li><a href="https://lh.or.kr/menu.es?mid=a10702010000" target="_blank">LH소개</a></li>
+                        <li><a href="/terms">이용약관</a></li>
+                        <li><a href="/policy">개인정보보호정책</a></li>
+                    </ul>
+                    <div class="footer-family">
+                        <a href="https://www.facebook.com/UrbanDataScience" target="_blank">
+                            <img src="images/newmain/facebook_logo.png" alt="페이스북" class="sns_icon">
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCThiazgDccc8Z82HCLhbHHQ" target="_blank">
+                            <img src="images/newmain/youtube_logo.png" alt="유튜브" class="sns_icon">
+                        </a>
+                        <button type="button" class="family-btn">관련 사이트
+                        </button>
+                        <ul class="family-list">
+                            <li><a href="https://www.lh.or.kr" target="_blank" title="LH 한국토지주택공사">LH 한국토지주택공사</a></li>
+                            <li><a href="http://bizmap.lh.or.kr" target="_blank" title="LH BizMap">LH BizMap</a></li>
+                            <li><a href="https://seereal.lh.or.kr/" target="_blank" title="LH 씨리얼">LH 씨리얼</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-btm">
+                    <div class="container">
+                        <div class="footer-txt-box">
+                            <div class="footer-txt">
+                                <span class="each" style="font-weight: bold;margin-bottom:3px;font-size: 1.2rem;">(우) 52852 경상남도 진주시 충의로 19(충무공동) 한국토지주택공사</span>
+                            </div>
+                            <div class="footer-txt">
+                                <span class="each">
+                                    HelpDesk :
+                                    <a href="tel:070-4855-2071">070-4855-2071 (운영시간 : 평일 09:00 ~ 18:00)</a>
+                                </span>
+                                <span class="each">
+                                    Tel :
+                                    <a href="tel:055-922-3664">055-922-3664</a>
+                                </span>
+                                <span class="each">
+                                    Fax :
+                                    <a href="tel:055-922-6479">055-922-6479</a>
+                                </span>
+                            </div>
+                            <p class="copyright">Copyright©2022 BY KOREA LAND & HOUSING CORPORATION. ALL RIGHT RESERVED.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- // footer -->
+    </div>
+    <!-- // wrapper -->
+
+</body>
+
+</html>
