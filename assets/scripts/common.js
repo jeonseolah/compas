@@ -59,6 +59,10 @@
 		$(".bookmark-indicator").on("click", function() {
 			$(this).toggleClass("active");
 		});
+
+		$(".btn-bookmark").on("click", function() {
+			$(this).toggleClass("active");
+		});
 	} 
 
 	$(document).ready(function () {

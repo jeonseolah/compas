@@ -606,7 +606,10 @@ input::-webkit-search-results-decoration {
 }
 
 .ly-header {
-  position: relative;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
   background-color: #ffffff;
   box-shadow: 0 49px 30.6px -28px rgba(0, 0, 0, 0.06);
@@ -910,7 +913,7 @@ input::-webkit-search-results-decoration {
   text-decoration: underline;
 }
 .section.intro {
-  min-height: calc(100vh - 100px);
+  min-height: 835px;
   box-sizing: border-box;
 }
 .section.intro::before {
@@ -2452,6 +2455,7 @@ input::-webkit-search-results-decoration {
   margin-top: 20px;
 }
 .dashboard-list .dashboard-item {
+  position: relative;
   overflow: hidden;
   flex: 1;
   border-radius: 18px;
@@ -2541,6 +2545,18 @@ input::-webkit-search-results-decoration {
   background-position: left center;
   font-weight: 600;
   color: #666;
+}
+.dashboard-list .icon-bookmark {
+  position: absolute;
+  top: 0;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  background-image: url("../images/icon-bookmark-active.png");
+  background-repeat: no-repeat;
+  background-size: 44px;
+  background-position: right center;
+  font-size: 0;
 }
 
 .data-list {
@@ -2924,7 +2940,7 @@ input::-webkit-search-results-decoration {
   background-color: #333;
   color: #ffffff;
 }
-.board-view .btn-bookmark:hover {
+.board-view .btn-bookmark.active {
   background-color: #000;
   box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.09);
 }
@@ -2948,6 +2964,14 @@ input::-webkit-search-results-decoration {
   max-width: 1400px;
   width: calc(100% - 40px);
   margin: 0 auto;
+}
+.graph.intelligence-summary .section-title {
+  background-image: url("../images/icon-intelligence-summary.png");
+  background-repeat: no-repeat;
+}
+.graph.map .section-title {
+  background-image: url("../images/icon-map.png");
+  background-repeat: no-repeat;
 }
 .graph .section-title {
   background-image: url("../images/icon-graph.png");
