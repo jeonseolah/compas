@@ -5335,7 +5335,6 @@ legend {
 #datapds-info.new .analysis .list-box .list {
     flex: 1;
     overflow: hidden;
-    min-width: 300px;
     width: 100%;
     border: 1px solid #ccc;
     border-radius: 18px;
@@ -5571,17 +5570,31 @@ legend {
 }
 
 #datapds-info.new .report_view .btn_box {
+    overflow-x: auto;
+    white-space: nowrap;
     display: flex;
     align-items: center;
     border: 1px solid #ddd;
     border-radius: 15px;
     background-color: #f6f6f6;
-    padding: 30px;
+    padding: 20px 10px;
     box-sizing: border-box;
 }
 
+#datapds-info.new .report_view .btn_box::-webkit-scrollbar {
+    height: 5px;
+}
+#datapds-info.new .report_view .btn_box::-webkit-scrollbar-thumb {
+    background-color: #c1c1c1;
+    border-radius: 3px;
+}
+#datapds-info.new .report_view .btn_box::-webkit-scrollbar-track {
+    background-color: #f2f2f2;
+    border-radius: 3px;
+}
+
 #datapds-info.new .report_view .btn_box .btn {
-    margin-right: 20px;
+    margin: 0 10px;
     padding: 10px 14px 10px 48px;
     background-color: #0270a6;
     background-image: url("../images/newsearch/icon-shortcut.png");
@@ -5838,6 +5851,7 @@ legend {
     }
 
     #datapds-info.new .info_contents .result {
+        position: relative;
         display: flex;
         flex-wrap: wrap;
     }
@@ -5882,16 +5896,19 @@ legend {
         background-size: 28px;
         font-size: 20px;
     }
+
+    #datapds-info.new .result .data_info {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 290px;
+        margin: 0 0 0 40px;
+    }
 }
 
 @media (min-width: 1320px) {
     #datapds_list.new .result .ranking {
         max-width: 290px;
-        margin: 0 0 0 40px;
-    }
-
-    #datapds-info.new .result .data_info {
-        width: 290px;
         margin: 0 0 0 40px;
     }
 }
