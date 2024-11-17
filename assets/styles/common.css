@@ -635,14 +635,12 @@ input::-webkit-search-results-decoration {
 }
 .ly-header .nav {
   display: flex;
-  justify-content: center;
-  margin-left: 100px;
+  justify-content: space-around;
+  flex: 1;
+  margin: 0 60px;
   font-size: 22px;
   line-height: 33px;
   font-weight: 700;
-}
-.ly-header .nav-item {
-  padding: 0 43px;
 }
 .ly-header .nav-item a {
   position: relative;
@@ -685,14 +683,18 @@ input::-webkit-search-results-decoration {
   font-size: 0;
 }
 .ly-header .search-input-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  width: 200px;
+  width: 40px;
   height: 40px;
   margin-left: 52px;
   background-color: #ebebeb;
   border-radius: 20px;
 }
 .ly-header .search-input-box .input-search {
+  display: none;
   width: 100%;
   height: 100%;
   padding: 0 16px;
@@ -700,16 +702,23 @@ input::-webkit-search-results-decoration {
   box-sizing: border-box;
 }
 .ly-header .search-input-box .btn-search {
-  position: absolute;
-  top: 50%;
-  right: 16px;
   width: 24px;
   height: 24px;
   background-image: url("../images/icon-search.png");
   background-repeat: no-repeat;
   background-size: 100%;
   font-size: 0;
-  transform: translateY(-50%);
+}
+.ly-header .btn-lang {
+  padding-left: 48px;
+  margin-left: 28px;
+  background-image: url("../images/img-en.png");
+  background-repeat: no-repeat;
+  background-size: 38px auto;
+}
+.ly-header .btn-lang span {
+  font-size: 17px;
+  font-weight: 500;
 }
 .ly-header .login-box {
   display: flex;
@@ -892,11 +901,13 @@ input::-webkit-search-results-decoration {
   vertical-align: top;
 }
 .section .section-description {
+  max-width: 70%;
   margin-top: 20px;
   font-size: 19px;
   line-height: 30px;
   font-weight: 700;
   color: #000;
+  word-break: keep-all;
 }
 .section .btn-more {
   display: inline-block;
@@ -966,9 +977,6 @@ input::-webkit-search-results-decoration {
 .section.intro .company-involve dd {
   position: relative;
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   min-height: 200px;
   background-size: 246px 200px;
   background-position: right 38px center;
@@ -987,14 +995,21 @@ input::-webkit-search-results-decoration {
   background-repeat: no-repeat;
 }
 .section.intro .company-involve dd > strong {
+  display: block;
+  max-width: 60%;
+  margin-top: 50px;
   font-size: 26px;
   line-height: 38px;
   font-weight: 800;
 }
 .section.intro .company-involve dd > p {
+  max-width: 42%;
   margin-top: 10px;
   font-size: 16px;
   line-height: 24px;
+}
+.section.intro .company-involve dd > p br {
+  display: none;
 }
 .section.analysis {
   display: flex;
@@ -1608,9 +1623,12 @@ input::-webkit-search-results-decoration {
 }
 .integrated-search-wrap .search-box-btn .btn-search span {
   position: relative;
-  display: block;
+  display: flex;
+  align-items: center;
   width: 100%;
-  height: 100%;
+  height: 53px;
+  padding-left: 24px;
+  text-align: left;
   background-color: #efefef;
   padding-right: 28px;
   background-image: url("../images/icon-zoomIn.png");
@@ -1620,7 +1638,6 @@ input::-webkit-search-results-decoration {
   border-radius: 0 0 15px 15px;
   font-size: 18px;
   font-weight: 600;
-  line-height: 53px;
   box-sizing: border-box;
 }
 .integrated-search-wrap .search-box-wrap {
@@ -1741,16 +1758,16 @@ input::-webkit-search-results-decoration {
 .integrated-search-wrap .tag-list {
   display: flex;
   flex-wrap: wrap;
+  max-width: calc(100% - 42px);
 }
 .integrated-search-wrap .tag-list li {
-  flex: 1;
   display: flex;
   align-items: center;
   height: 31px;
   padding: 0 9px 0 13px;
   background-color: #369367;
   border-radius: 16px;
-  margin-left: 7px;
+  margin: 1px 0 1px 7px;
 }
 .integrated-search-wrap .tag-list li > span {
   color: #ffffff;
@@ -2063,6 +2080,7 @@ input::-webkit-search-results-decoration {
   font-size: 18px;
   line-height: 27px;
   font-weight: 700;
+  box-sizing: border-box;
 }
 .indicator .data-list .label.ty1 {
   background-color: #565656;

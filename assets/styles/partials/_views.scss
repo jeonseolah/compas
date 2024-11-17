@@ -168,14 +168,14 @@ input::-webkit-search-results-decoration {
 
 	.nav {
 		display: flex;
-		justify-content: center;
-		margin-left: 100px;
+		justify-content: space-around;
+		flex: 1;
+		margin: 0 60px;
 		@include font(22);
 		font-weight: 700;
 	}
 
 	.nav-item {
-		padding: 0 43px;
 
 		& a {
 			position: relative;
@@ -224,14 +224,18 @@ input::-webkit-search-results-decoration {
 	}
 
 	.search-input-box {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		position: relative;
-		width: 200px;
+		width: 40px;
 		height: 40px;
 		margin-left: 52px;
 		@include themeColor(background-color, color04);
 		border-radius: 20px;
 
 		.input-search {
+			display: none;
 			width: 100%;
 			height: 100%;
 			padding: 0 16px;
@@ -240,15 +244,23 @@ input::-webkit-search-results-decoration {
 		}
 
 		.btn-search {
-			position: absolute;
-			top: 50%;
-			right: 16px;
 			width: 24px;
 			height: 24px;
 			@include funcImage("../images/icon-search.png");
 			background-size: 100%;
 			font-size: 0;
-			transform: translateY(-50%);
+		}
+	}
+
+	.btn-lang {
+		padding-left: 48px;
+		margin-left: 28px;
+		@include funcImage("../images/img-en.png");
+		background-size: 38px auto;
+
+		span {
+			font-size: 17px;
+			font-weight: 500;
 		}
 	}
 
@@ -454,11 +466,13 @@ input::-webkit-search-results-decoration {
 	}
 
 	.section-description {
+		max-width: 70%;
 		margin-top: 20px;
 		font-size: 19px;
 		line-height: 30px;
 		font-weight: 700;
 		color: #000;
+		word-break: keep-all;
 	}
 
 	.btn-more {
@@ -531,9 +545,6 @@ input::-webkit-search-results-decoration {
 			dd {
 				position: relative;
 				flex: 1;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
 				min-height: 200px;
 				background-size: 246px 200px;
 				background-position: right 38px center;
@@ -552,13 +563,21 @@ input::-webkit-search-results-decoration {
 				}
 
 				&>strong {
+					display: block;
+					max-width: 60%;
+					margin-top: 50px;
 					@include font(26);
 					font-weight: 800;
 				}
 
 				&>p {
+					max-width: 42%;
 					margin-top: 10px;
 					@include font(16);
+
+					br {
+						display: none;
+					}
 				}
 			}
 		}
@@ -1259,9 +1278,12 @@ input::-webkit-search-results-decoration {
 
 			& span {
 				position: relative;
-				display: block;
+				display: flex;
+				align-items: center;
 				width: 100%;
-				height: 100%;
+				height: 53px;
+				padding-left: 24px;
+				text-align: left;
 				background-color: #efefef;
 				padding-right: 28px;
 				@include funcImage("../images/icon-zoomIn.png");
@@ -1270,7 +1292,6 @@ input::-webkit-search-results-decoration {
 				border-radius: 0 0 15px 15px;
 				font-size: 18px;
 				font-weight: 600;
-				line-height: 53px;
 				box-sizing: border-box;
 			}
 		}
@@ -1420,16 +1441,16 @@ input::-webkit-search-results-decoration {
 	.tag-list {
 		display: flex;
 		flex-wrap: wrap;
+		max-width: calc(100% - 42px);
 
 		li {
-			flex: 1;
 			display: flex;
 			align-items: center;
 			height: 31px;
 			padding: 0 9px 0 13px;
 			@include themeColor(background-color, color02);
 			border-radius: 16px;
-			margin-left: 7px;
+			margin: 1px 0 1px 7px;
 
 			&>span {
 				@include themeColor(color, color00);
@@ -1765,6 +1786,7 @@ input::-webkit-search-results-decoration {
 			@include themeColor(color, color00);
 			@include font(18);
 			font-weight: 700;
+			box-sizing: border-box;
 
 			&.ty1 {
 				background-color: #565656;
