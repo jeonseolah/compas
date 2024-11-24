@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COMPAS HUB 대시보드</title>
+</head>
+
+<body>
+    <div class="guide-view">
+        <dl class="title-box">
+            <dt class="title">퍼블리싱 화면 리스트</dt>
+            <dd>- COMPAS HUB 대시보드</dd>
+        </dl>
+        <table>
+            <caption>
+                퍼블리싱 화면 리스트
+            </caption>
+            <colgroup>
+                <col style="width: 12%" />
+                <col style="width: 12%" />
+                <col style="width: 12%" />
+                <col style="width: 12%" />
+                <col style="width: 10%" />
+                <col style="width: 10%" />
+                <col style="width: 10%" />
+                <col />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>1Depth</th>
+                    <th>2Depth</th>
+                    <th>3Depth</th>
+                    <th>4Depth</th>
+                    <th>화면 ID / URL</th>
+                    <th>진행사항</th>
+                    <!-- 진행중 : working / 완료 : done -->
+                    <!-- 확인 : chk / 확인필요 : chk2 -->
+                    <th>비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Color</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <a href="/html/color.html" target="_blank">color.html</a>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Icon</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <a href="/html/icon.html" target="_blank">icon.html</a>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>레이아웃</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <a href="/html/layout.html" target="_blank">layout.html</a>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>메인</td>
+                    <td>데이터 목록</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <a href="/html/page01.html" target="_blank">page01.html</a>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>팝업</td>
+                    <td>대시보드 상세</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <a href="/html/popup01.html" target="_blank">popup01.html</a>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    dl {
+        margin: 0;
+        padding: 0;
+    }
+
+    .guide-view .title-box {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        padding: 24px;
+        background-color: #6325fd;
+    }
+
+    .guide-view .title-box dt {
+        display: block;
+        font-weight: 500;
+        color: #ffffff;
+        font-size: 22px;
+        line-height: 33px;
+    }
+
+    .guide-view .title-box dd {
+        margin: 10px 0 0;
+        color: #ffffff;
+    }
+
+    .guide-view table {
+        width: 100%;
+        margin-top: 30px;
+        border-top: 1px solid;
+        border-color: #ccc;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    .guide-view table caption {
+        overflow: hidden;
+        display: block;
+        position: absolute;
+        z-index: -1;
+        border: 0;
+        margin: -1px;
+        width: 1px;
+        height: 1px;
+        clip-path: polygon(0 0, 0 0, 0 0);
+    }
+
+    .guide-view table th {
+        padding: 12px 8px;
+        border-bottom: 1px solid;
+        font-size: 15px;
+        line-height: 21px;
+        font-weight: 500;
+        color: #000;
+        background-color: #ebebeb;
+        border-color: #ccc;
+        text-align: center;
+    }
+
+    .guide-view table th+th {
+        border-left: 1px solid;
+        border-color: #ccc;
+    }
+
+    .guide-view table td {
+        padding: 12px 8px;
+        border-bottom: 1px solid;
+        border-color: #ccc;
+        font-size: 15px;
+        line-height: 21px;
+    }
+
+    .guide-view table td+td {
+        border-left: 1px solid;
+        border-color: #ccc;
+    }
+
+    .guide-view table td>a {
+        display: block;
+        font-size: 15px;
+        line-height: 21px;
+        text-align: center;
+    }
+
+    .guide-view table td:nth-child(12) {
+        text-align: center;
+    }
+
+    .guide-view table .done {
+        text-align: center;
+    }
+
+    .guide-view table .done::before {
+        content: "";
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #7fff00;
+    }
+
+    .guide-view table .done::after {
+        content: "완료";
+        margin-left: 4px;
+    }
+
+    .guide-view table .done2::before {
+        content: "";
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: rgb(5, 75, 35);
+    }
+
+    .guide-view table .done2::after {
+        content: "1차 작업완료";
+        width: 6px;
+        height: 6px;
+        margin-left: 3px;
+    }
+
+    .guide-view table .working {
+        text-align: center;
+    }
+
+    .guide-view table .working::before {
+        content: "";
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: #ff8c00;
+    }
+
+    .guide-view table .working::after {
+        content: "진행중";
+        width: 6px;
+        height: 6px;
+        margin-left: 3px;
+    }
+
+    .guide-view table .stop {
+        text-align: center;
+    }
+
+    .guide-view table .stop::before {
+        content: "";
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: rgb(0, 153, 255);
+    }
+
+    .guide-view table .stop::after {
+        content: "일시중지";
+        width: 6px;
+        height: 6px;
+        margin-left: 3px;
+    }
+
+    .guide-view table .tbd {
+        text-align: center;
+    }
+
+    .guide-view table .tbd::before {
+        content: "";
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: rgb(205, 32, 190);
+    }
+
+    .guide-view table .tbd::after {
+        content: "TBD";
+        width: 6px;
+        height: 6px;
+        margin-left: 3px;
+    }
+
+    .guide-view table .chk {
+        text-align: center;
+    }
+
+    .guide-view table .chk::after {
+        content: "O";
+        width: 6px;
+        height: 6px;
+        margin-left: 3px;
+    }
+
+    .guide-view table .chk2 {
+        text-align: center;
+    }
+
+    .guide-view table .chk2::after {
+        content: "△";
+        width: 6px;
+        height: 6px;
+        margin-left: 3px;
+    }
+
+    .guide-view table .del {
+        background-color: rgb(165, 165, 165);
+    }
+
+    .guide-view table .pop {
+        background-color: #ffffb1;
+    }
+</style>
+
+</html>

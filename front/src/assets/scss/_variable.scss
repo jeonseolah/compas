@@ -1,0 +1,146 @@
+@charset "utf-8";
+
+// 테마별 색상
+$colors:(
+  theme-ty1: (
+      co1 : #6325fd,
+      co2 : #6976eb,
+      co3 : #aa95f6,
+      co4 : #cbcdfb,
+      co5 : #adb4f3,
+      co6 : #64cff6,
+      co7 : #d9d9d9,
+      bg90: #1c1e21,
+      bg80: #28292e,
+      bg70: #262a2d,
+      bg60: #30353a,
+      bg50: #373b40,
+      bg40: #2e3236,
+      bg30: #3f3f3f,
+      bg20: #636465,
+      bg10: #85898d,
+      bg00: #434964,
+    ),
+    theme-ty2: (
+      co1 : #39bbb4,
+      co2 : #2cc695,
+      co3 : #82d0dc,
+      co4 : #80cdf7,
+      co5 : #57e0ff,
+      co6 : #64f6ef,
+      co7 : #d9d9d9,
+      bg90: #1c1e21,
+      bg80: #28292e,
+      bg70: #262a2d,
+      bg60: #30353a,
+      bg50: #373b40,
+      bg40: #2e3236,
+      bg30: #3f3f3f,
+      bg20: #636465,
+      bg10: #85898d,
+      bg00: #37687c,
+    ),
+    theme-ty3: (
+      co1 : #ff124d,
+      co2 : #ff4154,
+      co3 : #d4315f,
+      co4 : #ef89ae,
+      co5 : #ff1f59,
+      co6 : #ff7185,
+      co7 : #d9d9d9,
+      bg90: #1c1e21,
+      bg80: #28292e,
+      bg70: #262a2d,
+      bg60: #30353a,
+      bg50: #373b40,
+      bg40: #2e3236,
+      bg30: #3f3f3f,
+      bg20: #636465,
+      bg10: #85898d,
+      bg00: #171617
+    )
+);
+
+@function func_color($key, $type: 'theme-ty1'){
+  @each $name, $color in map-get($colors, $type){
+    @if($key == $name){
+      @return $color;
+    }
+  }
+}
+
+@mixin color($property,$color, $important: false){
+  #{$property}: func_color($color) #{if($important, '!important', '')};
+  @at-root body.theme-ty2 & {
+    #{$property}: func_color($color, theme-ty2) #{if($important, '!important', '')};
+  }
+  @at-root body.theme-ty3 & {
+    #{$property}: func_color($color, theme-ty3) #{if($important, '!important', '')};
+  }
+}
+
+@mixin bgImg($theme1Url,$theme2Url:null,$theme3Url:null) {
+  background-image: url($theme1Url);
+  background-repeat: no-repeat;
+  @at-root body.theme-ty2 & {
+    background-image: url($theme2Url);
+  }
+  @at-root body.theme-ty3 & {
+    background-image: url($theme3Url);
+  }
+}
+
+@mixin font($size) {
+  @if ($size == 32) {
+      font-size: 32px;
+      line-height: 48px;
+  } @else if ($size == 30) {
+      font-size: 30px;
+      line-height: 46px;
+  } @else if ($size == 28) {
+      font-size: 28px;
+      line-height: 42px;
+  } @else if($size == 26) {
+      font-size: 26px;
+      line-height: 38px;
+  } @else if($size == 24) {
+      font-size: 24px;
+      line-height: 36px;
+  } @else if($size == 22) {
+      font-size: 22px;
+      line-height: 33px;
+  } @else if($size == 20) {
+      font-size: 20px;
+      line-height: 30px;
+  } @else if($size == 19) {
+      font-size: 19px;
+      line-height: 28.5px;
+  } @else if($size == 18) {
+      font-size: 18px;
+      line-height: 27px;
+  } @else if($size == 17) {
+    font-size: 17px;
+    line-height: 25.5px;
+  } @else if($size == 16) {
+      font-size: 16px;
+      line-height: 24px;
+  }@else if($size == 15) {
+      font-size: 15px;
+      line-height: 22.5px;
+  } @else if($size == 14) {
+      font-size: 14px;
+      line-height: 21px;
+  } @else if($size == 13) {
+      font-size: 13px;
+      line-height: 19.5px;
+  } @else if($size == 12) {
+      font-size: 12px;
+      line-height: 18px;
+  } @else if($size == 11) {
+    font-size: 11px;
+    line-height: 16.5px;
+  } @else if($size == 10) {
+      font-size: 10px;
+      line-height: 15px;
+  }
+}

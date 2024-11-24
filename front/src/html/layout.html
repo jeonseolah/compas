@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃</title>
+    <link rel="stylesheet" href="/assets/css/default.css" />
+</head>
+
+<body>
+    <div class="ly-wrap">
+        <div class="ly-header">
+            <h1><img src="/assets/images/logo.png" alt="COMPAS HUB"></h1>
+            <h2 class="header-title">
+                <i class="icon-file-text"></i>
+                <strong>미국 선거율 분석</strong>
+            </h2>
+            <div class="header-util">
+                <button class="btn save">SAVE APTURE</button>
+                <button class="btn dashboard">Dashboard List</button>
+                <button class="btn widget">ADD WIDGET</button>
+                <span class="user-info">홍길동님 /***부서</span>
+                <!--
+                <button class="btn login">
+                    <i class="icon-log-in"></i>
+                    <span>LOGIN</span>
+                </button>
+                -->
+                <button class="btn logout">
+                    <i class="icon-log-out"></i>
+                    <span>LOGOUT</span>
+                </button>
+            </div>
+        </div>
+        <div class="ly-container">
+            <div class="leftmenu">
+                <!-- 데이터 목록 -->
+                <div class="leftmenu-item is-active"><!-- .btn-toggle 클릭 .is-active 추가 -->
+                    <button class="btn-toggle data-list">
+                        <span>데이터 목록</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="data-list">
+                            <strong class="data-list-title">데이터 목록</strong>
+                            <div class="data-item is-active">
+                                <div class="data-item-head">
+                                    <strong class="data-item-title">데이터1</strong>
+                                    <div class="data-item-btn">
+                                        <button class="btn-edit"></button>
+                                        <button class="btn-alert"></button>
+                                        <button class="btn-toggle"></button>
+                                    </div>
+                                </div>
+                                <div class="data-item-content">
+                                    <div class="data-content-head">
+                                        <strong class="data-content-title">컬럼목록</strong>
+                                    </div>
+                                    <ul class="data-column-list">
+                                        <li>
+                                            <span class="icon column-ty1"></span>
+                                            <span class="type">date</span>
+                                            <span class="text-en">text enenenenenenenen</span>
+                                            <span class="text-ko">한글명한글명한글명한글명한글명한글명한글명</span>
+                                        </li>
+                                        <li>
+                                            <span class="icon column-ty2"></span>
+                                            <span class="type">number</span>
+                                            <span class="text-en">text en</span>
+                                            <span class="text-ko">한글명</span>
+                                        </li>
+                                        <li>
+                                            <span class="icon column-ty3"></span>
+                                            <span class="type">string</span>
+                                            <span class="text-en">text en</span>
+                                            <span class="text-ko">한글명</span>
+                                        </li>
+                                        <li>
+                                            <span class="icon column-ty4"></span>
+                                            <span class="type">content</span>
+                                            <span class="text-en">text en</span>
+                                            <span class="text-ko">한글명</span>
+                                        </li>
+                                        <li>
+                                            <span class="icon column-ty5"></span>
+                                            <span class="type">content</span>
+                                            <span class="text-en">text en</span>
+                                            <span class="text-ko">한글명</span>
+                                        </li>
+                                        <li>
+                                            <span class="icon column-ty6"></span>
+                                            <span class="type">content</span>
+                                            <span class="text-en">text en</span>
+                                            <span class="text-ko">한글명</span>
+                                        </li>
+                                        <li>
+                                            <span class="icon column-ty6"></span>
+                                            <span class="type">content</span>
+                                            <span class="text-en">text en</span>
+                                            <span class="text-ko">한글명</span>
+                                        </li>
+                                    </ul>
+                                    <div class="data-content-head">
+                                        <strong class="data-content-title">필터적용</strong>
+                                        <div class="switch checkbox">
+                                            <label>
+                                                <input role="switch" type="checkbox" />
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="data-textarea">
+                                        <div class="form">
+                                            <textarea class="textarea"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button class="btn-filter">
+                                            <span>필터적용</span>
+                                        </button>
+                                        <button class="btn-cancel">
+                                            <span>취소</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-item-head">
+                                    <strong class="data-item-title">데이터1</strong>
+                                    <div class="data-item-btn">
+                                        <button class="btn-edit"></button>
+                                        <button class="btn-alert"></button>
+                                        <button class="btn-toggle"></button>
+                                    </div>
+                                </div>
+                                <div class="data-item-content">
+                                    <div class="data-content-head">
+                                        <strong class="data-content-title">컬럼목록</strong>
+                                    </div>
+                                    <ul class="data-column-list">
+                                        <li>
+                                            <span class="icon column-ty1"></span>
+                                            <span class="type">date</span>
+                                            <span class="text-en">text enenenenenenenen</span>
+                                            <span class="text-ko">한글명한글명한글명한글명한글명한글명한글명</span>
+                                        </li>
+                                        <li>
+                                            <span class="icon column-ty2"></span>
+                                            <span class="type">number</span>
+                                            <span class="text-en">text en</span>
+                                            <span class="text-ko">한글명</span>
+                                        </li>
+                                        <li>
+                                            <span class="icon column-ty3"></span>
+                                            <span class="type">string</span>
+                                            <span class="text-en">text en</span>
+                                            <span class="text-ko">한글명</span>
+                                        </li>
+                                        <li>
+                                            <span class="icon column-ty4"></span>
+                                            <span class="type">content</span>
+                                            <span class="text-en">text en</span>
+                                            <span class="text-ko">한글명</span>
+                                        </li>
+                                        <li>
+                                            <span class="icon column-ty5"></span>
+                                            <span class="type">content</span>
+                                            <span class="text-en">text en</span>
+                                            <span class="text-ko">한글명</span>
+                                        </li>
+                                        <li>
+                                            <span class="icon column-ty6"></span>
+                                            <span class="type">content</span>
+                                            <span class="text-en">text en</span>
+                                            <span class="text-ko">한글명</span>
+                                        </li>
+                                        <li>
+                                            <span class="icon column-ty6"></span>
+                                            <span class="type">content</span>
+                                            <span class="text-en">text en</span>
+                                            <span class="text-ko">한글명</span>
+                                        </li>
+                                    </ul>
+                                    <div class="data-content-head">
+                                        <strong class="data-content-title">필터적용</strong>
+                                        <div class="switch checkbox">
+                                            <label>
+                                                <input role="switch" type="checkbox" />
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="data-textarea">
+                                        <textarea class="textarea"></textarea>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button class="btn-filter">
+                                            <span>필터적용</span>
+                                        </button>
+                                        <button class="btn-cancel">
+                                            <span>취소</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 데이터 테마 -->
+                <div class="leftmenu-item">
+                    <button class="btn-toggle data-theme">
+                        <span>데이터 테마</span>
+                    </button>
+                    <div class="toggle-content"></div>
+                </div>
+            </div>
+            <div class="gridstack-container">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
