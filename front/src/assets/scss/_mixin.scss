@@ -24,10 +24,12 @@
 // 말줄임
 @mixin textOverflowLine($line) {
     display: -webkit-box;
+    display: block;
     -webkit-line-clamp: $line;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 // 밴더프리픽스

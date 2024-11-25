@@ -39,8 +39,7 @@
       src:
           url("../fonts/#{$folder}/#{$file}.eot?siud0k#iefix") format("embedded-opentype"),
           url("../fonts/#{$folder}/#{$file}.ttf?siud0k") format("truetype"),
-          url("../fonts/#{$folder}/#{$file}.woff?siud0k") format("woff"),
-          url("../img/svg/icon.svg?siud0k#icomoon") format("svg");
+          url("../fonts/#{$folder}/#{$file}.woff?siud0k") format("woff");
       font-weight: normal;
       font-style: normal;
       font-display: block;

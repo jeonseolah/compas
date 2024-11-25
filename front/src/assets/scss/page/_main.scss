@@ -92,14 +92,14 @@ a {
     }
 
     .header-title {
-        display: flex;
-        align-items: center;
-        margin-left: 40px;
+        flex: 1;
+        margin-left: 20px;
         @include font(19);
         color: #fff;
+        @include textOverflowLine(1);
 
         &>.icon-file-text {
-            margin-right: 10px;
+            margin-right: 4px;
             @include color(color, co1);
             @include font(20);
         }
@@ -108,7 +108,9 @@ a {
     .header-util {
         display: flex;
         align-items: center;
-        margin-left: auto;
+        flex: 1;
+        justify-content: flex-end;
+        margin-left: 10px;
 
         .btn {
             display: inline-flex;
@@ -161,6 +163,7 @@ a {
             @include font(12);
             font-weight: 600;
             color: #fff;
+            @include textOverflowLine(1);
         }
     }
 }
@@ -603,10 +606,12 @@ a {
     }
 
     .panel-title {
+        flex: 1;
         margin-right: 10px;
         @include font(17);
         font-weight: 700;
         color: #fff;
+        @include textOverflowLine(1);
     }
     
     .btn-title-edit {
