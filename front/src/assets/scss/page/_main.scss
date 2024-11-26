@@ -590,12 +590,12 @@ a {
 .panel-header {
     position: relative;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    height: 50px;
-    padding: 0 20px;
+    max-height: 50px;
+    padding: 16px 20px;
     box-sizing: border-box;
     border-bottom: 1px solid #000;
+    box-sizing: border-box;
 
     &.border-0 {
         border-bottom: 0;
@@ -606,7 +606,6 @@ a {
     }
 
     .panel-title {
-        flex: 1;
         margin-right: 10px;
         @include font(17);
         font-weight: 700;
@@ -622,9 +621,19 @@ a {
         }
     }
 
+    .panel-right {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        &~.panel-tabs {
+            margin: 0;
+        }
+    }
+
     .panel-tabs {
         display: flex;
-        flex-wrap: wrap;
         margin-left: auto;
 
         &+.panel-util {
@@ -645,9 +654,10 @@ a {
     }
 
     .panel-util {
+        display: flex;
         margin-left: auto;
 
-        button {
+        &>button {
             margin-left: 10px;
 
             & i {
@@ -723,6 +733,7 @@ a {
 }
 
 .panel-content {
+    position: relative;
     height: 100%;
 
     .btn-widget {
@@ -920,5 +931,27 @@ a {
                 font-size: 16px;
             }
         }
+    }
+}
+
+/* gridstack custom */
+.grid-stack-item  > .ui-resizable-se {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    background: none;
+    cursor: pointer;
+
+    &::before {
+        content: "\e9a7";
+        display: block;
+        font-family: "icomoon";
+        font-size: 24px;
+        @include color(color, co1);
+        transform: rotate(45deg);
     }
 }
