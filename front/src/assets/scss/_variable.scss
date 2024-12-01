@@ -10,6 +10,8 @@ $colors:(
       co5 : #adb4f3,
       co6 : #64cff6,
       co7 : #d9d9d9,
+      co8 : #fff,
+      bg100: #7628ba,
       bg90: #1c1e21,
       bg80: #28292e,
       bg70: #262a2d,
@@ -29,6 +31,8 @@ $colors:(
       co5 : #57e0ff,
       co6 : #64f6ef,
       co7 : #d9d9d9,
+      co8 : #fff,
+      bg100: #93cee8,
       bg90: #1c1e21,
       bg80: #28292e,
       bg70: #262a2d,
@@ -48,6 +52,8 @@ $colors:(
       co5 : #ff1f59,
       co6 : #ff7185,
       co7 : #d9d9d9,
+      co8 : #fff,
+      bg100: #fe4343,
       bg90: #1c1e21,
       bg80: #28292e,
       bg70: #262a2d,
@@ -58,6 +64,27 @@ $colors:(
       bg20: #636465,
       bg10: #85898d,
       bg00: #171617
+    ),
+    theme-ty4: (
+      co1 : #6325fd,
+      co2 : #6976eB,
+      co3 : rgba(99, 37, 253, 0.5),
+      co4 : rgba(37, 41, 253, 0.24),
+      co5 : #adb4f3,
+      co6 : #64cff6,
+      co7 : #d9d9d9,
+      co8 : #2d2d2d,
+      bg100: #4d5469,
+      bg90: #f8f8f8,
+      bg80: #f8f8fc,
+      bg70: #f3f3f3,
+      bg60: #f9f9f9,
+      bg50: #fdfdfd,
+      bg40: #ececec,
+      bg30: #e2e2e2,
+      bg20: #818181,
+      bg10: #868d94,
+      bg00: #e5e8f2
     )
 );
 
@@ -77,9 +104,12 @@ $colors:(
   @at-root body.theme-ty3 & {
     #{$property}: func_color($color, theme-ty3) #{if($important, '!important', '')};
   }
+  @at-root body.theme-ty4 & {
+    #{$property}: func_color($color, theme-ty4) #{if($important, '!important', '')};
+  }
 }
 
-@mixin bgImg($theme1Url,$theme2Url:null,$theme3Url:null) {
+@mixin bgImg($theme1Url,$theme2Url:null,$theme3Url:null,$theme4Url:null) {
   background-image: url($theme1Url);
   background-repeat: no-repeat;
   @at-root body.theme-ty2 & {
@@ -87,6 +117,9 @@ $colors:(
   }
   @at-root body.theme-ty3 & {
     background-image: url($theme3Url);
+  }
+  @at-root body.theme-ty4 & {
+    background-image: url($theme4Url);
   }
 }
 

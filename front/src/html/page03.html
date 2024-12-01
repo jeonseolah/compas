@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>위젯 설정</title>
+    <link rel="stylesheet" href="/assets/css/default.css" />
+</head>
+
+<body>
+    <div class="ly-wrap widget-setting">
+        <div class="ly-header">
+            <h1>COMPAS HUB</h1>
+            <div class="chart-menu">
+                <button class="btn is-active">
+                    <i class="icon-7"></i>
+                    <span>막대</span>
+                </button>
+                <button class="btn">
+                    <i class="icon-8"></i>
+                    <span>선/면적</span>
+                </button>
+                <button class="btn">
+                    <i class="icon-9"></i>
+                    <span>트리맵</span>
+                </button>
+                <button class="btn">
+                    <i class="icon-10"></i>
+                    <span>파이</span>
+                </button>
+                <button class="btn">
+                    <i class="icon-11"></i>
+                    <span>산점도</span>
+                </button>
+                <button class="btn">
+                    <i class="icon-bubble"></i>
+                    <span>버블차트</span>
+                </button>
+                <button class="btn">
+                    <i class="icon-12"></i>
+                    <span>방사형</span>
+                </button>
+                <button class="btn">
+                    <i class="icon-filter"></i>
+                    <span>깔때기</span>
+                </button>
+                <button class="btn">
+                    <i class="icon-13"></i>
+                    <span>그리드</span>
+                </button>
+                <button class="btn">
+                    <i class="icon-14"></i>
+                    <span>이미지</span>
+                </button>
+                <button class="btn">
+                    <i class="icon-15"></i>
+                    <span>지도</span>
+                </button>
+                <button class="btn">
+                    <i class="icon-16"></i>
+                    <span>통계</span>
+                </button>
+            </div>
+            <div class="header-util">
+                <button class="btn widget-list">
+                    <i class="icon-menu"></i>
+                    위젯목록
+                </button>
+                <button class="btn widget-save">
+                    <i class="icon-check"></i>
+                    저장
+                </button>
+                <button class="btn widget-cancel">
+                    <i class="icon-x"></i>
+                    취소
+                </button>
+            </div>
+        </div>
+        <div class="ly-container">
+            <!-- 위젯 설정 -->
+            <div class="widget-left">
+                <div class="widget-column">
+                    <strong class="widget-title">위젯설정</strong>
+                    <div class="form search">
+                        <input type="text" class="input-text">
+                        <button class="btn text">
+                            <span>검색</span>
+                        </button>
+                    </div>
+                    <div class="column-box">
+                        <div class="form flex">
+                            <label>X</label>
+                            <select>
+                                <option>칼럼1</option>
+                            </select>
+                        </div>
+                        <div class="form flex">
+                            <label>Y</label>
+                            <select>
+                                <option>칼럼1</option>
+                            </select>
+                        </div>
+                        <div class="form flex">
+                            <label>통계</label>
+                            <select>
+                                <option>칼럼1</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="column-box remove">
+                        <div class="form flex">
+                            <label>Y</label>
+                            <select>
+                                <option>칼럼1</option>
+                            </select>
+                        </div>
+                        <div class="form flex">
+                            <label>통계</label>
+                            <select>
+                                <option>칼럼1</option>
+                            </select>
+                        </div>
+                        <button class="btn-remove">
+                            <i class="icon-minus"></i>
+                        </button>
+                    </div>
+                    <button class="btn-add">
+                        <i class="icon-plus"></i>
+                        <span>칼럼추가</span>
+                    </button>
+                </div>
+                <div class="accordion-list">
+                    <div class="accordion-item is-active">
+                        <div class="accordion-head">
+                            <strong class="title">데이터</strong>
+                            <div class="btn-group">
+                                <button class="btn">
+                                    <i class="icon-chevron-up"></i>
+                                </button>
+                                <button class="btn">
+                                    <i class="icon-chevron-down"></i>
+                                </button>
+                                <button class="btn">
+                                    <i class="icon-x"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="form flex">
+                                <label>레이어 설정</label>
+                                <div class="dropdown is-active"><!-- .dropdown-button 클릭 시 .is-active -->
+                                    <div class="dropdown-button">
+                                        <span>포인트</span>
+                                    </div>
+                                    <ul class="dropdown-list">
+                                        <li>
+                                            <i class="icon-point1"></i>
+                                            <span class="point">포인트맵</span>
+                                        </li>
+                                        <li>
+                                            <i class="icon-point2"></i>
+                                            <span class="point">라인맵</span>
+                                        </li>
+                                        <li>
+                                            <i class="icon-point3"></i>
+                                            <span class="point">폴리곤맵</span>
+                                        </li>
+                                        <li>
+                                            <i class="icon-point4"></i>
+                                            <span class="point">히트맵</span>
+                                        </li>
+                                        <li>
+                                            <i class="icon-point5"></i>
+                                            <span class="point">OD맵</span>
+                                        </li>
+                                        <li>
+                                            <i class="icon-point6"></i>
+                                            <span class="point">클러스터맵</span>
+                                        </li>
+                                        <li>
+                                            <i class="icon-point7"></i>
+                                            <span class="point">격자맵</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="column-box">
+                                <div class="form search">
+                                    <input type="text" class="input-text">
+                                    <button class="btn text">
+                                        <span>검색</span>
+                                    </button>
+                                </div>
+                                <div class="form flex">
+                                    <label>Geom</label>
+                                    <select>
+                                        <option>geom</option>
+                                    </select>
+                                </div>
+                                <div class="form flex">
+                                    <label>Geom</label>
+                                    <select>
+                                        <option>geom</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="filter-box">
+                                <div class="form">
+                                    <label>필터설정</label>
+                                    <textarea class="textarea"></textarea>
+                                </div>
+                                <div class="btn-toggle">
+                                    <button class="btn">개별</button>
+                                    <button class="btn is-active">공통</button>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn-filter">
+                                        <span>필터적용</span>
+                                    </button>
+                                    <button class="btn-cancel">
+                                        <span>취소</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-head">
+                            <strong class="title">데이터</strong>
+                            <div class="btn-group">
+                                <button class="btn">
+                                    <i class="icon-chevron-up"></i>
+                                </button>
+                                <button class="btn">
+                                    <i class="icon-chevron-down"></i>
+                                </button>
+                                <button class="btn">
+                                    <i class="icon-x"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="accordion-content">
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-head">
+                            <strong class="title">데이터</strong>
+                            <div class="btn-group">
+                                <button class="btn">
+                                    <i class="icon-chevron-up"></i>
+                                </button>
+                                <button class="btn">
+                                    <i class="icon-chevron-down"></i>
+                                </button>
+                                <button class="btn">
+                                    <i class="icon-x"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="accordion-content">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gridstack-container"></div>
+            <!-- 범례보이기 -->
+            <div class="widget-right">
+                <div class="widget-column">
+                    <div class="form flex">
+                        <label>범례보이기</label>
+                        <span class="form-item">
+                            <input type="radio" class="input-radio" id="radio-align1" name="radio-align" checked>
+                            <label for="radio-legend1">변경</label>
+                        </span>
+                        <span class="form-item">
+                            <input type="radio" class="input-radio" id="radio-legend2" name="radio-legend">
+                            <label for="radio-legend2">유지</label>
+                        </span>
+                    </div>
+                    <div class="form flex">
+                        <label>범례위치</label>
+                        <select>
+                            <option>왼쪽아래</option>
+                        </select>
+                    </div>
+                    <div class="form flex">
+                        <label>범례정렬</label>
+                        <div class="switch radio">
+                            <input type="radio" id="switch-radio2"  name="switch-radio"  checked>
+                            <label for="switch-radio2" class="switch-label">
+                                <i class="icon-edit-3"></i>
+                                VERTICAL
+                            </label>
+                            <input type="radio" id="switch-radio1" name="switch-radio">
+                            <label for="switch-radio1" class="switch-label">
+                                <i class="icon-edit-3"></i>
+                                VERTICAL
+                            </label>
+                            <button class="switch-toggle"></button>
+                        </div>
+                    </div>
+                    <div class="column-box">
+                        <strong class="title">데이터1</strong>
+                        <div class="form flex">
+                            <label>보일지말지여부</label>
+                            <div class="switch checkbox">
+                                <label>
+                                    <input role="switch" type="checkbox" />
+                                    <span></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form flex">
+                            <label>투명도</label>
+                            <div class="range-slider">
+                                <input type="range" class="input-range" max="100" min="0" step="1">
+                            </div>
+                        </div>
+                        <div class="form flex">
+                            <label>지도유형</label>
+                            <span class="txt">포인트 맵</span>
+                        </div>
+                        <div class="form flex">
+                            <label>분류 값</label>
+                            <span class="txt">칼럼 1</span>
+                        </div>
+                    </div>
+                    <div class="column-box">
+                        <strong class="title">설정</strong>
+                        <div class="form flex">
+                            <label>자료정렬</label>
+                            <span class="form-item">
+                                <input type="radio" class="input-radio" id="radio-align1" name="radio-align1" checked>
+                                <label for="radio-align1">수직</label>
+                            </span>
+                            <span class="form-item">
+                                <input type="radio" class="input-radio" id="radio-align2" name="radio-align1">
+                                <label for="radio-align2">수평</label>
+                            </span>
+                        </div>
+                        <div class="form flex">
+                            <label>그룹/누적/설정</label>
+                            <span class="form-item">
+                                <input type="radio" class="input-radio" id="radio-align3" name="radio-align2" checked>
+                                <label for="radio-align3">수직</label>
+                            </span>
+                            <span class="form-item">
+                                <input type="radio" class="input-radio" id="radio-align4" name="radio-align2">
+                                <label for="radio-align4">수평</label>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="column-box">
+                        <strong class="title">범례</strong>
+                        <ul class="color-list">
+                            <li class="color-item">
+                                <span class="color square"></span>
+                                <span class="txt">기본범례</span>
+                                <button class="btn-edit">
+                                    <i class="icon-edit-3"></i>
+                                </button>
+                            </li>
+                            <li class="color-item">
+                                <span class="color"></span>
+                                <span class="txt">기본범례</span>
+                                <button class="btn-edit">
+                                    <i class="icon-edit-3"></i>
+                                </button>
+                            </li>
+                            <li class="color-item">
+                                <span class="color"></span>
+                                <span class="txt">기본범례기본범례기본범례기본범례기본범례기본범례기본범례기본범례</span>
+                                <button class="btn-edit">
+                                    <i class="icon-edit-3"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // range 
+    document.querySelector('.input-range').addEventListener('input', function(e){
+        var gradientValue = 100 / e.target.attributes.max.value;
+        e.target.style.background = 'linear-gradient(to right, #6325fd 0%, #6325fd '+gradientValue * event.target.value +'%, #30353a ' +gradientValue *  event.target.value + '%, #30353a 100%)';
+    });
+</script>
+</html>

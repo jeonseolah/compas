@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인</title>
+    <link rel="stylesheet" href="/assets/css/default.css" />
+</head>
+
+<body>
+    <div class="ly-wrap">
+        <div class="ly-header">
+            <h1>COMPAS HUB</h1><!-- 20241202 수정 -->
+            <h2 class="header-title">
+                <i class="icon-file-text"></i>
+                <strong>미국 선거율 분석</strong>
+            </h2>
+            <div class="header-util">
+                <button class="btn save">SAVE APTURE</button>
+                <button class="btn dashboard">Dashboard List</button>
+                <button class="btn widget">ADD WIDGET</button>
+                <span class="user-info">홍길동님 /***부서</span>
+                <!--
+                <button class="btn login">
+                    <i class="icon-log-in"></i>
+                    <span>LOGIN</span>
+                </button>
+                -->
+                <button class="btn logout">
+                    <i class="icon-log-out"></i>
+                    <span>LOGOUT</span>
+                </button>
+            </div>
+        </div>
+        <div class="ly-container">
+            <div class="leftmenu">
+                <!-- 데이터 목록 -->
+                <div class="leftmenu-item"><!-- .btn-toggle 클릭 .is-active 추가 -->
+                    <button class="btn-toggle data-list">
+                        <span>데이터 목록</span>
+                    </button>
+                    <div class="toggle-content">
+                    </div>
+                </div>
+                <!-- 데이터 테마 -->
+                <div class="leftmenu-item is-active">
+                    <button class="btn-toggle data-theme">
+                        <span>데이터 테마</span>
+                    </button>
+                    <div class="toggle-content">
+                        <div class="data-theme">
+                            <strong class="data-theme-title">대시보드 테마</strong>
+                            <div class="form flex">
+                                <label for="label-select">테마</label>
+                                <select id="label-select">
+                                    <option>테이블</option>
+                                </select>
+                            </div>
+                            <div class="data-theme-list">
+                                <div class="data-theme-item">
+                                    <div class="data-theme-head">
+                                        <strong class="data-theme-title">대시보드</strong>
+                                        <div class="form">
+                                            <span class="form-item">
+                                                <input type="radio" class="input-radio" id="radio-dashboard1" name="radio-dashboard" checked>
+                                                <label for="radio-dashboard1">변경</label>
+                                            </span>
+                                            <span class="form-item">
+                                                <input type="radio" class="input-radio" id="radio-dashboard2" name="radio-dashboard">
+                                                <label for="radio-dashboard2">유지</label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="data-theme-content">
+                                        <div class="dashboard">
+                                            <div class="panel">
+                                                <div class="panel-head">
+                                                    <strong class="panel-title">대시보드</strong>
+                                                    <i class="icon-x"></i>
+                                                </div>
+                                                <div class="panel-content">
+                                                    <img src="../assets/images/@img-panel.png" alt="대시보드">
+                                                </div>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-position top">
+                                                    <div class="form flex">
+                                                        <label>폰트</label>
+                                                        <div class="color-picker font">
+                                                            <div class="color"></div>
+                                                        </div>
+                                                        <div class="quantity">
+                                                            <input type="number" class="input-number">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form flex">
+                                                        <label>타이틀 배경색</label>
+                                                        <div class="color-picker">
+                                                            <div class="color"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="option-position bottom">
+                                                    <div class="form flex">
+                                                        <label>테두리색</label>
+                                                        <div class="color-picker">
+                                                            <div class="color"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form flex">
+                                                        <label>배경색</label>
+                                                        <div class="color-picker">
+                                                            <div class="color"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="data-theme-item">
+                                    <div class="data-theme-head">
+                                        <strong class="data-theme-title">프레임</strong>
+                                        <div class="form">
+                                            <span class="form-item">
+                                                <input type="radio" class="input-radio" id="radio-frame1" name="radio-frame" checked>
+                                                <label for="radio-frame1">변경</label>
+                                            </span>
+                                            <span class="form-item">
+                                                <input type="radio" class="input-radio" id="radio-frame2" name="radio-frame">
+                                                <label for="radio-frame2">유지</label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="data-theme-content">
+                                        <div class="form flex">
+                                            <label>테두리색</label>
+                                            <div class="dropdown is-active"><!-- .dropdown-button 클릭 시 .is-active -->
+                                                <div class="dropdown-button">
+                                                    <span class="color"></span>
+                                                </div>
+                                                <ul class="dropdown-list">
+                                                    <li>
+                                                        <span class="color"></span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="color"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="form flex">
+                                            <label>헤더 배경색</label>
+                                            <div class="color-picker">
+                                                <div class="color"></div>
+                                            </div>
+                                        </div>
+                                        <div class="form flex">
+                                            <label>헤더 폰트 사이즈</label>
+                                            <div class="quantity">
+                                                <input type="number" class="input-number">
+                                            </div>
+                                        </div>
+                                        <div class="form flex">
+                                            <label>바디 배경색</label>
+                                            <div class="color-picker">
+                                                <div class="color"></div>
+                                            </div>
+                                        </div>
+                                        <div class="form flex">
+                                            <label>타이틀 배경색</label>
+                                            <div class="color-picker font">
+                                                <div class="color"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="data-theme-item">
+                                    <div class="data-theme-head">
+                                        <strong class="data-theme-title">차트</strong>
+                                        <div class="form">
+                                            <span class="form-item">
+                                                <input type="radio" class="input-radio" id="radio-chart1" name="radio-chart" checked>
+                                                <label for="radio-chart1">변경</label>
+                                            </span>
+                                            <span class="form-item">
+                                                <input type="radio" class="input-radio" id="radio-chart2" name="radio-chart">
+                                                <label for="radio-chart2">유지</label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="data-theme-content">
+                                        <div class="form flex">
+                                            <label>차트색</label>
+                                            <div class="color-picker">
+                                                <div class="color"></div>
+                                            </div>
+                                        </div>
+                                        <div class="form flex">
+                                            <label>지도범례색</label>
+                                            <div class="color-picker">
+                                                <div class="color"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gridstack">
+                <div class="grid grid-cols-2 gap-20">
+                    <div class="grid-item">
+                        <div class="panel-container">
+                            <div class="panel-header">
+                                <strong class="panel-title">선거구별 투표 핫스팟</strong>
+                                <button class="btn-title-edit">
+                                    <i class="icon-edit-3"></i>
+                                </button>
+                                <div class="panel-right">
+                                    <div class="panel-tabs">
+                                        <button class="tab is-active"></button>
+                                        <button class="tab"></button>
+                                        <button class="tab"></button>
+                                    </div>
+                                    <div class="panel-util">
+                                        <button class="btn-edit">
+                                            <i class="icon-edit"></i>
+                                        </button>
+                                        <button class="btn-menu">
+                                            <i class="icon-menu"></i>
+                                        </button>
+                                        <div class="panel-setting">
+                                            <button class="btn is-active">
+                                                <i class="icon-edit-3"></i><!-- 20241202 수정 -->
+                                                <span>패널 스타일 설정</span>
+                                            </button>
+                                            <button class="btn">
+                                                <i class="icon-plus-square"></i>
+                                                <span>탭추가</span>
+                                            </button>
+                                            <button class="btn">
+                                                <i class="icon-minus-square"></i>
+                                                <span>탭삭제</span>
+                                            </button>
+                                            <button class="btn">
+                                                <i class="icon-trash-2"></i>
+                                                <span>위젯 전체삭제</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-content">
+                                <div class="grid-stack-item">
+                                    <div class="ui-resizable-se"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-item grid-rows-3 gap-20">
+                        <div class="grid grid-cols-2 gap-20">
+                            <div class="grid-item">
+                                <div class="panel-container">
+                                    <!-- <div class="panel-header border-0">
+                                        <div class="panel-right">
+                                            <div class="panel-tabs">
+                                                <button class="tab is-active"></button>
+                                                <button class="tab"></button>
+                                                <button class="tab"></button>
+                                            </div>
+                                            <div class="panel-util">
+                                                <button class="btn-edit">
+                                                    <i class="icon-edit"></i>
+                                                </button>
+                                                <button class="btn-menu">
+                                                    <i class="icon-menu"></i>
+                                                </button>
+                                                <button class="btn-setting">
+                                                    <i class="icon-setting"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    <div class="panel-content">
+                                        <button class="btn-widget">
+                                            <span>ADD WIDGET</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item">
+                                <div class="panel-container is-active">
+                                    <div class="panel-header border-0">
+                                        <div class="panel-right">
+                                            <div class="panel-tabs">
+                                                <button class="tab is-active"></button>
+                                                <button class="tab"></button>
+                                                <button class="tab"></button>
+                                            </div>
+                                            <div class="panel-util">
+                                                <button class="btn-edit">
+                                                    <i class="icon-edit"></i>
+                                                </button>
+                                                <button class="btn-menu">
+                                                    <i class="icon-menu"></i>
+                                                </button>
+                                                <button class="btn-setting is-active">
+                                                    <i class="icon-setting"></i>
+                                                </button>
+                                                <div class="panel-setting" style="display: none;">
+                                                    <button class="btn is-active">
+                                                        <i class="icon-edit-3"></i><!-- 20241202 수정 -->
+                                                        <span>패널 스타일 설정</span>
+                                                    </button>
+                                                    <button class="btn">
+                                                        <i class="icon-plus-square"></i>
+                                                        <span>탭추가</span>
+                                                    </button>
+                                                    <button class="btn">
+                                                        <i class="icon-minus-square"></i>
+                                                        <span>탭삭제</span>
+                                                    </button>
+                                                    <button class="btn">
+                                                        <i class="icon-trash-2"></i>
+                                                        <span>위젯 전체삭제</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-content">
+                                        <button class="btn-widget">
+                                            <span>ADD WIDGET</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1">
+                            <div class="grid-item">
+                                <div class="panel-container">
+                                    <div class="panel-header border-0">
+                                        <strong class="panel-title">그래프 제목</strong>
+                                        <div class="panel-right">
+                                            <div class="panel-tabs">
+                                                <button class="tab is-active"></button>
+                                                <button class="tab"></button>
+                                                <button class="tab"></button>
+                                            </div>
+                                            <div class="panel-util">
+                                                <button class="btn-edit">
+                                                    <i class="icon-edit"></i>
+                                                </button>
+                                                <button class="btn-menu">
+                                                    <i class="icon-menu"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-content"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex gap-20">
+                            <div class="grid-item w-30">
+                                <div class="panel-container">
+                                    <div class="panel-header border-0">
+                                        <div class="panel-right">
+                                            <div class="panel-util">
+                                                <button class="btn-edit">
+                                                    <i class="icon-edit"></i>
+                                                </button>
+                                                <button class="btn-menu">
+                                                    <i class="icon-menu"></i>
+                                                </button>
+                                                <button class="btn-setting">
+                                                    <i class="icon-setting"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-content"></div>
+                                </div>
+                            </div>
+                            <div class="grid-item w-70">
+                                <div class="panel-container">
+                                    <div class="panel-header border-0">
+                                        <strong class="panel-title">그래프 제목</strong>
+                                        <div class="panel-right">
+                                            <div class="panel-util">
+                                                <button class="btn-edit">
+                                                    <i class="icon-edit"></i>
+                                                </button>
+                                                <button class="btn-menu">
+                                                    <i class="icon-menu"></i>
+                                                </button>
+                                                <button class="btn-setting is-active">
+                                                    <i class="icon-setting"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-content"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-sheet">
+                <ul class="tabs">
+                    <li class="is-active">
+                        <span>sheet1sheet1sheet1sheet1</span>
+                        <button class="btn-delete">
+                            <i class="icon-x"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <span>sheet1</span>
+                        <button class="btn-delete">
+                            <i class="icon-x"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function quantityInput(element, options) {
+        const spinner = element;
+
+        const defaultOptions = {
+            min: 1,
+            value: 1,
+        };
+
+        options = Object.assign({}, defaultOptions, options);
+
+        const obj = {
+
+            input: spinner.querySelector('input[type="number"]'),
+            init() {
+                this.setup();
+                this.events();
+                return this;
+            },
+            setup() {
+
+                this.input.value = options.value;
+                this.min = options.min;
+
+                const qNav = document.createElement('div');
+                const qUp = document.createElement('div');
+                const qDown = document.createElement('div');
+
+                qNav.setAttribute('class', 'quantity-nav');
+                qUp.setAttribute('class', 'quantity-button quantity-button--up');
+                qDown.setAttribute('class', 'quantity-button quantity-button--down');
+
+                qUp.innerHTML = '<span class="increase"></span>';
+                qDown.innerHTML = '<span class="decrease"></span>';
+                qNav.appendChild(qUp);
+                qNav.appendChild(qDown);
+                spinner.appendChild(qNav);
+
+                this.btnUp = spinner.querySelector('.quantity-button--up');
+                this.btnDown = spinner.querySelector('.quantity-button--down');
+            },
+            trigger() {
+                const event = document.createEvent('HTMLEvents');
+                event.initEvent('change', true, false);
+                return event;
+            },
+            events() {
+                this.btnUp.addEventListener('click', () => {
+                    const oldValue = parseFloat(this.input.value);
+                    let newVal;
+                    newVal = oldValue + 1;
+                    this.input.value = newVal;
+                    this.input.dispatchEvent(this.trigger());
+                });
+
+                this.btnDown.addEventListener('click', () => {
+                    const oldValue = parseFloat(this.input.value);
+                    let newVal;
+                    if (oldValue <= this.min) {
+                        newVal = oldValue;
+                    } else {
+                        newVal = oldValue - 1;
+                    }
+                    this.input.value = newVal;
+                    this.input.dispatchEvent(this.trigger());
+                });
+            },
+        }
+        return obj.init();
+    }
+
+    const numberInputs = document.querySelectorAll(".quantity");
+
+    if (numberInputs.length > 0) {
+        numberInputs.forEach((el, index) => {
+            quantityInput(el, {
+                min: 0,
+                value: 0,
+            });
+        });
+    }
+
+</script>
+</html>

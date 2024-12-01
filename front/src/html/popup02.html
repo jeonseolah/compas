@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(팝업) 데이터 변경</title>
+    <link rel="stylesheet" href="/assets/css/default.css" />
+</head>
+
+<body> 
+    <div class="popup" style="width: 390px">
+        <div class="popup-header">
+            <strong class="popup-title">데이터 변경</strong>
+            <button class="btn-close">
+                <i class="icon-x"></i>
+            </button>
+        </div>
+        <div class="popup-content">
+            <div class="form search">
+                <input type="text" class="input-text">
+                <button class="btn">
+                    <i class="icon-search"></i>
+                </button>
+            </div>
+            <div class="tree-view">
+                <ul class="tree-list depth1">
+                    <li class="tree-item">
+                        <input type="checkbox" id="checkbox1" checked />
+                        <label for="checkbox1">카테고리1뎁스</label>
+                        <ul class="tree-list depth2">
+                            <li class="tree-item">
+                                <input type="checkbox" id="checkbox1-1">
+                                <label for="checkbox1-1">유동인구</label>
+                                <ul class="tree-list depth3">
+                                    <li class="tree-item">
+                                        <input type="checkbox" id="checkbox1-1-1">
+                                        <label for="checkbox1-1-1"><span class="color-point">세종시</span>_거주인구</label>
+                                        <div class="util">
+                                            <span class="badge red">비</span>
+                                            <span class="badge green">일반</span>
+                                        </div>
+                                    </li>
+                                    <li class="tree-item">
+                                        <input type="checkbox" id="checkbox1-1-2">
+                                        <label for="checkbox1-1-2"><span class="color-point">세종시</span>_거주인구</label>
+                                        <div class="util">
+                                            <span class="badge blue">공</span>
+                                            <span class="badge yellow">공간</span>
+                                        </div>
+                                    </li>
+                                    <li class="tree-item">
+                                        <input type="checkbox" id="checkbox1-1-3">
+                                        <label for="checkbox1-1-3"><span class="color-point">세종시</span>_거주인구</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="tree-item">
+                                <input type="checkbox" id="checkbox1-2">
+                                <label for="checkbox1-2">거주인구</label>
+                                <ul class="tree-list depth3">
+                                    <li class="tree-item">
+                                        <input type="checkbox" id="checkbox1-2-1">
+                                        <label for="checkbox1-2-1">카테고리3뎁스</label>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="tree-item">
+                        <input type="checkbox" id="checkbox2" />
+                        <label for="checkbox2">카테고리1뎁스</label>
+                        <ul class="tree-list depth2">
+                            <li class="tree-item">
+                                <input type="checkbox" id="checkbox2-1">
+                                <label for="checkbox2-1">유동인구</label>
+                                <ul class="tree-list depth3">
+                                    <li class="tree-item">
+                                        <input type="checkbox" id="checkbox2-1-1">
+                                        <label for="checkbox2-1-1"><span class="color-point">세종시</span>_거주인구</label>
+                                        <div class="util">
+                                            <span class="badge red">비</span>
+                                            <span class="badge green">일반</span>
+                                        </div>
+                                    </li>
+                                    <li class="tree-item">
+                                        <input type="checkbox" id="checkbox2-1-2">
+                                        <label for="checkbox2-1-2"><span class="color-point">세종시</span>_거주인구</label>
+                                        <div class="util">
+                                            <span class="badge blue">공</span>
+                                            <span class="badge yellow">공간</span>
+                                        </div>
+                                    </li>
+                                    <li class="tree-item">
+                                        <input type="checkbox" id="checkbox2-1-3">
+                                        <label for="checkbox2-1-3"><span class="color-point">세종시</span>_거주인구</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="tree-item">
+                                <input type="checkbox" id="checkbox2-2">
+                                <label for="checkbox2-2">거주인구</label>
+                                <ul class="tree-list depth3">
+                                    <li class="tree-item">
+                                        <input type="checkbox" id="checkbox2-2-1">
+                                        <label for="checkbox2-2-1">카테고리3뎁스</label>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-container">
+                <ul class="nav-tabs">
+                    <li class="tab is-active"><a href="#tab1-1">데이터 정보</a></li>
+                    <li class="tab"><a href="#tab1-2">데이터 미리보기</a></li>
+                </ul>
+                <div id="tab1-1" class="tab-panel is-active">
+                    <div class="table-wrap">
+                        <div class="table-head">
+                            <p>row 수 : 1234</p>
+                        </div>
+                        <table class="table">
+                            <caption>데이터 정보</caption>
+                            <colgroup>
+                                <col style="width: 20%;">
+                                <col style="width: 20%;">
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">컬럼이름</th>
+                                    <th scope="col">칼럼타입</th>
+                                    <th scope="col">코멘트</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span>co2</span></td>
+                                    <td>test</td>
+                                    <td>testtest</td>
+                                </tr>
+                                <tr>
+                                    <td><span>co2</span></td>
+                                    <td>test</td>
+                                    <td>testtest</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="tab1-2" class="tab-panel">
+                    데이터 미리보기
+                </div>
+            </div>
+        </div>
+        <div class="popup-footer">
+            <div class="btn-group">
+                <button class="btn positive">
+                    <i class="icon-check"></i>
+                    <span>저장</span>
+                </button>
+                <button class="btn negative">
+                    <i class="icon-x"></i>
+                    <span>취소</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

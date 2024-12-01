@@ -3649,35 +3649,6 @@ input::-webkit-search-results-decoration {
 			box-sizing: border-box;
 		}
 
-		.search-input-box {
-			position: relative;
-			width: 100%;
-			height: 34px;
-			@include themeColor(background-color, color00);
-			border-radius: 4px;
-
-			.input-search {
-				width: 100%;
-				height: 100%;
-				padding: 0 16px;
-				background-color: transparent;
-				box-sizing: border-box;
-				@include font(14);
-			}
-
-			.btn-search {
-				position: absolute;
-				top: 50%;
-				right: 16px;
-				width: 24px;
-				height: 24px;
-				@include funcImage("../images/icon-search.png");
-				background-size: 100%;
-				font-size: 0;
-				transform: translateY(-50%);
-			}
-		}
-
 		.form {
 			display: flex;
 			flex-wrap: wrap;
@@ -3895,7 +3866,6 @@ input::-webkit-search-results-decoration {
 		}
 	}
 }
-
 
 .map-wrap {
     position: absolute;
