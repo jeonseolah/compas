@@ -10,7 +10,7 @@
         border-radius: 4px;
         padding: 10px;
         @include color(color, co8);
-        @include font(17);
+        @include font(16);
         font-weight: 700;
         box-sizing: border-box;
         outline: none;
@@ -86,8 +86,6 @@
             height: 20px;
             padding-left: 28px;
             cursor: pointer;
-            font-size: 15px;
-            line-height: 20px;
             @include color(color, co8);
 
             &::before {
@@ -243,6 +241,7 @@
             border-radius: 4px;
             box-sizing: border-box;
             @include color(color, co8);
+            @include font(12);
 
             &::after {
                 content: "";
@@ -276,7 +275,7 @@
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
-                height: 30px;
+                height: 28px;
                 padding: 5px 10px;
             }
         }
@@ -290,15 +289,15 @@
         }
 
         .point {
-            @include font(13);
+            @include font(12);
             @include color(color, co8);
             font-weight: 600;
         }
 
         i {
             display: block;
-            width: 25px;
-            height: 25px;
+            width: 20px;
+            height: 20px;
             background-size: contain;
             background-position: center;
             margin-right: 6px;
@@ -352,7 +351,7 @@
         border: 1px solid #000;
         border-radius: 4px;
         @include color(background-color, bg60);
-        @include font(14);
+        @include font(12);
         @include color(color, co8);
         padding: 0 10px;
         cursor: pointer;
@@ -667,7 +666,7 @@
                     display: flex;
                     align-items: center;
                     padding: 7px 10px;
-                    @include font(15);
+                    @include font(14);
                     font-weight: 700;
                     @include color(color, co8);
 
@@ -827,6 +826,15 @@
 }
 
 %popup {
+    position: relative;
+    z-index: 100;
+    overflow: hidden;
+    @include color(background-color, bg70);
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+
     .popup-header {
         display: flex;
         align-items: center;
@@ -837,7 +845,7 @@
     }
 
     .popup-title {
-        @include font(17);
+        @include font(16);
         font-weight: 700;
         color: #fff;
     }

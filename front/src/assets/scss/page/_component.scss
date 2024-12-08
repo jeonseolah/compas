@@ -230,7 +230,7 @@
     label {
         font-weight: 600;
         @include color(color, co8);
-        @include font(14);
+        @include font(12);
     }
 
     &.search {
@@ -281,6 +281,10 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
+
+        &+.form {
+            margin-top: 6px;
+        }
 
         &>label {
             min-width: 50px;
