@@ -234,7 +234,9 @@
     }
 
     &.search {
-        border: 1px solid #000;
+        overflow: hidden;
+        border: 1px solid;
+        @include color(border-color, co9);
         border-radius: 4px;
         @include color(background-color, bg50);
         box-sizing: border-box;
@@ -259,8 +261,9 @@
                 right: 0;
                 width: 60px;
                 height: 100%;
-                @include color(background-color, bg90);
-                border-left: 1px solid #000;
+                @include color(background-color, bg70);
+                border-left: 1px solid;
+                @include color(border-color, co9);
 
                 & span {
                     @include font(14);
@@ -331,7 +334,8 @@
         height: 100%;
         @include color(background-color, bg60);
         padding: 0 10px;
-        border: 1px solid #000;
+        border: 1px solid;
+        @include color(border-color, co9);
         border-radius: 4px;
         @include color(color, co8);
         box-sizing: border-box;

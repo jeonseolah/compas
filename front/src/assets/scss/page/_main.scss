@@ -87,7 +87,8 @@ a {
     height: 55px;
     @include color(background-color, bg80);
     padding: 0 24px;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid;
+    @include color(border-color, co9);
     box-sizing: border-box;
 
     h1 {
@@ -178,8 +179,9 @@ a {
     .chart-menu {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
         flex: 1;
+        margin: 0 4%;
 
         .btn {
             display: inline-flex;
@@ -190,21 +192,10 @@ a {
                 @include color(color, co2);
             }
 
-            &+.btn {
-                margin-left: 24px;
-            }
-
             & i {
                 margin-right: 4px;
                 font-size: 20px;
                 @include color(color, co8);
-
-                &.icon-bubble {
-                    width: 20px;
-                    height: 20px;
-                    @include bgImg("/assets/images/bubble.png", "/assets/images/bubble.png","/assets/images/bubble.png","/assets/images/bubble.png");
-                    background-size: contain;
-                }
             }
 
             & span {
@@ -339,7 +330,8 @@ a {
             z-index: -1;
             height: 100%;
             @include color(background-color, bg70);
-            border: 1px solid #000;
+            border: 1px solid;
+            @include color(border-color, co9);
             border-width: 0 1px 0 0;
             box-shadow: 0px 0px 15px 7px rgba(0, 0, 0, 0.3);
 
@@ -401,7 +393,8 @@ a {
         align-items: center;
         width: 100%;
         height: 40px;
-        border: 1px solid #000;
+        border: 1px solid;
+        @include color(border-color, co9);
         border-radius: 4px;
         padding: 0 15px;
         box-sizing: border-box;
@@ -499,8 +492,10 @@ a {
         height: 45px;
         padding: 0 20px;
         @include color(background-color, bg40);
-        border-top: 1px solid #000;
-        border-bottom: 1px dashed #000;
+        border-top: 1px solid;
+        @include color(border-color, co9);
+        border-bottom: 1px dashed;
+        @include color(border-color, co9);
         box-sizing: border-box;
 
         .data-theme-title {
@@ -530,7 +525,8 @@ a {
             height: 140px;
             background-color: #000;
             border-radius: 10px;
-            border: 1px solid #000;
+            border: 1px solid;
+            @include color(border-color, co9);
             box-shadow: 0px 4px 12px 8px rgba(0, 0, 0, 0.2);
 
             &-head {
@@ -808,7 +804,8 @@ a {
         height: 30px;
         padding: 0 15px;
         @include color(background-color, bg80);
-        border: 1px solid #000;
+        border: 1px solid;
+        @include color(border-color, co9);
         border-width: 0 1px 1px;
         border-radius: 4px;
         box-sizing: border-box;
@@ -897,7 +894,8 @@ a {
     overflow: hidden;
     height: 100%;
     @include color(background-color, bg80);
-    border: 1px solid #000;
+    border: 1px solid;
+    @include color(border-color, co9);
     border-radius: 6px;
 
     &.is-active {
@@ -935,7 +933,8 @@ a {
     padding: 16px 20px;
     box-sizing: border-box;
     @include color(background-color, bg70);
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid;
+    @include color(border-color, co9);
     box-sizing: border-box;
 
     &.border-0 {
@@ -1037,7 +1036,8 @@ a {
         display: flex;
         flex-direction: column;
         border-radius: 0 0 6px 6px;
-        border: 1px solid #000;
+        border: 1px solid;
+        @include color(border-color, co9);
         border-width: 0 1px 1px;
 
         .btn {
@@ -1056,7 +1056,8 @@ a {
             }
 
             &+.btn {
-                border-top: 1px solid #000;
+                border-top: 1px solid;
+                @include color(border-color, co9);
             }
 
             & span {
@@ -1121,19 +1122,19 @@ a {
             padding: 0 14px;
             border: 1px solid;
             border-width: 1px 1px 0;
-            border-color: #000;
+            @include color(border-color, co9);
             @include color(background-color, bg30);
             box-sizing: border-box;
             @include color(color, co8);
 
             &.is-active {
-                @include color(background-color, bg20);
+                @include color(background-color, bg60);
                 border-top: 4px solid;
                 @include color(border-color, co1);
 
                 & span,
                 & .btn-delete {
-                    color: #fff;
+                    @include color(color, co8);
                 }
             }
 
@@ -1163,7 +1164,8 @@ a {
 .tab-container {
 
     .form {
-        border-bottom: 1px dashed #000;
+        border-bottom: 1px dashed;
+        @include color(border-color, co9);
         margin-bottom: 10px;
         padding-bottom: 10px;
 
@@ -1184,7 +1186,6 @@ a {
                 &>a {
                     height: 40px;
                     @include color(border-color, co1);
-                    background-color: #373b40;
                     @include color(background-color, bg50);
                     @include color(color, co8);
                     font-weight: 600;
@@ -1205,7 +1206,7 @@ a {
                 border-top: 3px solid;
                 @include color(border-color, bg30);
                 border-radius: 6px 6px 0 0;
-                @include color(background-color, bg40);
+                @include color(background-color, bg70);
                 @include color(color, co8);
                 @include font(14);
                 box-sizing: border-box;
@@ -1261,7 +1262,7 @@ a {
 
         &.current {
             @include color(background-color, co1);
-            color: #fff;
+            color: #fff !important;
         }
     }
 
@@ -1318,7 +1319,7 @@ a {
     }
 
     .ly-container {
-        grid-template-columns: 400px 1fr 330px;
+        grid-template-columns: 400px 1fr 400px;
     }
 
     .widget-left {
@@ -1340,7 +1341,7 @@ a {
 
     .widget-right {
         overflow-y: auto;
-        width: 330px;
+        width: 400px;
         height: calc(100vh - 55px);
         padding: 24px;
         box-sizing: border-box;
@@ -1349,7 +1350,8 @@ a {
 
         .form.flex {
             height: 55px;
-            border-bottom: 1px dashed #000;
+            border-bottom: 1px dashed;
+            @include color(border-color, co9);
 
             &>label {
                 min-width: 90px;
@@ -1367,7 +1369,8 @@ a {
                 padding: 0 10px;
                 @include color(background-color, bg90);
                 @include color(color, co2);
-                border-bottom: 1px dashed #000;
+                border-bottom: 1px dashed;
+                @include color(border-color, co9);
                 border-radius: 10px 10px 0 0;
             }
 
@@ -1393,7 +1396,8 @@ a {
         padding: 10px 0;
         @include color(background-color, bg70);
         box-sizing: border-box;
-        border: 1px solid #000;
+        border: 1px solid;
+        @include color(border-color, co9);
         border-radius: 10px;
 
         .form {
@@ -1437,9 +1441,9 @@ a {
     
 
     .input-range {
-        width: 90%;
+        width: 100%;
         height: 5px;
-        background: linear-gradient(to right, #6325fd 0%, #6325fd 50%, #30353a 50%, #30353a 100%);
+        background: linear-gradient(to right, #6325fd 0%, #6325fd 50%, #878787 50%, #878787 100%);
         border-radius: 8px;
         outline: none;
         transition: background 450ms ease-in;
@@ -1488,13 +1492,15 @@ a {
 .accordion-list {
     overflow: hidden;
     border-radius: 6px;
-    border: 1px solid #000;
+    border: 1px solid;
+    @include color(border-color, co9);
 
     .accordion-item {
         @include color(background-color, bg90);
 
         &+.accordion-item {
-            border-top: 1px solid #000;
+            border-top: 1px solid;
+            @include color(border-color, co9);
         }
 
         &.is-active {
@@ -1619,6 +1625,7 @@ a {
                 .btn-filter {
                     border: 1px solid;
                     @include color(border-color, co1);
+                    @include color(color, co1);
         
                     &>span {
                         padding-left: 20px;
@@ -1654,7 +1661,7 @@ a {
             align-items: center;
             margin-top: 10px;
             padding-left: 44px;
-            background-image: url("/assets/images/share.png");
+            @include bgImg("/assets/images/share.png", "/assets/images/share.png", "/assets/images/share.png", "/assets/images/share-themeLight.png");
             background-repeat: no-repeat;
             background-size: 21px;
             background-position: left 10px center;
@@ -1667,7 +1674,7 @@ a {
                 width: 24px;
                 height: 24px;
                 margin-left: 10px;
-                background-image: url("/assets/images/copy.png");
+                @include bgImg("/assets/images/copy.png", "/assets/images/copy.png", "/assets/images/copy.png", "/assets/images/copy-themeLight.png");
                 background-repeat: no-repeat;
                 background-size: 21px;
                 background-position: center;
@@ -1698,23 +1705,24 @@ a {
             box-sizing: border-box;
 
             &:nth-child(1) {
-                background-image: url("/assets/images/user.png");
+                @include bgImg("/assets/images/user.png", "/assets/images/user.png", "/assets/images/user.png", "/assets/images/user-themeLight.png");
             }
 
             &:nth-child(2) {
-                background-image: url("/assets/images/view.png");
+                @include bgImg("/assets/images/view.png", "/assets/images/view.png", "/assets/images/view.png", "/assets/images/view-themeLight.png");
             }
 
             &:nth-child(3) {
-                background-image: url("/assets/images/calendar.png");
+                @include bgImg("/assets/images/calendar.png", "/assets/images/calendar.png", "/assets/images/calendar.png", "/assets/images/calendar-themeLight.png");
             }
 
             &:nth-child(4) {
-                background-image: url("/assets/images/download.png");
+                @include bgImg("/assets/images/download.png", "/assets/images/download.png", "/assets/images/download.png", "/assets/images/download-themeLight.png");
             }
 
             &:nth-child(5) {
-                background-image: url("/assets/images/publish.png");
+                @include bgImg("/assets/images/publish.png", "/assets/images/publish.png", "/assets/images/publish.png", "/assets/images/publish-themeLight.png");
+
             }
         }
 
@@ -1738,6 +1746,7 @@ a {
         .btn {
             display: flex;
             align-items: center;
+            justify-content: center;
             height: 36px;
             padding: 0 20px;
             border-radius: 4px;
@@ -1774,7 +1783,8 @@ a {
             &+.table-item {
                 margin-left: 30px;
                 padding-left: 30px;
-                border-left: 1px solid #000;
+                border-left: 1px solid;
+                @include color(border-color, co9);
 
                 &::before {
                     content: "";
@@ -1835,12 +1845,77 @@ a {
         overflow: visible;
         position: relative;
         width: 280px;
-        background: transparent;
+        background: #fff !important;
         border: 0;
         box-shadow: none;
 
+        .nav-tabs {
+
+            &.switch {
+
+                .tab {
+
+                    &.is-active {
+
+                        a {
+    
+                            &::after {
+                                content: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .tab {
+                display: flex;
+                align-items: center;
+            }
+
+            .switch {
+                position: relative;
+                height: 20px;
+                margin-left: 10px;
+
+                [type=checkbox] {
+
+                    &+span {
+                        width: 40px;
+                        height: 20px;
+
+                        &::after {
+                            content: "OFF";
+                            position: absolute;
+                            top: 50%;
+                            right: 5px;
+                            transform: translateY(-50%);
+                            font-size: 10px;
+                            color: #fff;
+                        }
+                    }
+
+                    &:checked {
+
+                        &+ span {
+
+                            &::before {
+                                left: 26px;
+                            }
+
+                            &::after {
+                                content: "ON";
+                                left: 6px;
+                                right: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         .tab-panel {
             padding: 0;
+            @include color(background-color, bg40);
         }
 
         .map-legend {
@@ -1850,63 +1925,6 @@ a {
             height: 0;
             overflow-y: auto;
             overflow-x: hidden;
-
-            .nav-tabs {
-
-                .tab {
-                    display: flex;
-                    align-items: center;
-    
-                    &.is-active {
-    
-                        a {
-    
-                            &::after {
-                                content: none;
-                            }
-                        }
-                    }
-                }
-    
-                .switch {
-                    position: relative;
-                    height: 20px;
-                    margin-left: 10px;
-    
-                    [type=checkbox] {
-    
-                        &+span {
-                            width: 40px;
-                            height: 20px;
-    
-                            &::after {
-                                content: "OFF";
-                                position: absolute;
-                                top: 50%;
-                                right: 5px;
-                                transform: translateY(-50%);
-                                font-size: 10px;
-                            }
-                        }
-    
-                        &:checked {
-    
-                            &+ span {
-    
-                                &::before {
-                                    left: 26px;
-                                }
-    
-                                &::after {
-                                    content: "ON";
-                                    left: 6px;
-                                    right: auto;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
         }
 
         .color-list {
@@ -1952,24 +1970,30 @@ a {
         }
 
         .edit-contents {
+            position: relative;
             height: 220px;
             padding: 15px;
             box-sizing: border-box;
 
             .color-picker {
+                display: flex;
+                flex-wrap: wrap;
                 height: 100%;
-                @include color(background-color, bg90);
-                border-radius: 6px;
+
+                .color {
+                    flex: 0 0 calc(100% - 56px);
+                    @include color(background-color, bg90);
+                    border-radius: 6px;
+                }
             }
 
             .color-gradient {
-                flex: 1;
                 display: flex;
                 flex-wrap: wrap;
                 height: 100%;
 
                 .gradient {
-                    flex: 1;
+                    flex: 0 0 calc(100% - 56px);
                     overflow-y: auto;
                     height: 190px;
                     padding: 6px;
@@ -1988,24 +2012,6 @@ a {
                         }
                     }
                 }
-
-                .btn-toggle {
-                    display: flex;
-                    flex-direction: column;
-
-                    .btn {
-                        padding: 4px 12px;
-                        border-radius: 0 6px 6px 0;
-                        @include color(background-color, bg60);
-                        @include font(12);
-                        font-weight: 600;
-                        color: #fff;
-
-                        &.is-active {
-                            @include color(background-color, bg90);
-                        }
-                    }
-                }
             }
 
             .icon-container {
@@ -2013,7 +2019,7 @@ a {
                 flex-wrap: wrap;
 
                 .icon {
-                    flex: 1;
+                    flex: 0 0 calc(100% - 56px);
                     height: 190px;
                     @include color(background-color, bg90);
                     border-radius: 6px 0 6px 6px;
@@ -2033,22 +2039,42 @@ a {
                         }
                     }
                 }
+            }
 
-                .btn-toggle {
-                    display: flex;
-                    flex-direction: column;
+            .btn-toggle {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
 
-                    .btn {
-                        padding: 4px 12px;
-                        border-radius: 0 6px 6px 0;
-                        @include color(background-color, bg60);
-                        @include font(12);
-                        font-weight: 600;
-                        color: #fff;
+                .btn {
+                    padding: 4px 12px;
+                    border-radius: 0 6px 6px 0;
+                    @include color(background-color, bg60);
+                    @include color(color, co8);
+                    @include font(12);
+                    font-weight: 600;
+                    color: #fff;
 
-                        &.is-active {
-                            @include color(background-color, bg90);
-                        }
+                    &.is-active {
+                        @include color(background-color, bg90);
+                    }
+                }
+            }
+
+            .btn-group {
+                position: absolute;
+                bottom: 15px;
+                right: 15px;
+                flex-direction: column;
+
+                .btn {
+                    width: 50px;
+                    height: 26px;
+                    padding: 0;
+                    @include font(12);
+
+                    &+.btn {
+                        margin: 4px 0 0;
                     }
                 }
             }
