@@ -181,7 +181,7 @@ a {
         flex-wrap: wrap;
         justify-content: space-between;
         flex: 1;
-        margin: 0 4%;
+        margin: 0 5%;
 
         .btn {
             display: inline-flex;
@@ -194,12 +194,13 @@ a {
 
             & i {
                 margin-right: 4px;
-                font-size: 20px;
+                font-size: 22px;
                 @include color(color, co8);
             }
 
             & span {
-                @include font(14);
+                font-size: 14px;
+                line-height: 22px;
                 @include color(color, co8);
                 font-weight: 600;
             }
